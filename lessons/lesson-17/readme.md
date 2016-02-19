@@ -18,19 +18,20 @@ Week # | Lesson 17
 *Before this lesson, you should already be able to:*
 - There will be multiple ways to run the exercises:
     - Using Postgres Exercises
-        - For this students should install Postgres (more details) below
-        - If `brew` is installed, this should be as simple as `brew install postgres`
+        - ... nothing for students ...
     - Setting up local Postgres
+        - Install Postgres (more details) below, if `brew` is installed, this should be as simple as `brew install postgres`
     - Using Wagon
-        - For this setup, students should create an account at https://www.wagonhq.com/ and download the software
+        - Create an account at https://www.wagonhq.com/ and download the software
 
 ### INSTRUCTOR PREP
 *Before this lesson, instructors will need to:*
 - There will be multiple ways to run the exercises:
     - Using Postgres Exercises
+        - You can setup a local demo of the postgres exercises as well from https://pgexercises.com/gettingstarted.html
+    - Setting up local Postgres
         - For this students should install Postgres (more details) below
         - If `brew` is installed, this should be as simple as `brew install postgres`
-        - You can setup a local demo of the postgres exercises as well from https://pgexercises.com/gettingstarted.html
     - Using Wagon
         - For this setup, you can should create an account at https://www.wagonhq.com/ and download the software
 
@@ -106,7 +107,12 @@ This data layout is similar to that in JSON documents.
 
 Popular databases of this variety include mongodb and couchdb.
 
-**Check:** Go through a few examples of data storage and talk about what might be a better storage solution. I think for many of these the answers may be personal preference, but the students should understand some of the differences.
+**Check:** 
+1. Below are a few examples of data storage. 
+    - Answer what might be the best storage or database solution
+
+> NOTE: I think for many of these the answers may be personal preference, but the students should understand some of the differences.
+
 - Database for an application with user profiles:
     - (As always) Probably relational DB:
     - Perhaps 'noSQL' database if user profile fields are commonly changing updating or we want to make it easy to do complex queries on user profile elements
@@ -115,10 +121,68 @@ Popular databases of this variety include mongodb and couchdb.
 - Storing last visit date of a user
     - A fast key-value store might be useful for caching interesting statistics about a user (last visit, total visits)
 
+
+2. Consider the following dataset from Uber with the follow fields:
+    - User ID
+    - User Name
+    - Driver ID
+    - Driver Name
+    - Ride ID
+    - Ride Time
+    - Pickup Longitude
+    - Pickup Latitude
+    - Pickup Location Entity
+    - Dropoff Longitude
+    - Dropoff Latitude
+    - Dropoff Location Entity
+    - Miles
+    - Travel Time
+    - Fare
+    - CC Number
+
+How would you design a relational database to support this data? List the tables you would create, what fields they would contain, and how they would like to other tables.
+
+Answer:
+    Users table:
+        - User ID
+        - User Name
+        - Joined Date
+        - CC Number
+
+    Drivers table:
+        - Driver ID
+        - Driver Name
+        - Joined Date
+
+    Locations table: Should store popular destinations metadata
+        - Entity
+        - Longitude
+        - Latitude
+        - Description
+
+    Rides:
+        - Ride ID
+        - Ride Time
+        - User ID (link to users)
+        - Driver ID (link to drivers)
+        - Pickup Location Entity (link to locations)
+        - Dropoff Location Entity (link to locations)
+        - Miles
+        - Travel Time
+        - Fare
+        - CC Number 
+            (Question: Should this link to users? How can a user change their payment methods in the system, maybe a separate table of payment methods?)
+
+
+
 <a name="demo1"></a>
 ## Demo: Accessing Databases from Pandas (20 min)
 
-While database provide many analytical capabilities, often times it's useful to pull the data back into Python for more flexible programming. Large, fixed operations would e more efficient in a database, but Pandas allow for interactive processing.
+While database provide many analytical capabilities, often times it's useful to pull the data back into Python for more flexible programming. Large, fixed operations would be more efficient in a database, but Pandas allow for interactive processing.
+
+For example, if ever night you want to aggregate logins, or sales to present a report or dashboard, this operation is likely not changing and operating on a large dataset. This can run very efficiently in a database rather than connecting Python to it.
+
+However, if we want to investigate the login or sales data further, ask more interactive questions, then using Python can be very handy.
 
 ```python
 import pandas as pd
