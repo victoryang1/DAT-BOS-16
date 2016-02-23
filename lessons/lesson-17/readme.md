@@ -16,9 +16,9 @@ Week # | Lesson 17
 
 ### STUDENT PRE-WORK
 *Before this lesson, you should already be able to:*
+
 - There will be multiple ways to run the exercises:
     - Using Postgres Exercises
-        - ... nothing for students ...
     - Setting up local Postgres
         - Install Postgres (more details) below, if `brew` is installed, this should be as simple as `brew install postgres`
     - Using Wagon
@@ -51,6 +51,9 @@ Week # | Lesson 17
 <a name="opening"></a>
 ## Opening (5 min)
 Today's lesson will be on databases and the SQL query language. Databases are the standard solution for data storage and are much more robust than how we've stored data in this class so far - text and CSV files. Databases come in many flavors, but we will explore the most common, relational databases. Relational databases themselves come in different varieties, but almost all use the SQL language as a base for querying. Almost all analyses typically involve pulling data from a resource and in most industry settings that resource will be a database.
+
+
+These are some additional changes.
 
 <a name="introduction"></a>
 ## Intro to Databases (35 mins)
