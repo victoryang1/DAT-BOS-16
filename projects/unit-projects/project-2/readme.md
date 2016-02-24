@@ -67,7 +67,7 @@ While your total score is a helpful gauge of whether you've met overall project 
 ### RESOURCES
 
 #### Dataset  
-We'll be using the same dataset as UCLA's Logit Regression in R tutorial to explore logistic regression in Python. Our goal will be to identify the various factors that may influence admission into graduate school. It containes four variables- admit, gre, gpa, rank.
+We'll be using the same dataset as UCLA's Logistic Regression in R tutorial to explore logistic regression in Python, as explained in [yhat's blog](http://blog.yhat.com/posts/logistic-regression-and-python.html). This is an excellent resource for using logistic regression and summary statistics to explore a relevant dataset. Our goal will be to identify the various factors that may influence admission into graduate school. It containes four variables- admit, gre, gpa, rank.
 
 - 'admit' is a binary variable. It indicates whether or not a candidate was admitted admit =1) our not (admit= 0)
 - 'gre' is GRE score
