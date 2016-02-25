@@ -93,6 +93,32 @@ __"Ensuring that code has been tested will be vital to ensure that the results o
 
 __"As a real-world anecdote, in a recent cleanup effort of one important machine learning system at Google, it was found possible to rip out tens of thousands of lines of unused experimental codepaths"__
 
+**Check:** Take a look at the following code which parses an apartment description for the apartment's square footage. What corner cases would it fail?
+
+```python
+
+def extract_sqft(apt_description):
+    # Split the text on spaces
+    words = apt_description.split(' ')
+    for (i, word) in enumerate(words):
+        # Look for "sqft"
+        if word == 'sqft':
+            # Select the word before sqft
+            return int(words[i-1])
+        else:
+            return np.nan
+```
+
+Answer: There are so many! 
+- What if the ad says "sqft." instead of sqft?
+- What if the ad says "square feet" or "sq ft" etc. ?
+- What if the thing before is not an integer?
+- What if "sqft" is the first word in the text?
+
+Each of these corner cases would be very good unit tests to improve the code.
+
+**Check:** Think back to your earlier projects; are there any places where your code could be cleaned up and optimized?
+
 #### Evolving Features
 
 Once your model is trained or analysis is complete, it's important to track it's performance over time. Many of the correlations found or predictive features may not be true, a few months or years in the future. For example, in our evergreen prediction example, which we will revisit today, it captures important food labels to predict recipes. However, it doesn't know about popular food trends of tomorrow. While `brownies` and `cookies` and `flour` are important features, `cronut` is not since the dataset was collected prior to that phenomenon.
