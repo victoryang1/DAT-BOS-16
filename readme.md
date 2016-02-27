@@ -5,7 +5,7 @@
 Welcome to Data Science 2.0! We are building a global community of lifelong learners who are excited about using data to solve real world problems. Here is our current timeline:
 
 - **Jan 25th:** Lessons 1-14 + Unit & Final Projects complete.
-- **Feb 29th**: Lesson, slides, & QA for Lessons 15-18 complete.
+- **Mar 4th**: Lesson, slides, & QA for Lessons 15-18 complete.
 
 
 ## Data Science Curriculum Repo
