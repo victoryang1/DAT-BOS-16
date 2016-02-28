@@ -38,7 +38,7 @@ General Assembly's Data Science course is made up of 20 lessons that are 3 hours
 | Lesson 7 | [Evaluating Model Fit](./lesson-07/readme.md) || Lesson 17 | [Data Science Databases](./lesson-17/readme.md) |
 | Lesson 8 | [Intro to Classification](./lesson-08/readme.md)|| Lesson 18 | [Data Science Careers](./lesson-18/readme.md) |
 | Lesson 9 | [Intro to Logistic Regression](./lesson-09/readme.md) || Lesson 19 | *Flex Session |
-| Lesson 10 | [Communicating Model Results]) ||Lesson 20 | Final Project Demo Day |
+| Lesson 10 | [Communicating Model Results](./lesson-10/readme.md) ||Lesson 20 | Final Project Demo Day |
 
 ---
 
