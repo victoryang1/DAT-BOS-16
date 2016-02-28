@@ -62,7 +62,7 @@ We looked a moving averages to evaluate the local behavior of the time series.
 
 A _moving average_ is an average of _k_ surrounding data points in time.
 
- ![](../lesson-16/assets/images/single_moving_avg_fit.gif)
+ ![](../lesson-15/assets/images/single_moving_avg_fit.gif)
 
 We looked at autocorrelation to compute the relationship of the data with with prior values.
 
