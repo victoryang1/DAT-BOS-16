@@ -208,7 +208,7 @@ In the last class, we saw that we would plot the sales data at a particular stor
 import pandas as pd
 
 # Load the data and set the DateTime index
-data = pd.read_csv('../assets/data/rossmann.csv', skipinitialspace=True)
+data = pd.read_csv('../assets/dataset/rossmann.csv', skipinitialspace=True)
 
 data['Date'] = pd.to_datetime(data['Date'])
 data.set_index('Date', inplace=True)
