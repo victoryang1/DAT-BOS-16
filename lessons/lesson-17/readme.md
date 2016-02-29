@@ -1,18 +1,19 @@
 ---
-title: Databases
+title: Database Intro
 duration: "3:00"
 creator:
     name: Arun Ahuja
     city: NYC
 ---
 
-# ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png)
+# ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png) Intro to Databases
 DS | Lesson 17
 
 ### LEARNING OBJECTIVES
 *After this lesson, you will be able to:*
 - Understand the uses and differences of various databases
 - Access databases from Pandas
+- Navigate Postgres
 
 ### STUDENT PRE-WORK
 *Before this lesson, you should already be able to:*
