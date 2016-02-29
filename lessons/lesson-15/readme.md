@@ -1,12 +1,12 @@
 ---
-title: Timeseries Analysis
+title: Timeseries Data
 duration: "3:00"
 creator:
     name: Arun Ahuja
     city: NYC
 ---
 
-# ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png)
+# ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png) Time Series Data
 DS | Lesson 15
 
 ### LEARNING OBJECTIVES
