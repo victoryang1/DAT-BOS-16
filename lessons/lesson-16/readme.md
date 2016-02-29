@@ -6,7 +6,7 @@ creator:
     city: NYC
 ---
 
-# ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png)
+# ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png) Modeling Timeseries Data
 DS | Lesson 16
 
 ### LEARNING OBJECTIVES
