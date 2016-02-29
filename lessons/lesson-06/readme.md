@@ -88,7 +88,7 @@ A linear regression works best when:
 * The Xs are independent of each other (low multicollinearity)
 * The resulting values passes linear assumptions (dependent on problem)
 
-> **Check:** What is linear regression and when can it be applied?
+**Check:** What is linear regression and when can it be applied?
 
 
 <a name="demo1"></a>
@@ -133,7 +133,7 @@ sns.lmplot('bodywt', 'brainwt', mammals)
 Notice:
 
 1. The `lmplot()` function returns a straight line. That is why it is a linear solution. If we had multiple variables, the solution would be a linear plane.
-2. The linear solution does explain a portion of the data well, but because both bodywt and brainwt are log-log distributions, outliers effect the weight of the solution poorly. We can see this from the wide and inconsistently shaped confidence intervals that seaborn's lmplot generates.
+2. The linear solution does explain a portion of the data well, but because both "bodywt" and "brainwt" are log-log distributions, outliers effect the weight of the solution poorly. We can see this from the wide and inconsistently shaped confidence intervals that seaborn's lmplot generates.
 
 Because both values are a log-log distribution, some math properties allow us to transform them into normal distributions. Then, we can solve for the linear regression!
 
@@ -148,7 +148,7 @@ sns.lmplot('bodywt', 'brainwt', log_mammals)
 ![03-mammals-plot](https://cloud.githubusercontent.com/assets/846010/11454354/ccb17da4-95f6-11e5-98dd-879dd30da086.png)
 
 
-> **Check:** Does this explain the animal's brain weight better or worse than the original data?
+**Check:** Does this explain the animal's brain weight better or worse than the original data?
 
 Even though we changed the way the data was shaped, this is still a _linear_ result: it's just linear in the log10 of the data, instead of in the data's natural state.
 
@@ -204,7 +204,7 @@ For today, our `LinearRegression()` does not have a transform function... but so
 
 With this information, we can build a simple process for linear regressions that take advantage of a feature_selection function and the linear regression estimator, as well as get familiar with how to implement parameters.
 
-> **Check:** Describe some of the base principles for sklearn model objects. 
+**Check:** Describe some of the base principles for sklearn model objects.
 
 
 <a name="demo2"></a>
@@ -232,7 +232,7 @@ def get_linear_model_metrics(X, y, algo):
     print 'R-Squared:', algo.score(X,y)
     plt.figure()
     plt.hist(residuals, bins=np.ceil(np.sqrt(len(y))))
-    
+
 - Keep the model
     return algo
 
@@ -251,7 +251,7 @@ R-Squared: 0.871949198087
 
 ![04-mammals-residuals-hist](https://cloud.githubusercontent.com/assets/846010/11454351/cca7186e-95f6-11e5-9e12-e2b7abee9749.png)
 
-> **Check:**  What does our ouput tell us?
+**Check:**  What does our ouput tell us?
 
 Our output tells us that:
 
@@ -273,7 +273,7 @@ print lm.predict([[0]])
 array([ 0.08591731])
 ```
 
-> **Check:** What would we expect an animal's brainwt to be if their bodywt is 0?
+**Check:** What would we expect an animal's brainwt to be if their bodywt is 0?
 
 With linear modeling we call this part of the __linear assumption__. Consider it a test to the model. If an animal's body weights nothing, we expect their brain to be nonexistent. That given, we can improve the model by telling sklearn's LinearRegression object we do not want to fit a y intercept.
 
@@ -295,7 +295,7 @@ R-Squared: 0.864418807451
 * Because we start at 0, the large outliers have a greater effect, so the coefficient has increased.
 * Fitting the this linear assumption also explains slightly less of the variance.
 
-> **Check:** Is this a better or worse model? Why?
+**Check:** Is this a better or worse model? Why?
 
 
 <a name="guided-practice2"></a>
@@ -313,7 +313,7 @@ for boolean in loop:
     get_linear_model_metrics(X, y, lm)
     print
 ```
-> **Check:** Out of the four, which model performed the best? The worst? Why?
+**Check:** Out of the four, which model performed the best? The worst? Why?
 
 
 <a name="ind-practice1"></a>
@@ -325,7 +325,7 @@ Next class we'll go into further detail on other regression techniques, but for 
 * `linear_model.Ridge()`
 * `linear_model.ElasticNet()`
 
-> **Check:** Did the implementation run without error? What were the r-squared outputs for each estimator?
+**Check:** Did the implementation run without error? What were the r-squared outputs for each estimator?
 
 
 <a name="intro3"></a>
@@ -333,7 +333,7 @@ Next class we'll go into further detail on other regression techniques, but for 
 
 In the previous example, one variable explained the variance of another; however, more often than not, we will need multiple variables. For example, a house's price may be best measured by square feet, but a lot of other variables play a vital role: bedrooms, bathrooms, location, appliances, etc. For a linear regression, we want these variables to be largely independent of each other, but all of them should help explain the y variable.
 
-We'll work with bikeshare data to showcase what this means and to explain a concept called _multicollinearity_.
+We'll work with bike-share data to showcase what this means and to explain a concept called _multicollinearity_.
 
 #### What is Multicollinearity?
 
@@ -401,7 +401,7 @@ R-Squared: 0.21124723661
 
 Even though the 2-variable model `temp + atemp` has a higher explanation of variance than two variables on their own, and both variables are considered significant (p values approaching 0), we can see that together, their coefficients are wildly different. This can introduce error in how we explain models.
 
-What happens if we use a second variable that isn't highly correlated with temperature, like humidity? 
+What happens if we use a second variable that isn't highly correlated with temperature, like humidity?
 
 ```bash
 temp, hum
@@ -413,7 +413,7 @@ R-Squared: 0.310901196913
 
 While temperature's coefficient is higher, the logical output still makes sense: for guest riders we expected a positive relationship with temperature and a negative relationship with humidity, and our model suggests it as well.
 
-> **Check:** What is multicollinearity? Why might this cause problems in a model?
+**Check:** What is multicollinearity? Why might this cause problems in a model?
 
 
 <a name="guided-practice3"></a>
@@ -445,7 +445,7 @@ y-intercept: 2.66666666652
 R-Squared: 0.0233906873841
 ```
 
-> **Check:** Are students able to explain how coefficients changed once all the weather situations were included?
+**Check:** Are students able to explain how coefficients changed once all the weather situations were included?
 
 This model makes more sense, because we can more easily explain the variables compared to the one we left out. For example, this suggests that a clear day (weathersit:1) on average brings in about 38 more riders hourly than a day with heavy snow. In fact, since the weather situations "degrade" in quality (1 is the nicest day, 4 is the worst), the coefficients now reflect that well. However at this point, there is still a lot of work to do, because weather on its own fails to explain ridership well.
 
@@ -475,7 +475,7 @@ final_feature_set = bikemodel_data[columns_to_keep]
 get_linear_model_metrics(final_feature_set, y, lm)
 ```
 
-> **Check:** Were groups able to add all three conditions into the model? Did they come up with two additional predictive features?
+**Check:** Were groups able to add all three conditions into the model? Did they come up with two additional predictive features?
 
 
 <a name="ind-practice2"></a>

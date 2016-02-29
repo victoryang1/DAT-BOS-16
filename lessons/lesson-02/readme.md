@@ -16,12 +16,12 @@ DS | Lesson 2
 - Identify data set types
 - Define the data science workflow
 - Apply the data science workflow in the pandas context
-- Write an IPython Notebook to import, format and clean data using the Pandas Library
+- Write an iPython Notebook to import, format and clean data using the Pandas Library
 
 ### STUDENT PRE-WORK
 *Before this lesson, you should already be able to:*
 
-- Create, open and create and IPython Notebook
+- Create, open and create and iPython Notebook
 - Have completed python pre-work
 
 ### INSTRUCTOR PREP
@@ -71,7 +71,7 @@ Today we will focus on steps 1-2, and we will dive into steps 3-5 over the next 
 ## Intro: Asking a good question (10 mins)
 
 #### Why we need a good question/aim
-> "A problem well stated is half solved."
+"A problem well stated is half solved."
 
 By having a high quality question/aim you set yourself up for success as you being your analysis. You also establish the basis for making your analysis reproducible. A clearly articulated research question not only helps other data scientists learn from, and reproduce your work, but also helps them expand on your work in the future.
 
@@ -87,10 +87,10 @@ The goals of a high quality, reproducible question are similar to the SMART Goal
 Let's break this down further:
 
 1. Specific: The dataset and key variables are clearly defined.
-2. Measureable: The the type of analysis and major assumptions are articulated.
+2. Measurable: The the type of analysis and major assumptions are articulated.
 3. Attainable: The question you are asking is feasible for your dataset and is not likely to be biased.
 4. Reproducible: Another person (or you in 6 months!) can read your state and understand exactly how your analysis is performed
-5. Timebound: You clearly state the time period and population for which this analysis will pertain
+5. Time-bound: You clearly state the time period and population for which this analysis will pertain
 
 ![](./assets/images/smart-goal-image.jpg)
 
@@ -98,7 +98,7 @@ Let's break this down further:
 ## Demo: Diagraming an aim (5 mins)
 
 Example aim:
-Determine the association of foods in the home with child dietary intake. Using one 24-hour recall from the cross-sectional NHANES 2007-2010, we will determine the factors associated with food available in the homes of American children and adolescents. We will test if reported availability of fruits, dark green vegetables, low fat milk or sugar-sweetened beverages available in the home increases the likelihood that children and adolescents will meet their USDA recommended dietary intake for that food. 
+Determine the association of foods in the home with child dietary intake. Using one 24-hour recall from the cross-sectional NHANES 2007-2010, we will determine the factors associated with food available in the homes of American children and adolescents. We will test if reported availability of fruits, dark green vegetables, low fat milk or sugar-sweetened beverages available in the home increases the likelihood that children and adolescents will meet their USDA recommended dietary intake for that food.
 
 Hypothesis: Children will be more likely to meet their recommended intake level when a food is always available in their home compared to rarely of never.
 > Source: From Dr. Amy Roberts' Dissertation
@@ -106,13 +106,13 @@ Hypothesis: Children will be more likely to meet their recommended intake level 
 > Instructor Note: For each of these, give one 1 example and ask the class to id others.  
 
 1. Specific: Using **one 24-hour recall** from the cross-sectional National Health and Nutrition Examination Survey (NHANES) 2007-2010, we will determine the factors associated with food available in the homes of **American children and adolescents**. We will test if **self-reported availability of fruits, dark green vegetables, low fat milk or sugar-sweetened beverages available in the home increases** the likelihood that children and adolescents will meet their **USDA recommended dietary intake** for that food. Our hypothesis is that children will be **more likely to meet their recommended intake level when a food is** _always_ **available in their home** (compared to rarely or never).
-    - How data was collected is indicated: 
+    - How data was collected is indicated:
         - 24-hour recall, self-reported
-    - What data was collected is stated: 
+    - What data was collected is stated:
         - Fruits, dark green vegetables, low fat milk or sugar-sweetened beverages; always vs rarely available
-    - How data will be analyzed is defined: 
+    - How data will be analyzed is defined:
         - Using USDA recommendations as a gold-standard to measure the association
-    - The specific hypothesis & direction of the expected associations are described: 
+    - The specific hypothesis & direction of the expected associations are described:
         - Children will be more likely to meet their recommended intake level
 
 2. Measurable: Determine the association of foods in the home with child dietary intake. We will test if the reported availability of fruits, dark green vegetables, low fat milk or sugar-sweetened beverages available in the home increases the likelihood that children and adolescents will meet their USDA recommended dietary intake for that food.
@@ -144,7 +144,7 @@ As we saw in the attainable section above, different types of data have differen
 
 1. **Cross-Sectional Data:** All information is determined at the same time; all the data comes from the same time period.
 
-    - **Issues**: TEMPORALITY. 
+    - **Issues**: TEMPORALITY.
         - There is no distinction between _exposure_ and _outcome_. This is why in the example above, we can't say that the availability of fruit in the home actually **causes** children to meet their recommendations. It is just as likely that the opposite may be true.
     - **Strengths**
         - Often population-based  
@@ -159,17 +159,17 @@ As we saw in the attainable section above, different types of data have differen
     - **Strengths**
         - Unambiguous temporal sequence – exposure precedes outcome
         - Multiple outcomes can be measured
-    
+
     - **Limitations**
         - Expense
         - Takes a long time
         - Vulnerable to missing data
 
-> **Check:**
+**Check:**
 
-> - What type of data is the flightstats data?
-> - Determine if the number of passengers on JetBlue, Delta, and United domestic flights with carry-on luggage is associated with delayed take-off time using data from flightstats.com from January 2015- December 2015.
-> - Can you create a cross-sectional analysis from a longitudinal data collection? How?
+- What type of data is the "flightstats" data?
+- Determine if the number of passengers on JetBlue, Delta, and United domestic flights with carry-on luggage is associated with delayed take-off time using data from flightstats.com from January 2015- December 2015.
+- Can you create a cross-sectional analysis from a longitudinal data collection? How?
 
 <a name="#guidedpractice"></a>
 ## Guided Practice: Write a research question with raw data (10 mins)
@@ -178,16 +178,16 @@ Looking at the data from Kaggle's Titanic competition, let's write a high qualit
 - Resource: [Data dictionary](https://www.kaggle.com/c/titanic/data)
 - Format: Think, Pair, Share
 
-> **Check:**
+**Check:**
 
-> 1. Q: What type of data is this cross-sectional or longitudinal?
+1. Q: What type of data is this cross-sectional or longitudinal?
     - A: cross-sectional
 
-> 2. Q: What will we be measuring (hint: look back at the previous example)
+2. Q: What will we be measuring (hint: look back at the previous example)
     - A: The association between being a woman or a child and survival on the Titanic.
 
-> 3. Q: Write out a SMART aim for this data:
-    - A: Using data from April 15, 1912, taken from  the Titanic diaster, we will determine the association of gender, age (in years) and survival.
+3. Q: Write out a SMART aim for this data:
+    - A: Using data from April 15, 1912, taken from the Titanic disaster, we will determine the association of gender, age (in years) and survival.
 
 <a name="review1"></a>
 ## SMART Review
@@ -236,7 +236,7 @@ Data dictionaries are often our primary source to help judge the quality of our 
 
 Data dictionaries are also where you'll identify any requirements, assumptions, and constraints of your data. Note that you should never assume that a pre-existing data dictionary is complete. It is often going to be up to you to test your assumptions and add to your dictionary.
 
-> **Check:** What is a 'data dictionary' and what is it used for? Why?
+**Check:** What is a 'data dictionary' and what is it used for? Why?
 
 
 <a name="codealong"></a>
@@ -259,7 +259,7 @@ Additionally, we often have to merge data together, correct missing data, and pl
 
 > Instructor's Note: View [Examples from the Sample Notebook](./code/numpy-and-pandas.ipynb)
 
-> **Check:** What is a 'dataframe' and when would you use one?
+**Check:** What is a 'dataframe' and when would you use one?
 
 
 <a name="introduction3"></a>

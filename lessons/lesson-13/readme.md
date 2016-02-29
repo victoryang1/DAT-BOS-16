@@ -16,7 +16,7 @@ DS | Lesson 13
 - List common tasks associated with:
   - use-cases
   - tokenization
-  - tagging 
+  - tagging
   - parsing
 - Demonstrate how to classify text or documents using `scikit-learn`
 
@@ -26,7 +26,7 @@ DS | Lesson 13
 - Experience with sckit-learn classifiers, specifically Random Forests and Decision trees
 - Install `spacy` with `pip install spacy` (or use Anaconda)
 - Run the `spacy` download data command
-  
+
   ```python
   python -m spacy.en.download --force all
   ```
@@ -40,7 +40,7 @@ DS | Lesson 13
 - Add to the "Additional Resources" section for this lesson
 - Install `spacy` with `pip install spacy` (or use Anaconda)
 - Run the `spacy` download data command
- 
+
   ```python
   python -m spacy.en.download --force all
   ```
@@ -62,7 +62,7 @@ DS | Lesson 13
 ## Review: Decision Trees and Random Forests  (10 mins)
 Recall definitions of Decision Trees and Random Forests from previous lesson.
 
-> **Check:** What are some important features of decision trees and random forests?
+**Check:** What are some important features of decision trees and random forests?
 
   - Decision trees are weak learners that are easy to overfit
   - Random forests are strong models that made up a collection of decision trees
@@ -73,7 +73,7 @@ Recall definitions of Decision Trees and Random Forests from previous lesson.
 <a name="introduction-nlp"></a>
 ## Introduction: Natural Language Processing (30 mins)
 
-### What is Natural Language Procesing? (NLP)
+### What is Natural Language Processing? (NLP)
 
 Natural language processing is the task of extracting meaning and information from text documents. There are many types of information we might want to extract; these include simple classification tasks, such as deciding what category a piece of text falls into or what tone it has, as well as more complex tasks like translating or summarizing text.
 
@@ -107,7 +107,7 @@ Stemming and lemmatization are two solutions to this type of problem. Once we've
 
 - Stemming removes endings with `s`, `es`, `ly`, `ing`, and `ed`.
 
-This is useful so that we can treat the word `happy` and `happily` similarly. 
+This is useful so that we can treat the word `happy` and `happily` similarly.
 
 There are many well-known stemmer functions that can import many of these common endings, most notably the [Porter stemmer](http://tartarus.org/martin/PorterStemmer/).
 
@@ -115,11 +115,11 @@ There are many well-known stemmer functions that can import many of these common
 
 For example, we can identify that "bad" and "badly" are similar using stemming.  However, this heuristic won't be able to tell that "better" and "best" are similar. That's where lemmatization comes in handy.
 
-> **Check:** Can you think of other problem words or phrases that might require these tools?
+**Check:** Can you think of other problem words or phrases that might require these tools?
 
 ### Parsing and Tagging
 
-Another classic NLP problem involves _parsing_ text and _tagging_. In order to understand the various elements of a sentence, we need to **tag** important topics and **parse** their dependencies. Our goal is to successfully identify the actors and actions in the text in order to make informed decisions. 
+Another classic NLP problem involves _parsing_ text and _tagging_. In order to understand the various elements of a sentence, we need to **tag** important topics and **parse** their dependencies. Our goal is to successfully identify the actors and actions in the text in order to make informed decisions.
 
 For example if we are processing financial news, we might need to identify which companies are involved and any actions they are taking. We would then be able to create an alert when a specific company releases a new product.  
 
@@ -136,7 +136,7 @@ Tagging and parsing is in fact made up of a few overlapping sub-problems:
 
 As you can see, NLP requires a large number of overlapping rules and dictionaries; however, the potential benefits are enormous.
 
-> **Check:** How might NLP be applied within your current jobs or final projects? What are some potential use-cases?
+**Check:** How might NLP be applied within your current jobs or final projects? What are some potential use-cases?
 
 ***
 
@@ -149,7 +149,7 @@ Two popular NLP toolkits in Python are `nltk` and `spacy`. `nltk` is the most po
 
 We'll be using `spacy` in this class, although `nltk` has a similar interface and functionality. Most of the utilities and individual tasks we'll be performing also have their own specialized tools available as well.
 
-Let's start by attempting to process some of the titles. 
+Let's start by attempting to process some of the titles.
 
 First, we'll load our NLP toolkit by specifying the language:
 
@@ -160,12 +160,12 @@ First, we'll load our NLP toolkit by specifying the language:
   ```
 
   This toolkit has 3 pre-processing engines:
-  
+
     - a tokenizer: to identify the word tokens
     - a tagger: to identify the concepts described by the words
     - a parser: to identify the phrases and links between the different words
 
-Each of these pre-processing tasks can be overridden with a specific tool you have (you may want a specialized tokenizer that looks for stock quotes or instagram posts instead of news headlines). You could also write your own tokenizer or tagger for those tasks and use them in place of the default ones `spacy` provides. For now, we'll use the defaults.
+Each of these pre-processing tasks can be overridden with a specific tool you have (you may want a specialized tokenizer that looks for stock quotes or Instagram posts instead of news headlines). You could also write your own tokenizer or tagger for those tasks and use them in place of the default ones `spacy` provides. For now, we'll use the defaults.
 
 The first title is:
 
@@ -178,7 +178,7 @@ The first title is:
  title = "IBM sees holographic calls, air breathing batteries"
  parsed = nlp_toolkit(title)
 
- for (i, word) in enumerate(parsed): 
+ for (i, word) in enumerate(parsed):
     print("Word: {}".format(word))
     print("\t Phrase type: {}".format(word.dep_))
     print("\t Is the word a known entity type? {}".format(word.ent_type_  if word.ent_type_ else "No"))
@@ -191,17 +191,17 @@ The `nlp_toolkit` here runs each of the individual pre-processing tools: first i
 Output:
 
 ```
-Word: IBM 
+Word: IBM
    Phrase type: nsubj
    Is the word a known entity type? ORG
    Lemma: ibm
    Parent of this word: see
-Word: sees 
+Word: sees
    Phrase type: ROOT
    Is the word a known entity type? No
    Lemma: see
    Parent of this word: see
-Word: holographic 
+Word: holographic
    Phrase type: amod
    Is the word a known entity type? No
    Lemma: holographic
@@ -211,17 +211,17 @@ Word: calls
    Is the word a known entity type? No
    Lemma: call
    Parent of this word: see
-Word: , 
+Word: ,
    Phrase type: punct
    Is the word a known entity type? No
    Lemma: ,
    Parent of this word: call
-Word: air 
+Word: air
    Phrase type: compound
    Is the word a known entity type? No
    Lemma: air
    Parent of this word: breathing
-Word: breathing 
+Word: breathing
    Phrase type: compound
    Is the word a known entity type? No
    Lemma: breathing
@@ -235,9 +235,9 @@ Word: batteries
 
 In this output:
 
-- "IBM" is identified as an organization (ORG). 
-- We identify a phrase 'holographic calls' 
-- We identify a compand noun phrase at the end - 'air breathing batteries'.
+- "IBM" is identified as an organization (ORG).
+- We identify a phrase 'holographic calls'
+- We identify a compound noun phrase at the end - 'air breathing batteries'.
 - We can that 'see' is at a root as it is the action 'IBM' is taking.
 - Additionally, we can see that 'batteries' was lemmatized to 'battery'.
 
@@ -253,7 +253,7 @@ data['references_organization'] = data['title'].fillna('').map(references_organi
 data[data['references_organization']][['title']].head()
 ```
 
-> **Check:** Write a function to identify titles that have mention an organization (ORG) and person (PERSON).
+**Check:** Write a function to identify titles that have mention an organization (ORG) and person (PERSON).
 
 Solution:
 
@@ -295,21 +295,21 @@ In doing so, we'll have many encoding or representation questions along the way,
 
 The answer to each of these is problem dependent, but all of them will affect our modeling problem.
 
-> **Check:** What do you think? Does word order matter? Case? Punctuation? Discuss and explain your reasoning.
+**Check:** What do you think? Does word order matter? Case? Punctuation? Discuss and explain your reasoning.
 
 Solution:
 
 - [ ] Yes, order of words may matter.
-  - This is especially true when trying to predict postive or negative sentiment.
+  - This is especially true when trying to predict positive or negative sentiment.
 - [ ] Yes, punctuation may matter.
-  - In sentiment prediction, saying "amazing!!!" may result in a diferent tone than "amazing."
+  - In sentiment prediction, saying "amazing!!!" may result in a different tone than "amazing."
 - [ ] Yes, letter case may matter.
   - Upper-case words or phrases are usually proper nouns. For instance, "Python" is more likely to refer to a programming language, while "python" may refer to either the programming language or a type of snake.
 
 
 Note: Classification using words from the text as features is known as **bag-of-words** classification.
 
-> **Check:** What is "bag-of-words" classification stand for and when should it be used? What are some benefits to this approach?
+**Check:** What is "bag-of-words" classification stand for and when should it be used? What are some benefits to this approach?
 
 ***
 
@@ -331,13 +331,13 @@ There are built-in utilities to pull out features from text in `scikit-learn` - 
 
 **REMEMBER**: Using all of the words can be very useful, but we also need to remember to use regularization to avoid overfitting. Otherwise, using rare words may result in the model learning something that isn't generalizable.
 
-For example, if we are attempting to predict sentiment and see an article that has the word "bessst!", we may link this word to positive sentiment. However, very few articles may ever use this word, so it isn't actually very useful for our model. 
+For example, if we are attempting to predict sentiment and see an article that has the word "bessst!", we may link this word to positive sentiment. However, very few articles may ever use this word, so it isn't actually very useful for our model.
 
 ```python
 from sklearn.feature_extraction.text import CountVectorizer
 
-vectorizer = CountVectorizer(max_features = 1000, 
-                             ngram_range=(1, 2), 
+vectorizer = CountVectorizer(max_features = 1000,
+                             ngram_range=(1, 2),
                              stop_words='english',
                              binary=True)
 ```
@@ -358,7 +358,7 @@ vectorizer = CountVectorizer(max_features = 1000,
 
 Like models or estimators in `scikit-learn`, vectorizers follow a similar interface:  
 
-  - We create a vectorizer object with the parameters of our feature space. 
+  - We create a vectorizer object with the parameters of our feature space.
   - We `fit` a vectorizer to learn the vocabulary
   - We `transform` a set of text into that feature space.
 
@@ -372,8 +372,8 @@ titles = data['title'].fillna('')
 
 from sklearn.feature_extraction.text import CountVectorizer
 
-vectorizer = CountVectorizer(max_features = 1000, 
-                             ngram_range=(1, 2), 
+vectorizer = CountVectorizer(max_features = 1000,
+                             ngram_range=(1, 2),
                              stop_words='english',
                              binary=True)
 
@@ -385,17 +385,17 @@ X = vectorizer.transform(titles)
 ```
 
 #### Random Forest Prediction Model
-Build a random forest model to predict evergreeness of a website using the title features
+Build a random forest model to predict the "evergreeness" of a website using the title features
 
 ```python
 from sklearn.ensemble import RandomForestClassifier
 
 model = RandomForestClassifier(n_estimators = 20)
-    
+
 - Use `fit` to learn the vocabulary of the titles
 vectorizer.fit(titles)
 
-- Use `tranform` to generate the sample X word matrix - one column per feature (word or n-grams)
+- Use `transform` to generate the sample X word matrix - one column per feature (word or n-grams)
 X = vectorizer.transform(titles)
 y = data['label']
 
@@ -415,7 +415,7 @@ The Term Frequency is equivalent to `CountVectorizer` features, or the number of
 
 To define Inverse Document Frequency, first let's define Document Frequency. **Document Frequency** is the % of documents that a particular word appears in. For example, you could assume `the` appears in 100% of documents, while words like `Syria` would have relatively low document frequency.  
 
-**Inverse Document Frequency** is simply `1 / Document Frequency` (although sometimes this is altered to `log(1 / Document Frequency)`). 
+**Inverse Document Frequency** is simply `1 / Document Frequency` (although sometimes this is altered to `log(1 / Document Frequency)`).
 
 Looking at our final term:
   Term Frequency * Inverse Document Frequency = Term Frequency / Document Frequency.  
@@ -431,9 +431,9 @@ vectorizer = TfidfVectorizer()
 
 `TfidfVectorizer` follows the same `fit` and `fit_transform` interface of `CountVectorizer`.
 
-> **Check:** What does TF-IDF stand for? What does this function do and why is it useful?
+**Check:** What does TF-IDF stand for? What does this function do and why is it useful?
 
-> **Check:** Use `TfidfVectorizer` to create a feature representation of the stumbleupon titles.
+**Check:** Use `TfidfVectorizer` to create a feature representation of the stumbleupon titles.
 
 > Instructor Note: You can find the solutions in the [solution code notebook](./code/solution-code/solution-code-13.ipynb).
 
@@ -446,7 +446,7 @@ Tie together the text features of the title with one more feature sets from the 
 - Use the `body` text instead of the `title` text - is this an improvement?
 - Use `TfIdfVectorizer` instead of `CountVectorizer` - is this an improvement?
 
-> **Check:** Were you able to prepare a model that uses both quantitative features and text features? Does this model improve the AUC?
+**Check:** Were you able to prepare a model that uses both quantitative features and text features? Does this model improve the AUC?
 
 ***
 

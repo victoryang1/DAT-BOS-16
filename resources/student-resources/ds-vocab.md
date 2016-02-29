@@ -68,18 +68,33 @@
 
 - Aperiodic cycles
 - ARIMA model - Autoregressive integrated moving average
+- Autocorrelation
+- Collinearity
 - Decay
 - Decision trees
+- Denormalized
+- Detrending
+- Differencing
 - Dimensional reduction
 - Document-based databases
+- Lag
 - LDA - latent dirichlet allocation
+- Mean scaling
 - Moving Average
+- multi-collinearity
+- Normalized
 - NLP - natural language processing
 - NLTK - natural language toolkit
+- Non-stationary
 - Periodicity
 - Random forests
+- Refactor
 - Relational databases
+- Residuals
 - Rolling means
+- Stationarity
+- Time-series
 - Tokenize
 - Topic models
+- Unit Testing
 - Weighted Moving Average

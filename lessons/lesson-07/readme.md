@@ -60,7 +60,7 @@ Recall the central metric introduced for linear regressions, r-squared. If we ha
 
 It is typical to use multiple prediction metrics while solving for an optimal solution to a regression problem. In particular, we're interested in the advantages of a loss function; that is, putting a cost against our prediction algorithm. While we use r-squared to inch our ways closer to 1, we'll explore loss functions and find ways to **refine** our model in order to minimize that value toward 0.
 
-> **Check:** What is r-squared? What is a residual?
+**Check:** What is r-squared? What is a residual?
 
 ---
 
@@ -71,7 +71,7 @@ It is typical to use multiple prediction metrics while solving for an optimal so
 
 In the last class, we reviewed one expectation of linear models: that the residual error be normal, and a median close to 0.
 
-y = betas * x + alpha + epsilon` <- epsilon == error
+y = betas * x + alpha + epsilon <- epsilon == error
 
 ![residual_histogram](https://cloud.githubusercontent.com/assets/846010/11647511/d51bcfa2-9d36-11e5-8496-a29a2b01f5c1.png)
 
@@ -85,7 +85,7 @@ For squared error, we will:
 2. Square each residual.
 3. Take the mean of the squared residual error.
 
-sklearn's metrics module includes a mean_squared_error function. Sklearn's metrics module will be the tool we use to evaluate performance for the majority of our models
+Sklearn's metrics module includes a mean_squared_error function. Sklearn's metrics module will be the tool we use to evaluate performance for the majority of our models
 
 ``` python
 from sklearn import metrics
@@ -158,10 +158,10 @@ Otherwise, one objective of a _biased_ model is to trade this biased error for _
 
 Since the whole point of prediction is for a model to work on data that the model hasn't seen yet, your want your model to perform _generally_ well on new data! If your model has a lot of _bias_, then even if you have a good r-squared or mean squared error from learned data, it could still perform **poorly** on new predictive data.
 
-> **Check:** Which of the following scenarios would be better for a weatherman:
+**Check:** Which of the following scenarios would be better for a weatherman?:
 
-> 1. Knowing that I can very accurately "predict" the temperature outside from previous days perfectly, but be 20-30 degrees off for future days?
-> 2. Knowing that I can accurately predict the general trend of the temperate outside from previous days, and therefore am at most only 10 degrees off on future days?
+1. Knowing that I can very accurately "predict" the temperature outside from previous days perfectly, but be 20-30 degrees off for future days?
+2. Knowing that I can accurately predict the general trend of the temperate outside from previous days, and therefore am at most only 10 degrees off on future days?
 
 
 > Answer: If you said the second case, you just described what we call a good model fit.
@@ -171,9 +171,9 @@ Since the whole point of prediction is for a model to work on data that the mode
 <a name="demo-cv"></a>
 ## Demo: Cross Validation (20 minutes)
 
-One approach data scientists use to account for bias is cross validation. The basic idea of cross validation is to generate several models based on different cross sections of the data, measure performance of each, and then take the mean performance. This technique is one way to swap bias error for generalized error in our model. 
+One approach data scientists use to account for bias is cross validation. The basic idea of cross validation is to generate several models based on different cross sections of the data, measure performance of each, and then take the mean performance. This technique is one way to swap bias error for generalized error in our model.
 
-In other words, this method helps us create weatherman Scenario #2 - describing previous trends with a general amount of accuracy in order to make more specifically accurate predictions about future trends.
+In other words, this method helps us create weatherman Scenario 2 - describing previous trends with a general amount of accuracy in order to make more specifically accurate predictions about future trends.
 
 ![crossvalidation_kfold](http://i.stack.imgur.com/8hyyh.png)
 
@@ -202,7 +202,7 @@ lm = linear_model.LinearRegression().fit(modeldata, y)
 print metrics.mean_squared_error(y, lm.predict(modeldata))
 ```
 
-> **Check:** While the cross validated approach here generated more overall error, which of the two approaches would predict new data more accurately: the single model or the cross validated, averaged one? Why?
+**Check:** While the cross validated approach here generated more overall error, which of the two approaches would predict new data more accurately: the single model or the cross validated, averaged one? Why?
 
 ***
 
@@ -269,16 +269,16 @@ In this example; L1 (lasso) massively increases our error (likely from not fitti
 
 Regularization, like any important optimization function, will be more important during _cross validation_. In particular, we will optimize the regularization weight parameter _through_ cross validation.
 
-> **Check:** Why is regularization important? What does it protect against and how?
+**Check:** Why is regularization important? What does it protect against and how?
 
 ***
 
 <a name="demo-reg"></a>
 ## Demo: Understanding Regularization Effects (15 mins)
 
-> **Check:** We are working with the bikeshare data to predict riders over hours/days with a few features. Why does it make sense to use a ridge regression over a lasso regression?
+**Check:** We are working with the bike-share data to predict riders over hours/days with a few features. Why does it make sense to use a ridge regression over a lasso regression?
 
-Let's test a variety of alpha weights for Ridge Regression on the bikeshare data.
+Let's test a variety of alpha weights for Ridge Regression on the bike-share data.
 
 ```python
 alphas = np.logspace(-10, 10, 21)
@@ -343,7 +343,7 @@ print gs.grid_scores_ # shows all the grid pairings and their performances.
 Use similar code from above, but now:
 
 1. Introduce cross validation into the grid search. This is accessible from the `cv` argument.
-2. Addto the param_grid dictionary fit_intercept = True and False.
+2. Add to the param_grid dictionary fit_intercept = True and False.
 3. Re-investigate the best score, best estimator, and grid scores attributes as a result of the grid search.
 
 ***
@@ -387,9 +387,9 @@ while not optimized:
 
 ```
 
-> **Check:**
-> 1. What is the code doing?
-> 2. What could go wrong?
+**Check:**
+1. What is the code doing?
+2. What could go wrong?
 
 One particular challenge with gradient descent is that it could potentially solve for a _local_ minimum of error, instead of a _global_ minimum.
 
@@ -412,7 +412,7 @@ In this chart, our local optimum distance gets you close to your desired locatio
 Gradient Descent works best when:
 
 1. We are working with a large data set. Smaller sets are more prone to error, and proneness to error could be steps in the wrong direction.
-2. Data is severely cleaned up and normalized (such as the bikeshare data set).
+2. Data is severely cleaned up and normalized (such as the bike-share data set).
 
 Gradient descent's advantages are huge: with a very large data set, OLS will take significantly longer to solve (computationally). We may not notice it as much on the smaller data sets in class, but in a live system with millions of data points, gradient descent is vastly superior. You'll particularly see this with the regressors `partial_fit()` function.
 
@@ -427,7 +427,7 @@ print lm.score(modeldata, y)
 print metrics.mean_squared_error(y, lm.predict(modeldata))
 ```
 
-> **Check:** Untuned, how well did gradient descent perform compared to OLS?
+**Check:** Untuned, how well did gradient descent perform compared to OLS?
 
 ***
 
@@ -438,11 +438,11 @@ There are tons of ways to approach a regression problem. The regularization tech
 
 For this deliverable, our goals are to:
 
-- implement the gradient descent approach to our bikeshare modeling problem,
+- implement the gradient descent approach to our bike-share modeling problem,
 - show how gradient descent solves and optimizes the solution,
 - demonstrate the grid_search module!
 
-While exploring the Gradient Descent regressor object, you'll build a grid search using the stochastic gradient descent estimator for the bikeshare data set. Continue with either the model you evaluated last class or the simpler one from today. In particular, be sure to implement the "param_grid" in the grid search to get answers for the following questions:
+While exploring the Gradient Descent regressor object, you'll build a grid search using the stochastic gradient descent estimator for the bike-share data set. Continue with either the model you evaluated last class or the simpler one from today. In particular, be sure to implement the "param_grid" in the grid search to get answers for the following questions:
 
 1. With a set of alpha values between 10^-10 and 10^-1, how does the mean squared error change?
 2. Based on the data, we know when to properly use l1 vs l2 regularization. By using a grid search with l1_ratios between 0 and 1 (increasing every 0.05), does that statement hold true? If not, did gradient descent have enough iterations?
@@ -471,7 +471,7 @@ print 'ALL ESTIMATORS'
 print gs.grid_scores_
 ```
 
-> **Check:** Were you able to answer all three questions? What questions do you have?
+**Check:** Were you able to answer all three questions? What questions do you have?
 
 ***
 

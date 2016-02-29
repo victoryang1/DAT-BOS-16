@@ -49,10 +49,10 @@ DS | Lesson 9
 
 Read through the following questions and brainstorm answers for each:
 
-1. In class, we've covered two different types of algorithms so far: the *linear model* (ordinary least squares, OLS) and *k-nearest neighbors* (knn). What are the main differences between these two? What is different about how they approach solving the problem?
+1. In class, we've covered two different types of algorithms so far: the *linear model* (ordinary least squares, OLS) and *k-nearest neighbors* (KNN). What are the main differences between these two? What is different about how they approach solving the problem?
     - For example, what is _interpretable_ about OLS compared to what's _interpretable_ in KNN?
 
-    > A: OLS is used to solve a continuous regression problem, while KNN is used to solve a categorical problem. 
+    > A: OLS is used to solve a continuous regression problem, while KNN is used to solve a categorical problem.
 
 2. What would be the advantage of using a linear model like OLS to solve a classification problem, compared to KNN?
     - What are some challenges for using OLS to solve a classification problem (say, if the values were either 1 or 0)?
@@ -66,13 +66,13 @@ Logistic Regression is a _linear_ approach to solving a classification problem. 
 
 Regression results, as defined, can have a value ranging from negative infinity to infinity. However, not all regression problems will use that entire range. For example, imagine predicting a football player's salary: it wouldn't be negative, and while it would be high, there is an eventual cap.
 
-Classification is used when the predicted values (class labels) are not necessarily greater or less than each other. Logically this makes sense, but since most classification problems are binary (0 or 1), and 1 is technically greater than 0... wouldn't it make sense to apply the concept of a regression to solve classification? How could we contain those bounds? 
+Classification is used when the predicted values (class labels) are not necessarily greater or less than each other. Logically this makes sense, but since most classification problems are binary (0 or 1), and 1 is technically greater than 0... wouldn't it make sense to apply the concept of a regression to solve classification? How could we contain those bounds?
 
 Below, we'll review some approaches to regression that will show us how to apply it to classification problems.
 
 ### Fix 1: Probability
 
-One approach is to predict the probability that an observation belongs to a certain class. We could assume that the _prior_ probability (or the _bias_) of a class is the class distribution. 
+One approach is to predict the probability that an observation belongs to a certain class. We could assume that the _prior_ probability (or the _bias_) of a class is the class distribution.
 
 For example, if we know that roughly 700 people from the Titanic survived out of 2200 total, then without knowing anything about the passengers and crew, the probability of survival would be ~0.32 (32%). However, we still need a way to use a linear function to either increase or decrease the probability of an individual, given any additional data we know about them.
 
@@ -98,7 +98,7 @@ Our sigmoid function is defined mathematically as:
 
 `1 / 1 + e^-t`
 
-Recall that `e` is the inverse of the natural log. As t increases/decreases, the result is closer to 1 or 0. When t = 0, the result would be 0.5. 
+Recall that `e` is the inverse of the natural log. As t increases/decreases, the result is closer to 1 or 0. When t = 0, the result would be 0.5.
 
 Since `t` decides how much to increase or decrease the value away from 0.5, `t` can help with interpretation when solving for something like a coefficient. But in its current form, it is not as useful.
 
@@ -113,7 +113,7 @@ As mentioned above, the _logit_ function is the inverse of the _sigmoid_ functio
 
 `ln(p / (1 - p))`
 
-Here, the value within the natural log (`p / (1 - p)`) represents _odds_. Taking the natural log of odds generates _log odds_ (hence, logit). 
+Here, the value within the natural log (`p / (1 - p)`) represents _odds_. Taking the natural log of odds generates _log odds_ (hence, logit).
 
 The beauty of the logit function is that it allows for values between negative infinity and infinity, but provides us probabilities between 0 and 1.
 
@@ -173,9 +173,9 @@ Use the data `collegeadmissions.csv` and the [Logistic Regression](http://scikit
 <a name="intro-eval"></a>
 ## Introduction: Advanced Classification Metrics: Precision, Recall, AUC.
 
-Accuracy is only one of several metrics used when solving for a classification problem. It is best defined as `total predicted correct / total data set`. But accuracy alone isn't always usable. 
+Accuracy is only one of several metrics used when solving for a classification problem. It is best defined as `total predicted correct / total data set`. But accuracy alone isn't always usable.
 
-For example, if we know a prediction is 75% accurate, accuracy doesn't provide any insight into why the 25% was wrong. Was it wrong _equally_ across all class labels? Did it just guess one class label for all predictions and 25% of the data was just the other label? 
+For example, if we know a prediction is 75% accurate, accuracy doesn't provide any insight into why the 25% was wrong. Was it wrong _equally_ across all class labels? Did it just guess one class label for all predictions and 25% of the data was just the other label?
 
 It's important to look at other metrics to fully understand the problem.
 

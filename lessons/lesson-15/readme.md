@@ -41,20 +41,20 @@ DS | Lesson 15
 ---
 <a name="opening"></a>
 ## Opening (5 min)
-In this class, we will discuss analyzing data that is changing over time. While most of our previous examples have assumed that our data was collected over time, we didn't care which data points were collected earlier or later. We made assumptions that the data was _not_ changing over time. 
+In this class, we will discuss analyzing data that is changing over time. While most of our previous examples have assumed that our data was collected over time, we didn't care which data points were collected earlier or later. We assumed that the data was _not_ changing over time.
 
-In this class, we will discuss statistics associated with data with that is changing over time and look at how to measure that change.
+In this class, we will discuss statistics associated with data with that _is_ changing over time and look at how to measure that change.
 
 Specifically, we will focus on IDENTIFYING problems that are related to time series data and then understanding the types of questions we are interested in. Additionally, we will discuss the unique aspects of MINING and REFINING time series data.
 
 <a name="introduction-timeseries"></a>
 ## Intro: What are (is) time series data? (20 mins)
 
-Time series data is any dataset where the individual data points change over time. 
+Time series data is any dataset where the individual data points change over time.
 
 This would be fairly common in most business data, since we expect sales to change according to the seasons and trends. You will find this property in many social phenomena as well; for example, it's been well documented that traditionally there are higher crime rates in the summer.
 
-To be honest, _most_ datasets have an important time component, but we typically assume it's fairly minimal. 
+To be honest, _most_ datasets have an important time component, but we typically assume it's fairly minimal.
 
 If we are attempting to analyze salaries in an industry, it's clear that salaries shift over time, depending on economic factors. But, if we are examining the problem on a smaller scale (say 3-5 years) the effect of time on salaries is much smaller than other variables, like industry or position.
 
@@ -63,7 +63,7 @@ Therefore, we often need to focus on identifying the specific aspects of our dat
 
 Typically, our time series data will be a sequence of values. We will be interested in studying the changes in this series in order to see how related the individual values are. How much does this week's sales affect next week's? How much does today's stock price affect tomorrow's?
 
-> **Check** Identify any time components of previous datasets used in class, like the `stumbleupon` dataset, for example. This dataset collects news stories to see which are more long-lasting. In order to do this, we need to identify current event stories, and it's likely we will have to retrain our model over time.
+**Check** Identify any time components of previous datasets used in class, like the `stumbleupon` dataset, for example. This dataset collects news stories to see which are more long-lasting. In order to do this, we need to identify current event stories, and it's likely we will have to retrain our model over time.
 
 Time series analysis is useful for sales analysis, stock market trends, economic phenomena, social science problems, and more.
 
@@ -263,7 +263,7 @@ store1_data_2015[
 
 To measure how much the sales are correlated with each other, we want to compute the _autocorrelation_ of the 'Sales' column. In pandas, we'll do this with the `autocorr` function.
 
-`autocorr` takes one argument, the `lag` - which is how many prior data points should be used to compute the correlation. If we set the `lag` to 1, we compute the correlation between every point and the point directly preceding it, while setting `lag` to 10. Thi computes the correlation between every point and the point 10 days earlier:
+`autocorr` takes one argument, the `lag` - which is how many prior data points should be used to compute the correlation. If we set the `lag` to 1, we compute the correlation between every point and the point directly preceding it, while setting `lag` to 10. This computes the correlation between every point and the point 10 days earlier:
 
 ```python
 data['Sales'].resample('D', how='mean').autocorr(lag=1)
@@ -353,7 +353,7 @@ data['Sales'].diff(periods=7)
 
 This would compute the difference in sales from every day to the same day in a previous week. **Difference functions** allow us to identify seasonal changes when we see repeated up or downswings.
 
-The following plot of the month to month change (`diff`) in jobs from FiveThiryEight helps identify the seasonal component to a number of retail jobs:
+The following plot of the month to month change (`diff`) in jobs from FiveThirtyEight helps identify the seasonal component to a number of retail jobs:
 
 ![](./assets/images/casselman-datalab-wsj2.png)
 

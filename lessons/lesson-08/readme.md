@@ -36,8 +36,8 @@ DS | Lesson 8
 | TIMING  | TYPE  | TOPIC  |
 |:-:|---|---|
 | 5 min  | [Opening](#opening)  | Discuss lesson objectives  |
-| 10-15 mins  | [Introduction](#introduction-class) | What is Classification? | 
-| 20 mins  | [Guided Practice](#guided-practice-class) | Regression vs Classification | 
+| 10-15 mins  | [Introduction](#introduction-class) | What is Classification? |
+| 20 mins  | [Guided Practice](#guided-practice-class) | Regression vs Classification |
 | 20 mins  | [Independent Practice](#ind-practice-class)  | Build a Classifier |
 | 10-15 mins  | [Introduction](#introduction-knn)  | Introduction to K Nearest Neighbors |
 | 10-15 mins  | [Demo](#demo-knn)  | Demo of KNN |
@@ -54,7 +54,7 @@ In class so far, we've primarily worked with regression problems: machine learni
 
 While predicting something like the cost of a house or the number of clicks on an ad, we use ranges to sort our values. But other problems, like whether a loan is going to default or not, don't make sense within those parameters. A loan is either going to default, or it's not. We call these binary problems.
 
-> **Check:** What if we want to build a model to predict set values, like an social media status or photo color? How about the gender of a baby? Do we use regression problems or binary values? Do the same principles apply?
+**Check:** What if we want to build a model to predict set values, like an social media status or photo color? How about the gender of a baby? Do we use regression problems or binary values? Do the same principles apply?
 
 ---
 
@@ -78,7 +78,7 @@ Data Problem | Class Labels
 Patient data problem | is smoker, is not smoker
 pixel color | red, blue (etc)
 
-The easiest way to understand if our `y`, the dependent variable, is a classification problem or not, is to see if the values can be ordered given math. 
+The easiest way to understand if our `y`, the dependent variable, is a classification problem or not, is to see if the values can be ordered given math.
 
 For example, if predicting revenue, $100MM is greater than $90MM (and more so, could be negative!), so revenue prediction sounds like a _regression_ problem. Red is not inherently greater than or less than blue, therefore predicting this pixel is a _classification_ problem, with "red" and "blue" as the class labels.
 
@@ -184,7 +184,7 @@ print knn.score(iris.data[:,2:], iris.target)
 Above we have the simplest implementation of KNN using sklearn, attempting to predict one of three iris types based the size of the iris. We use the default `n_neighbors` of 5, which will remove most ties. Of course, there could be ties; for example, if there are three labels, and two of them get two votes each, the last label would get one vote.
 
 ### What happens in ties?
-It is certainly possible for a knn classifier to have a tie for votes: in binary classification, we'd see this using 4 for k and each value (0 and 1) getting two votes each. For sklearn, in the case of ties, it will designate the class based on what it saw first in the _training set_.
+It is certainly possible for a KNN classifier to have a tie for votes: in binary classification, we'd see this using 4 for k and each value (0 and 1) getting two votes each. For sklearn, in the case of ties, it will designate the class based on what it saw first in the _training set_.
 
 We can also implement a _weight_, so that the total distance plays a more significant role. Try changing the `weights` argument in the previous code to "distance" and see how it affects the accuracy.
 
@@ -196,7 +196,7 @@ With KNN, we do _not_ have regularization, and a different problem: since KNN wo
 
 In a related example, consider the similarity of users for a particular product. When the product is very broad (for example, a newspaper/news website), the audience will also be very broad, so the newspaper will likely have many features: different sections, topics, types of stories, writers, etc. Yet with so many different different parts that appeal to such a broad audience, user similarity should actually be high!
 
-What about a product like toothpaste? While it also appeals to a broad audience, the _types_ of toothpaste (and the features that separate them) are quite limited. It would be much simpler to identify "distance" between toothpaste users, since the feature set ("has flouride," "controls tarter", etc) is much smaller.
+What about a product like toothpaste? While it also appeals to a broad audience, the _types_ of toothpaste (and the features that separate them) are quite limited. It would be much simpler to identify "distance" between toothpaste users, since the feature set ("has fluoride," "controls tarter", etc) is much smaller.
 
 <a name="introduction-eval"></a>
 ## Introduction to Classification Metrics
@@ -211,7 +211,7 @@ Accuracy's equation is simple: of all the samples/observations we predicted, how
 
 Misclassification rate is directly opposite; of all the samples/observations we predicted, how many were incorrect? This is a value we'd want to decrease (like mean squared error).
 
-Since they are opposite of each other, you can pick one or the other; effectively they will be the same. But when coding, **do** make sure that you are using a classification metric when solving a classification problem! 
+Since they are opposite of each other, you can pick one or the other; effectively they will be the same. But when coding, **do** make sure that you are using a classification metric when solving a classification problem!
 
 SKLearn will not intuitively understand if you are doing classification or regression, and accidentally using mean squared error for classification, or accuracy for regression, is a common programming pitfall.
 
@@ -249,8 +249,8 @@ gs.grid_scores_
 
 #### Bonus:
 
-1. By default, the KNN classifier in SKlearn uses the _Minkowski metric_ for distance, given p: this is how it decides to calculate distance (using a triangle, p=1 is using the length of sides 1+2 to get the distance from a to c; p=2 using the length of side 3). 
-    - What _type_ of data does this metric work best for? 
+1. By default, the KNN classifier in SKlearn uses the _Minkowski metric_ for distance, given p: this is how it decides to calculate distance (using a triangle, p=1 is using the length of sides 1+2 to get the distance from a to c; p=2 using the length of side 3).
+    - What _type_ of data does this metric work best for?
     - What _type_ of data does this distance metric may not work for?
         - For help, read about [distance metrics in the sklearn documentation](http://scikit-learn.org/stable/modules/generated/sklearn.neighbors.DistanceMetric.html#sklearn.neighbors.DistanceMetric).
 2. It's possible to use KNN as a regression estimator. Using independent reading or your own brilliant creativity, come up with the following:

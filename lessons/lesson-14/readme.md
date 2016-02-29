@@ -20,7 +20,7 @@ DS | Lesson 14
 ### STUDENT PRE-WORK
 *Before this lesson, you should already be able to:*
 
-- Install `gensim` with `pip install gensim` 
+- Install `gensim` with `pip install gensim`
 - Recall and apply _unsupervised learning_ techniques
 - Recall probability distributions, specifically discrete multinomial distributions
 - Recall NLP essentials, including experience with `spacy`
@@ -53,7 +53,7 @@ DS | Lesson 14
 
 This lesson will continue on natural language processing with an emphasis on _latent variable models_.
 
-In our data science workflow, we will often be MINING datasets with a large amount of text or unstructured data. In our last class, we saw many techniques for MINING this data, including pre-processing and building linguistic rules to uncover patterns. We could also create _classifiers_ from this unstructured data. In this class, we'll continue with methods for MINEING or REFINING our understanding of text data by attempting to uncover structure or organization inherent in the text.
+In our data science workflow, we will often be MINING datasets with a large amount of text or unstructured data. In our last class, we saw many techniques for MINING this data, including pre-processing and building linguistic rules to uncover patterns. We could also create _classifiers_ from this unstructured data. In this class, we'll continue with methods for MINING or REFINING our understanding of text data by attempting to uncover structure or organization inherent in the text.
 
 Many of the advances in natural language processing have been about using data to learn the rules of grammar and language and then using those tools to extract information or build classification algorithms from the text. We saw these tools in our last class, including:
 
@@ -67,7 +67,8 @@ _Latent variable models_ are different in that instead of attempting to recreate
 
 We'll use _unsupervised_ learning techniques (discovering patterns or structure) to extract the information.
 
-Rather than inferring that 'Python' and 'C++' are both programming languages because they are often a noun preceded by the verb 'program' or 'code', we'll infer a category by identifing that they are often used in the same way. We won't need to guide them with particular phrases to look for parts of speech.
+Rather than inferring that 'Python' and 'C++' are both programming languages because they are often a noun preceded by the verb 'program' or 'code', we'll infer a category by identifying that they are often used in the same way. We won't need to guide them with particular phrases to look for parts of speech.
+
 
 <a name="introduction-nlp"></a>
 ## Introduction: Latent Variable Models (55 mins)
@@ -112,7 +113,7 @@ There are many dimensionality techniques built into `scikit-learn`. One of the m
 
 ### Mixture Models and Language Processing
 
-Mixture models (and specifically **LDA** or **Latent Dirichlet Allocation**) take this concept further and generate more structure around the documents. Instead of just replacing correlated columns, we create clusters of common words and generate probability distributions to explicitly state how related words are. 
+Mixture models (and specifically **LDA** or **Latent Dirichlet Allocation**) take this concept further and generate more structure around the documents. Instead of just replacing correlated columns, we create clusters of common words and generate probability distributions to explicitly state how related words are.
 
 To understand this better, let's imagine a new way to generate text:
 
@@ -127,7 +128,7 @@ What this 'model' of text is assuming is that each document is some _mixture_ of
 ![Latent Dirichlet Allocation](./assets/images/lda-mixture-graphic.jpg)
 
 _Latent Dirichlet Allocation_ is a model that assumes this is the way text is generated and then attempts to learn two things:
-   
+
     1. What is the _word distribution_ of each topic?
     2. What is the _topic distribution_ of each document?
 
@@ -168,7 +169,7 @@ There are many variants as well, that attempt to incorporate more structure into
  - Variable number of topics
     - Test a different number of topics to find the best model
 
-> **Check:** Take any recent news-article and brainstorm which 3 topics this story is most likely made up of. Next, brainstorm which words are most likely derived from which of those 3 topics.
+**Check:** Take any recent news-article and brainstorm which 3 topics this story is most likely made up of. Next, brainstorm which words are most likely derived from which of those 3 topics.
 
 
 <a name="demo-lda"></a>
@@ -180,13 +181,13 @@ import gensim
 
 `gensim` is another library of language processing tools focused on latent variable models of text.
 
-We begin by first translating our set of documents (articles) into the same matrix reprsentation, with a row per document and a column per feature (word or n-gram).
+We begin by first translating our set of documents (articles) into the same matrix representation, with a row per document and a column per feature (word or n-gram).
 
 ```python
 from sklearn.feature_extraction.text import CountVectorizer
 
-cv = CountVectorizer(binary=False, 
-                     stop_words='english', 
+cv = CountVectorizer(binary=False,
+                     stop_words='english',
                      min_df=3)
 
 docs = cv.fit_transform(data.body.dropna())
@@ -216,7 +217,7 @@ In the model above, we need to explicitly specify the number of topics we want t
 
 Once we have `fit` this model, like other unsupervised learning techniques, most of our validation techniques are mostly about interpretation.
 
-- Did we learn reasonable topics? 
+- Did we learn reasonable topics?
 - Do the words that make up a topic make sense?
 
 We can evaluate this by viewing the top words for each topic:
@@ -253,13 +254,13 @@ while:
 ```
 is a topic mostly related to fashion and style.
 
-> **Check:** Demonstrate the code you used to generate the topics above. Hypothesize other topic interpretations.
+**Check:** Demonstrate the code you used to generate the topics above. Hypothesize other topic interpretations.
 
 
 <a name="introduction-word2vec"></a>
 ## Introduction: Word2Vec (20 mins)
 
-`Word2Vec` is another unsupervised model for latent variable natural language processing. It is a model that was [orginally released by Google](https://code.google.com/p/word2vec/) and further [improved at Stanford](http://nlp.stanford.edu/projects/glove/)
+`Word2Vec` is another unsupervised model for latent variable natural language processing. It is a model that was [originally released by Google](https://code.google.com/p/word2vec/) and further [improved at Stanford](http://nlp.stanford.edu/projects/glove/)
 
 This model creates *word vectors*, which are multi-dimensional representations of words. This is similar to having a distribution of concepts or topics that the word is associated with.
 
@@ -289,7 +290,7 @@ Additionally, the first few represent the *same* concept (or multiple concepts):
 1. Paris is a city like thing, so it contains shops and restaurants
 1. Paris is a capital city
 
-What we want to do is apply **dimensionality reduction** to find a few concepts per word (instead of looking for _all_ of the possible contexts). 
+What we want to do is apply **dimensionality reduction** to find a few concepts per word (instead of looking for _all_ of the possible contexts).
 
 In **LDA**, we could do this by identifying the topics a word was most likely to come from.
 
@@ -341,7 +342,7 @@ It can easily identify words related to those from this dataset (remember, most 
 
 In this exercise, we will compare some of the classical NLP tools from the last class with these more modern latent variable techniques. We will do this by comparing information extraction techniques on Twitter using the two methods.
 
-> Intructor Note: If you want students to capture their own collection of tweets using the Twitter API,[ use the following instructions](./code/twitter-instructions.md). It requires some setup and a Twitter account.
+> Instructor Note: If you want students to capture their own collection of tweets using the Twitter API,[ use the following instructions](./code/twitter-instructions.md). It requires some setup and a Twitter account.
 
 > If not - you can use a [pre-existing file of captured tweets](./assets/data/captured-tweets.txt) relating tech companies and Middle Eastern companies.
 
@@ -390,43 +391,43 @@ Now we'd like to do a few things:
 1. Use `spacy` to write a function to filter tweets down to those where Google is announcing a product. How might we do this? One way might be to identify verbs, where 'Google' is the noun and there is some action like 'announcing'
 
     a. Write a function that can take a sentence parsed by `spacy` and identify if it mentions a company named 'Google'. Remember, `spacy` can find entities and code them as `ORG` if they are a company.
-    
+
         i. **BONUS**: Make this function work for any company
-        
+
     b. Write a function that can take a sentence parsed by `spacy` and return the verbs of the sentence (preferably lemmatized)
-    
+
     c. For each tweet, parse it using `spacy` and print it out if the tweet has 'release' or 'announce' as a verb.
-    
+
     d. Write a function that identifies countries. HINT: the entity label for countries is GPE (or "GeoPolitical Entity")
-    
+
     e. Re-run (d) to find country tweets that discuss 'Iran' announcing or releasing.
 
 2. Build a `word2vec` model of the tweets we have collected using `gensim`
 
     a. First take the collection of tweets and tokenize them using `spacy`
 
-        i. Think about how this should be done. Should you only use upper-case or lower-case? Should you remove punctuations or symbols? 
-        
+        i. Think about how this should be done. Should you only use upper-case or lower-case? Should you remove punctuations or symbols?
+
     b. Build a `word2vec` model
-    
+
         i. Test the window size as well - this is how many surrounding words need to be used to model a word. What do you think is appropriate for Twitter?
-        
+
     c. Test your word2vec model with a few similarity functions.
-    
+
         i. Find words similar to 'Syria'
-        
+
         ii. Find words similar to 'war'
-        
+
         iii. Find words similar to "Iran"
-        
+
         iv. Find words similar to 'Verizon'
-        
+
     d. Adjust the choices in (b) and (c) as necessary
 
 3. Filter tweets to those that mention 'Iran' or similar entities and 'war' or similar entities.
 
     a. Do this using just `spacy`
-    
+
     b. Do this using `word2vec` similarity scores
 
 
@@ -446,8 +447,8 @@ Concept Review:
 ### BEFORE NEXT CLASS
 |   |   |
 |---|---|
-| **DUE TODAY**  | [Final Project, Deliverable 2](../../projects/final-projects/02-experiment-writeup/readme.md) | 
-| **UPCOMING PROJECTS**  | [Final Project, Deliverable 3](../../projects/final-projects/03-exploratory-analysis/readme.md) | 
+| **DUE TODAY**  | [Final Project, Deliverable 2](../../projects/final-projects/02-experiment-writeup/readme.md) |
+| **UPCOMING PROJECTS**  | [Final Project, Deliverable 3](../../projects/final-projects/03-exploratory-analysis/readme.md) |
 
 ### ADDITIONAL RESOURCES
 - [Five Takeaways on the State of Natural Language Processing](http://www.wise.io/tech/five-takeaways-on-the-state-of-natural-language-processing)
