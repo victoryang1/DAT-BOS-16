@@ -7,7 +7,7 @@ creator:
 ---
 
 # ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png) 
-Week # | Lesson 16
+DS | Lesson 16
 
 ### LEARNING OBJECTIVES
 *After this lesson, you will be able to:*
@@ -38,7 +38,9 @@ Week # | Lesson 16
 <a name="opening"></a>
 ## Opening (5 min)
 
-In the last class we focused on exploring time-series data and common statistics for time-series analysis. In this class, we will advance those techniques to show how to predict or forecast forward from time series data. If we have a sequence of values (a time series), we will use the techniques in this class to predict the a future value. For example, we may want to predict the number of sales in a future month. 
+In the last class, we focused on exploring time-series data and common statistics for time-series analysis. In this class, we'll advance those techniques to show how to predict or forecast from time series data. 
+
+If we have a sequence of values (a time series), we will use the techniques in this class to predict a future value. For example, we may want to predict the number of sales in a future month. 
 
 <a name="introduction"></a>
 ## Intro: What are (is) time series models? (60 mins)
