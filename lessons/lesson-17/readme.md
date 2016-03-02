@@ -616,7 +616,7 @@ group by b.title
 
 ***
 
-### BEFORE NEXT CLASS
+### UPCOMING PROJECTS
 |   |   |
 |---|---|
 | **Upcoming Projects** | [Final Project, Part 4](../../projects/final-projects/04-notebook-rough-draft/readme.md)
