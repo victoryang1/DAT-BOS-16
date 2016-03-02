@@ -403,6 +403,8 @@ Python has developed a strong collection of well-written deep learning libraries
 ### BEFORE NEXT CLASS
 |   |   |
 |---|---|
+| **DUE TODAY**  | [Final Project, Part 4](../../projects/final-projects/04-notebook-rough-draft/readme.md) |
+| **UPCOMING PROJECTS**  | [Final Project, Part 5](../../projects/final-projects/05-presentation/readme.md) |
 
 
 ### ADDITIONAL RESOURCES
