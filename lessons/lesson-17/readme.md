@@ -619,6 +619,7 @@ group by b.title
 ### BEFORE NEXT CLASS
 |   |   |
 |---|---|
+| **Upcoming Projects** | [Final Project, Part 4](../../projects/final-projects/04-notebook-rough-draft/readme.md)
 
 ### ADDITIONAL RESOURCES
 - [Pandas: Comparison with SQL](http://pandas.pydata.org/pandas-docs/stable/comparison_with_sql.html)
