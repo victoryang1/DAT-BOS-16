@@ -6,9 +6,9 @@ This is it! It's presentation time.
 
 Whether during an interview or as part of a job, you will frequently have to present your findings to business partners and other interested parties - many of whom won't know anything about data science! That's why it's important to practice communicating clearly and effectively so that anyone can understand.
 
-That's why your goal here is to create a 10 minute presentation that guides your viewers through the problem, original data and hypothesis, findings, and results. This is what you've been building toward over the past few weeks! You should already have the analytical work complete, so now it's time to clean up and clarify your findings. 
+Your goal is to create a 10 minute presentation that guides your viewers through your problem, data, hypothesis, findings, and results. This is what you've been building toward over the past few weeks! You should already have the analytical work complete, so now it's time to clean up and clarify your findings. 
 
-Come up with a detailed 10-20 slide deck or interactive demo that explains your data, visualizes your model, describes your approach, articulates strengths and weaknesses, and presents specific recommendations. Plan for a 10 minute presentation with 1-2 minutes of QA; be prepared to explain and defend your model to an inquisitive audience!
+Create a detailed 10-20 slide deck or interactive demo that explains your data, visualizes your model, describes your approach, articulates strengths and weaknesses, and presents specific recommendations. Plan for a 10 minute presentation with 1-2 minutes of QA; be prepared to explain and defend your model to an inquisitive audience!
 
 **Goal:** A detailed 10-20 slide presentation deck that relates your data, model, and findings to a non-technical audience.
 
