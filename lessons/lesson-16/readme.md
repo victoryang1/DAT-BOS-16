@@ -500,6 +500,8 @@ data.head()
 ### BEFORE NEXT CLASS
 |   |   |
 |---|---|
+| Project Due | [Final Project, Part 3](../../projects/final-projects/03-exploratory-analysis/readme.md)
+| Upcoming Work | [Final Project, Part 4](../../projects/final-projects/04-notebook-rough-draft/readme.md)
 
 ### ADDITIONAL RESOURCES
 - [ARIMA model overview](https://www.quantstart.com/articles/Autoregressive-Integrated-Moving-Average-ARIMA-p-d-q-Models-for-Time-Series-Analysis)
