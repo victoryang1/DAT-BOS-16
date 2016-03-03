@@ -65,7 +65,7 @@ For example, in Hulu's recommendation system, they pull data from multiple sourc
 
 Organizing and managing the systems and data dependencies can become an important part of the job.
 
-![](assets/images/ml-systems.jpg)
+![](assets/images/ml-systems.png)
 
 Many organizations rely on data engineering teams to encode these common tasks into pipelines. **Data pipelines** are a series of automated data transformations that ensure the validity of your work for routine data maintenance tasks. Below is a description of the AirBnB model building pipeline.
 
@@ -149,7 +149,7 @@ Google's technical debt paper groups troublesome feature evolution into two grou
 
 __"Machine learning systems often have a difficult time distinguishing the impact of correlated features. This may not seem like a major problem: if two features are always correlated, but only one is truly causal, it may still seem okay to ascribe credit to both and rely on their observed co-occurrence. However, if the world suddenly stops making these features co-occur, prediction behavior may change significantly."__
 
-This is very important for _black-box models_. Such models may rely on correlations from a wide-range of features; however, in doing so we can typically ignore one of two variables that are highly recorded (think of PCA or regularization, where we try to remove correlated features).
+This is very important for _black-box models_. Such models may rely on correlations from a wide-range of features; however, in doing so we can typically ignore one of two variables that are highly correlated (think of PCA or regularization, where we try to remove correlated features).
 
 In the future, if these two variables are no longer correlated, we may need to update this. This is especially common when analyzing economics and cultural trends.
 
