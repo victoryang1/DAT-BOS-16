@@ -9,3 +9,6 @@ Here you'll find our "getting started" guide, some github instructions, the cour
 - [Data Science Workflow](./instructor-resources/data-science-workflow-final.pdf)
 - [Contributing Guidelines](./instructor-resources/course-feedback-guidelines.md)
 
+For logistical or permissions issues, please talk to your local producer. For further questions about the curriculum, get in touch!
+- Product Manager: [Joel Foster](joel.foster@ga.co)
+- Instructional Designer: [Jeff Boykin](jeff.boykin@ga.co)
