@@ -31,8 +31,6 @@ The structure of this repository provides a way for us to organize our informati
 
 Some cities maintain forks of this repository for collaboration by their local instructors. However, we also encourage the teaching team for each cohort to fork this repository directly, and use it to store your new and improved resources. By the end of the course, we hope you'll have some things to submit to make our curriculum better.
 
-If you have any questions about the organization of resources, or about the scope of the DS curriculum, feel free to open an issue.
-
-Please check out our [contributing guidelines](contributing.md) for more details.
+If you have any questions about the organization of resources, or about the scope of the DS curriculum, feel free to open an issue. Please check out our [contributing guidelines](contributing.md) for more details.
 
 ![GeneralAssemb.ly](https://github.com/generalassembly/ga-ruby-on-rails-for-devs/raw/master/images/ga.png "GeneralAssemb.ly")
