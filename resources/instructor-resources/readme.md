@@ -8,3 +8,4 @@ Here you'll find our "getting started" guide, some github instructions, the cour
 - [Project Timeline](./instructor-resources/DS-project-due-dates.pdf)
 - [Data Science Workflow](./instructor-resources/data-science-workflow-final.pdf)
 - [Contributing Guidelines](./instructor-resources/course-feedback-guidelines.md)
+
