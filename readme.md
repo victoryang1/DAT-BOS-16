@@ -1,11 +1,12 @@
 # ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png) Data Science 2.0
 
-# _Curriculum Refresh In Progress_
+Welcome to Data Science 2.0! We are building a global community of lifelong learners who are excited about using data to solve real world problems. 
 
-Welcome to Data Science 2.0! We are building a global community of lifelong learners who are excited about using data to solve real world problems. Here is our current timeline:
-
-- **Jan 25th:** Lessons 1-14 + Unit & Final Projects complete.
-- **Mar 4th**: Lesson, slides, & QA for Lessons 15-18 complete.
+In this 10 week part-time course, students will use python to explore datasets, build predictive models, and communicate data driven insights.
+- Perform exploratory data analysis with powerful programmatic tools, python, and the command line.
+- Build and refine basic machine learning models to predict patterns from data sets.
+- Learn the language of data scientists to contribute as a part of a greater team.
+- Communicate data driven insights to a non-technical audience through visual storytelling.
 
 
 ## Data Science Curriculum Repo
