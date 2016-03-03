@@ -197,10 +197,8 @@ id2word = dict(enumerate(cv.get_feature_names()))
 ```
 
 We want our model to learn:
-    - Which columns are correlated (i.e. likely come from the same topic)?
-        This is the _word distribution_
-    - Which topics are in each document?
-        This is the _topic distribution_
+- Which columns are correlated (i.e. likely come from the same topic)? This is the _word distribution_.
+- Which topics are in each document? This is the _topic distribution_.
 
 ```python
 from gensim.models.ldamodel import LdaModel
