@@ -332,18 +332,20 @@ Aside from Python, other common languages for data scientists include:
 - R
 - Java & Scala
 
+#### R
 "R" is often used in data science. Many features of data analysis with Python have actually been borrowed from R! For example, the Pandas dataframe replicates the functionality of the original R dataframe.
 
 However, R still contains many specialized algorithms. While `statsmodels` and `scikit-learn` combine many of the most popular statistical algorithms, some problems require a more specialized tool. Typically, R has a wider variety of niche algorithms for these cases.
 
-Compared to R, Python has greater speed and an easier ability to tie into other applications. R has many specialized dataframe operations, but Python code can be faster and more efficient. Using Python also allows you to connect your analysis to other more useful tools, like web development apps or database services.
+Compared to R, Python has greater speed and an easier ability to tie into other applications. R also has many specialized dataframe operations, but Python code can be faster and more efficient. Python also allows you to connect your analysis to other more useful tools, like web development apps or database services.
 
-Meanwhile, Java/Scala are popular for their link to the Hadoop ecosystem. Many larger organizations store their data in a _Hadoop_ system. Most of the adapters that move data in and out these systems are built in Java and Scala.
+#### Java/Scala
+Meanwhile, Java/Scala are popular for their link to the _Hadoop ecosystem_. Many larger organizations store their data in a Hadoop system. Most of the adapters that move data in and out these systems are built in Java and Scala.
 
 Therefore, it is sometimes easier to interact with these systems in those languages. However, in most cases, these languages lack the interactivity and ease of use that R and Python provide.
 
 ### Modeling Frameworks
-While `scikit-learn` is the most popular machine learning framework in Python, there are alternatives for specialized use-cases.
+While `scikit-learn` is the most popular machine learning framework in Python, there are a few alternatives for specialized use-cases.
 
 For example, most models in `scikit-learn` require datasets to be small enough to fit into memory. Other frameworks can work around this. One example is `xgboost` which provides efficient Random Forest implementations that may train much faster than the models in `scikit-learn`.
 
@@ -354,44 +356,61 @@ Similarly, a library called `Vowpal Wabbit` is often used to train very large li
 <a name="nextsteps"></a>
 ## Next Steps (20 mins)
 
-The core of this class has focused on statistical knowledge combined with an overview of supervised and unsupervised learning models. But data science is a big field, and for each of these topics, there are many alternative methods!
+Throughout this class, we've focused on statistical knowledge combined with an overview of supervised and unsupervised learning models. But data science is a big field, and for each of these topics, there are many alternative methods!
 
 ### Statistical Testing
-While it is often not important to have an encyclopedic knowledge of all possible statistical tests, it may be worth remembering a few common ones and the assumptions they make.
+While it is often not important to have an encyclopedic knowledge of **every possible statistical test**, it may be worth remembering a few common ones and the assumptions they make.
 
-Additionally, it's good to have a clear sense of distributions and what they look like. Being able to view a histogram and summarize it by the distribution it resembles makes it easier to discuss your data with others. Here is an example that labels different types of histograms:
+Additionally, it's good to build up a clear sense of distributions and what they look like. Being able to look at a histogram and summarize it by the distribution it resembles makes it easier to discuss your data with others. Here is an example that labels different types of histograms:
 
 ![](assets/images/distribution.png)
 
 [](http://blog.cloudera.com/blog/2015/12/common-probability-distributions-the-data-scientists-crib-sheet/)
 
 ### Visualization
-While most of the plotting in this class was done in Python, these plots are often not the most visual appealing. Many tools exist to build plots, but a fair amount visual design knowledge may be needed to ensure the best product. Visualizing and presenting data is often the best way to transfer information from your work to the business and much more likely to be effective than an array of numbers.
+While most of the plotting in this class was done in Python, these plots are often not the most visually appealing. Visualizing and presenting data is often the best way to transfer information from your work in an effective manner.
 
-To make plots interactive, tools like plot.ly or D3.js may be used. The latter is a Javascript library to construct web-based interactive plots.
+To make your plots interactive, you could try using tools like plot.ly or D3.js. We've mentioned plot.ly before, while D3.js is a Javascript library that constructs web-based interactive plots.
 
 [D3 Gallery](https://github.com/mbostock/d3/wiki/Gallery)
 
 ### Model Interpretability vs Accuracy
-One of the constant trade-offs in data modeling is whether we are more interested in high predictive accuracy or a high degree of interpretability. We saw that linear models are simple, can perform well and offer a concise summary of the impact of various features through the coefficients. However, black-box models such as Random Forests may perform much better (in terms of predictive accuracy) without as much transparency. In real-world scenarios, you likely care more about interpretability and insight and prefer simpler models. Logistic and Linear Regression though simple are by far the most used tools and important to know well.
+One of the constant trade-offs in data modeling is whether we are more interested in _high predictive accuracy_ or a _high degree of interpretability_.
 
-When going further in data science you will see this contrast return again and again. Two methods of advanced analysis perfectly capture this divide.
+We saw that linear models are simple, can perform well and offer a concise summary of the impact of various features through the coefficients. However, black-box models such as Random Forests may perform much better (in terms of predictive accuracy) without as much transparency.
 
+In real-world scenarios, you likely to care more about interpretability and insight and prefer simpler models. Logistic and Linear Regression - although simple - are by far the most used tools and important to know well!
+
+When going further in data science, you will see this contrast return again and again. Two methods of advanced analysis perfectly capture this divide.
+
+#### Bayesian Analysis
 _Bayesian data analysis_ is a method of analysis that requires you first write down your expectations about the interactions in your world and then attempt to learn how strong those interactions are.
 
-For example, suppose you are analyzing the roll-out of a new educational policy. We want to measure the impact of this policy on some outcome (test scores). Similar to our current models, we need to know what else will impact test scores and build a model to learn the impact of this policy on test scores. However, we may want to force additional constraints. For example, we may want to say that we think the policy will have a related but different effect in different states. We can further write down subgroups where the effect may be different because of different reasons (different local resources, demographics, budgets, etc.) and explicitly state how these aspects related to further constrain our model.
+For example, suppose you are analyzing the roll-out of a new educational policy. We want to measure the impact of this policy on some outcome (like test scores).
 
-These types of models are typically small and their main strengths are in interpretability and capturing the amount of uncertainty exists in your data. Rather than stating that X will change Y by some amount, these models give a _distribution_ or range of possible amounts and attempts to tell what will happen in the best or worst case.
+Similar to our current models, we need to know what else will impact those test scores and build a model to learn the impact of this new policy on those scores.
 
-These models are useful when interpretability and precisely defining interactions are of utmost importance, particularly, if we want a clear definition how right or wrong we are. We may want to say that candidate X is likely to win the election, but if we want to quantify the degree of uncertainty we have Bayesian models can be useful.
+However, we may want to force additional constraints. For example, we may think that the policy will have a related but different affect in different states.
 
-There are a few tools to build these types of models in Python, one of which is [pymc](http://pymc-devs.github.io/pymc3/). A good reference on this is [Bayesian Methods for Hackers](http://camdavidsonpilon.github.io/Probabilistic-Programming-and-Bayesian-Methods-for-Hackers/)
+We can further write down subgroups where the effect may be different because of different reasons (different local resources, demographics, budgets, etc.) and explicitly state how these aspects related to further constrain our model.
 
+These types of Bayesian models are typically small and their main strengths are in interpretability and capturing the amount of uncertainty exists in your data.
+
+Rather than stating that X will change Y by some amount, these models describe a _distribution_, or a range of possible amounts, and attempt to tell what will happen in the best or worst case scenario.
+
+Such models are useful when interpretability and precisely definitions are of utmost importance; for example, when we want a clear definition of how right or wrong we are.  We may want to say that candidate X is likely to win the election, but if we want to quantify the _degree of uncertainty_ for our prediction, then Bayesian models can be useful.
+
+- There are a few tools to build these types of models in Python, one of which is [pymc](http://pymc-devs.github.io/pymc3/). A good reference on this is [Bayesian Methods for Hackers](http://camdavidsonpilon.github.io/Probabilistic-Programming-and-Bayesian-Methods-for-Hackers/).
+
+
+#### Deep Learning
 On the other side of spectrum, powerful models that offer little to no interpretable value are _deep learning_ models.
 
-These models, also known as _neural networks_, are very powerful predictive models, however, they are complex to build and offer little to extract what patterns they have learned.
+These models, also known as _neural networks_, are very powerful predictive models, however, they are complex to build and offer little means of extracting the patterns they have learned.
 
-Put simply, these models attempt to operate in a staged fashion. First they perform a dimensionality reduction to extract pattern or representations of the input data. Then these representations are used for the predictive task. This is very similar to a model we saw in this class, which was using a dimensionality reduction technique followed by a classification technique. Deep learning models tie these two steps together, attempting to learn the best representation for the task. Additionally, they include many non-linear operations to capture more complex relationships in the data.
+Put simply, these models attempt to operate in a staged fashion. First they perform a dimensionality reduction to extract pattern or representations of the input data. Then these representations are used for the predictive task. This is very similar to a model we saw in this class, using a dimensionality reduction technique followed by a classification technique.
+
+Deep learning models tie these two steps together, attempting to learn the best representation for the task. Additionally, they include many non-linear operations to capture more complex relationships in the data.
 
 Deep learning models are particularly well suited for image or audio analysis.
 
@@ -406,10 +425,10 @@ Python has developed a strong collection of well-written deep learning libraries
 <a name="conclusion"></a>
 ## Conclusion (10 mins)
 - Data science results are often incorporated into a larger final product
-- Tracking final products means maintaining models and data pipelines, understanding the possible changes overtime, and managing logistical and ethical considerations
-- Alternative languages for data science include R or Java/Scala (but Python has many advantages)
-- Visualization skills are vital to communicate and improve your models
-- Advanced machine learning methods you can explore include Bayesian methods and deep learning
+- Tracking final products means maintaining models and data pipelines, understanding possible changes overtime, and managing logistical and ethical considerations
+- Alternative languages for data science include R or Java/Scala (although Python has many advantages in comparison)
+- Visualization skills are vital to communicate and improve your models!
+- Advanced machine learning methods you can explore include Bayesian methods and deep learning :)
 
 
 ***
