@@ -35,9 +35,9 @@ Each project includes objectives, requirements, starter-code, rubric, and sugges
 | **Unit 2** | [Project 3](./unit-projects/project-3/readme.md) | [Assigned Lesson 5](../lessons/lesson-05/readme.md) | [Due Lesson 9](../lessons/lesson-09/readme.md) |
 | **Unit 2** | [Project 4](./unit-projects/project-4/readme.md) | [Assigned Lesson 9](../lessons/lesson-09/readme.md) | Due Lesson 11 |
 | **Unit 3** | [Final Project, pt 2](./final-projects/02-experiment-writeup/readme.md) | [Assigned Lesson 8](../lessons/lesson-08/readme.md) | [Due Lesson 14](../lessons/lesson-14/readme.md) |
-| **Unit 3** | [Final Project, pt 3](./final-projects/03-exploratory-analysis/readme.md) | [Assigned Lesson 14](../lessons/lesson-14/readme.md) | [Due Lesson 16]() |
-| **Unit 3** | [Final Project, pt 4](./final-projects/04-notebook-rough-draft/readme.md) | [Assigned Lesson 16]() | [Due Lesson 18]() |
-| **Unit 3** | [Final Project, pt 5](./final-projects/05-presentation/readme.md) | [Assigned Lesson 18]() | Due Lesson 20 |
+| **Unit 3** | [Final Project, pt 3](./final-projects/03-exploratory-analysis/readme.md) | [Assigned Lesson 14](../lessons/lesson-14/readme.md) | [Due Lesson 16](../lessons/lesson-16/readme.md) |
+| **Unit 3** | [Final Project, pt 4](./final-projects/04-notebook-rough-draft/readme.md) | [Assigned Lesson 16](../lessons/lesson-16/readme.md) | [Due Lesson 18](../lessons/lesson-18/readme.md) |
+| **Unit 3** | [Final Project, pt 5](./final-projects/05-presentation/readme.md) | [Assigned Lesson 18](../lessons/lesson-18/readme.md) | Due Lesson 20 |
 
 
 
