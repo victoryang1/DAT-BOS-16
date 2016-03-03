@@ -6,7 +6,7 @@ creator:
     city: NYC
 ---
 
-# ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png) Advancing in Data Science 
+# ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png) Advancing in Data Science
 DS | Lesson 18
 
 ### LEARNING OBJECTIVES
@@ -90,12 +90,13 @@ Most of the code in this class has been written in notebooks. However, as your a
 
 While this isn't always the responsibility of a data scientist, more clarity in the code will often lead to more clarity in the analysis. This is particularly true for long-term or open source projects where your code has to make sense to other people in the future!
 
-One way to write better code is to create and follow a _styleguide_, which is a clear set of rules for your code's organization. Columbia recently developed a [special styleguide just for data scientists](http://columbia-applied-data-science.github.io/pages/lowclass-python-style-guide.html).
+One way to write better code is to create and follow a _styleguide_, which is a clear set of rules for your code's organization. In fact, Columbia recently developed a [special styleguide just for data scientists](http://columbia-applied-data-science.github.io/pages/lowclass-python-style-guide.html)!
 
 Some of the rules are pretty straightforward:
 - "Give variables, methods, and attributes descriptive names"
 - "Write functions that take well-defined inputs and produce well-defined output"
 
+##### Unit Testing
 Another common practice in software development is _unit-testing_. Unit-testing involves write short statements that _test_ a piece of code or function you have written. Typically, this test provides a few sample inputs and outputs to ensure your code can produce the same outputs.
 
 According to Google, ___"ensuring that code has been tested is vital to ensuring that your analysis results are correct."___
@@ -106,9 +107,9 @@ ___"Only a tiny fraction of the code in many machine learning systems is actuall
 
 Creating and following a clear styleguide as well as testing and refactoring your code will help you maintain your machine learning algorithm over time. Reducing this _technical debt_ saves time and money in the long term. Even Google is not immune:
 
-___"As a real-world anecdote, in a recent cleanup effort of one important machine learning system at Google, it was found possible to rip out tens of thousands of lines of unused experimental codepaths!"___
+___"As a real-world anecdote, in a recent cleanup effort of one important machine learning system at Google, it was possible to rip out tens of thousands of lines of unused, experimental codepaths!"___
 
-**Check:** Take a look at the following code which parses an apartment description for the apartment's square footage. What corner cases would it fail?
+**Check:** Take a look at the following code that parses descriptions for an apartment's square footage. In which corner cases would it fail?
 
 ```python
 
@@ -136,72 +137,82 @@ Each of these corner cases would be very good unit tests to improve the code.
 
 #### Evolving Features
 
-Once your model is trained, it's important to track performance over time. Many of the correlations found or features predicted may not remain true a few months or years in the future!
+Once your model is trained, it's important to track performance over time. Many of the correlations found or features predicted may not remain true a few months or years into the future!
 
 For example, our "evergreen" article prediction example looks for food mentions to predict the popularity of certain recipes. However, it doesn't know how to gauge trends in popular foods! Over time, it will return a smaller and smaller sample unless we readjust the model's parameters.
 
 Google's technical debt paper groups troublesome feature evolution into two groups, _legacy features_ and _bundled features_.
 
-1. Legacy Features: When a feature F is included in a model early in its development, but as time goes on, other features are added that make F mostly or entirely redundant!
+1. Legacy Features: When a feature `F` is included in a model early in its development, but as time goes on, other features are added that make `F` mostly or entirely redundant!
 
-2. Bundled Features: When a group of features are bundled together, it can be hard to identify which features aren't performing well. Features can also be "bundled" with commonly occurring variables, but these occurrences may change over time, making those features obsolete.
-
+2. Bundled Features: When a group of features are bundled together, it can be hard to identify which features aren't performing well. Features can also be "bundled" with commonly occurring variables, but these occurrences may change over time, making those features obsolete:
 
 __"Machine learning systems often have a difficult time distinguishing the impact of correlated features. This may not seem like a major problem: if two features are always correlated, but only one is truly causal, it may still seem okay to ascribe credit to both and rely on their observed co-occurrence. However, if the world suddenly stops making these features co-occur, prediction behavior may change significantly."__
 
-This last point is very important for black-box models. These models may rely on correlations from a wide-range of features, however, in doing so we can typically ignore one of two variables that are highly recorded (think of PCA or regularization, where we try to remove correlated features). In the future, if these two variables are no-longer correlated, we may need to update this. This example is common in economics -
+This is very important for _black-box models_. Such models may rely on correlations from a wide-range of features; however, in doing so we can typically ignore one of two variables that are highly recorded (think of PCA or regularization, where we try to remove correlated features).
 
-Another way in which features may evolve is through feedback loops. Once you've performed your analysis or built your model, it's likely you are going to take some action or make a business decision. It's important to track how this may change the data you are using for your analysis!
+In the future, if these two variables are no longer correlated, we may need to update this. This is especially common when analyzing economics and cultural trends.
 
-One example, are the many data analysis efforts to find ways to stop infections from spreading in hospital. Suppose to we analyze data related to this and find that whenever a doctor sees more than 5 patients in an hour, those patients are at a greater risk for infection. Following this analysis, the hospital enforces that doctor's _cannot_ observe that many patients in an hour.
+##### Feedback Loops
+Another way in which features may evolve is through _feedback loops_. Once you've performed your analysis or built your model, it's likely you are going to take some action or make a business decision. It's important to track how these actions may end up changing the data you've used in your analysis!
 
-Now, at the end of year, if we attempt to analyze the feature of "saw > 5 patients in an hour", it simply won't exist. Through our intervention we changed the data.
+For example, in the health field, many data analysis efforts look for ways to stop infections from spreading in a hospital setting. Suppose that we analyze hospital data and find that whenever a doctor sees more than 5 patients in an hour, those patients are at a greater risk for infection. Following this analysis, the hospital enforces a new rule: doctors' _cannot_ see more than 4 patients in an hour.
 
-**Check** Brainstorm two correlated features from our prior work in this class that may not be correlated in the future.
+At the end of year, if we then attempt to analyze our prior feature of "saw > 5 patients in an hour", it won't exist. Through our intervention, we changed the data.
+
+**Check** Brainstorm two correlated features from prior work in this class that may not be correlated in the future.
 
 #### Monitoring Models
 
-Once a model is deployed and making predictions, it's important to track its performance. This will also help diagnose features that are evolving.
+Once a model is deployed and making predictions, it's important to _monitor_ and track its performance. This will also help diagnose any features that are evolving. As Google says:
 
-__"Unit testing of individual components and end-to-end tests of running systems are valuable, but in the face of a changing world such tests are not sufficient to provide evidence that a system is working as intended. Live monitoring of system behavior in real time is critical."__
+__"Unit testing of individual components and end-to-end tests of running systems are valuable, but in the face of a changing world, such tests are not sufficient to provide evidence that a system is working as intended. Live monitoring of system behavior in real time is critical."__
 
-One often used monitoring technique is to always have a baseline. When you are evaluating your model, it is important to always compare to a simple baseline - something that predicts the average or the most commonly occurring thing. While monitoring a model over time, you can also evaluate this baseline model over time to ensure that your 'better' model never underperforms it.
+One frequently used monitoring technique is to always have a baseline. When you are evaluating your model, it is important to always compare to a simple baseline - something that predicts the average or the most commonly occurring thing.
 
-In Google's paper [Ad Click Prediction: A View From The Trenches](http://research.google.com/pubs/pub41159.html), they describe a more complex monitoring systems, that analyzes how model performance changes and in what subcategories.
+While monitoring a model, you can evaluate this baseline model over time to ensure that your 'better' model never underperforms it.
+
+In Google's paper [Ad Click Prediction: A View From The Trenches](http://research.google.com/pubs/pub41159.html), they describe more complex monitoring systems that analyze how model performance changes and in which subcategories:
 
 __"Evaluating the quality of our models is done most cheaply through the use of logged historical data ... Because the different metrics respond in different ways to model changes, we find that it is generally useful to evaluate model changes across a plurality of possible performance metrics. We compute metrics such as AucLoss (that is, 1 − AUC, where AUC is the standard area under the ROC and SquaredError ... We also compute these metrics on a variety of sub-slices of the data, such as breakdowns by country, query topic, and layout. ... This is important because click rates vary from country to country and from query to query, and therefore the averages change over the course of a single day. ... A small aggregate accuracy win on one metric may in fact be caused by a mix of positive and negative changes in distinct countries, or for particular query topics. This makes it critical to provide performance metrics not only on the aggregate data, but also on various slicing of the data, such as a per-country basis or a per-topic basis."__
 
 
 ### Ethical Considerations
 
-Another, often overlooked, aspect of managing real-world data science projects are ethical considerations. A core aspect of any data science project is understanding the biases of the data we are studying. Data often represent the summary of a system and any biases of the system will appear in the data and any analysis built from it.
+Another, often overlooked, aspect of managing real-world data science projects are _ethical considerations_! A core aspect of any data science project is understanding the _biases_ of the data we are studying. Data often represent the summary of a system, so any biases within that system will appear in the data and any analysis built from it.
 
-Two common examples of this are in sentencing and financial loan applications. In the first, it's common to want to find data-driven solution in criminal justice. Can we analyze what drives crime in certain cities and what actions we can take to reduce it? However, most data that is collected on this is based on how current criminal justice system works. Therefore it's difficult to separate the biases of the current system from any correlations/predictions that may be found in the model.
+Two common examples of this are in legal sentencing and financial loan applications. In the first, it's common to want to find data-driven solution in criminal justice. Can we analyze what drives crime in certain cities and what actions we can take to reduce it?
 
-Similarly, in most financial loan applications, we are interested analyzing applications to identify the best borrowers - who is most likely to pay back in a timely fashion and what rate? However, most analyses are strongly regulated to ensure that they do not consider protected factors such as race and gender. However, often this information can leak in, even if we don't mean for it. This can happen with proxy features, those that are not protected factors but strongly correlated with it. This type of bias can happen often in home loan applications when zip code or neighborhood can be a proxy for race.
+ However, most data that is collected on this is based on how the current criminal justice system works. Therefore, it's difficult to separate the biases of the current system from any correlations/predictions that may be found in the model. In other words, we might only find what the system is currently constructed to find.
 
-**Check:** Discuss with the students other areas of possible ethical issues in Data Science? How can this occur when examining health data? When examining educational records?
+Similarly, in most financial loan applications, we are interested analyzing applications to identify the best borrowers - who is most likely to pay back in a timely fashion and what rate?
+
+These applications are strongly regulated to ensure that loan officers do not consider protected factors such as race and gender. However, this information can often leak in, even unintentionally!
+
+This can happen with _proxy features_, or features that are strongly correlated with protected factors. For instance, neighborhood zip codes can often be a proxy for race during home loan considerations.
+
+**Check:** Discuss other possible ethical issues in Data Science. How might this occur when examining health data? What about educational records?
 
 <a name="exercise"></a>
 ## Group Exercise: Data Science in an Organization  (20 mins)
 > Instructor Note: Break students into groups of 4-5 students each. Assign each group a company and 1-2 data products or analyses that the company must perform.
 
-1. Brainstorm aspects of maintenance that must be performed. When should you re-do the study? What features may change or become difficult to collect in the future?
-2. Describe possible interventions; will this change the data collected in the future?
-3. Describe ethical issues that may arise from these tasks.
+1. Brainstorm any maintenance that must be performed on your pre-existing model. When should you re-do your study? What features may change or become difficult to collect in the future?
+2. Describe possible interventions; will these interventions change the data you're collecting in the future?
+3. Describe any ethical issues that may arise from these tasks.
 
 
 Example:
-Company: HBO
-Task: Build a customized home screen with recommended shows
+- Company: HBO
+- Task: Build a customized home screen with recommended shows
 
 1. Maintenance: Popular movies are consistently changing and new movies/shows are added, so the model must be consistently updated. Must be a way to track unexpected events: possibly override recommendations before re-releases or sequel releases.
 2. Intervention: Displaying the movies (somewhat a given here). Recommendation systems are where feedback issues are most common: movies not recommended are more likely to fall to the bottom in viewership, making them seem less appealing. Users may not like recommendations and stop using the service altogether.
 3. Ethical considerations: Should gender be used in the recommendations? Should the descriptions or images of the movies or shows be altered based on 'perceived' interests of a specific gender?
 
 Example:
-Company: Credit Card Company
-Task: Identify fraudulent transactions
+- Company: Credit Card Company
+- Task: Identify fraudulent transactions
 
 1. Maintenance: User spending likely changes as their income increases. Expensive purchases that may have been expensive (and fraudulent) in previous year may not be this year.
 2. Intervention: Block fraud transactions. Another common case of feedback is when the intervention is adversarial. As you find ways to block fraud transactions, they are try to hide their actions better. Suppose we identify 10 common IPs used for fraudulent transaction, if we block those IPs, the fraudsters will likely change.
@@ -209,7 +220,7 @@ Task: Identify fraudulent transactions
 
 
 <a name="demo"></a>
-## Demo/Codealong: Pipelines in scikit-learn (30 mins)
+## Demo: Pipelines in scikit-learn (30 mins)
 One way to improve coding and model management is to use pipelines in `scikit-learn`.
 
 These tie to together all the steps that you may need to prepare your dataset and make your predictions.
@@ -246,7 +257,7 @@ vectorizer.fit(titles)
 X = vectorizer.transform(titles)
 ```
 
-We used this input X, matrix of all commong n-grams in the dataset, as input to a classifier. We wanted to classify how evergreen a story was based on these inputs.
+We used this input X, a matrix of all common n-grams in the dataset, as an input to our classifier. We wanted to classify how evergreen a story was, based on these inputs.
 
 ```python
 from sklearn.linear_model import LogisticRegression
@@ -260,11 +271,13 @@ scores = cross_val_score(model, X, y, scoring='roc_auc')
 print('CV AUC {}, Average AUC {}'.format(scores, scores.mean()))
 ```
 
-Often we will want to combine these steps to evaluate on some future dataset. Therefore, we need to make sure we perform the _exact same_ transformations on the data. If has_brownies_in_text is column 19, we need to make sure it is column 19 when it comes to evaluation time.
+#### Combining Steps in Pipelines
 
-Pipelines combines all both pre-processing and model building steps into a single object. Rather than manually evaluating the transformers and then feeding them into the models, pipelines ties these steps together.
+Often we will want to combine these steps to evaluate some future dataset. Therefore, we need to make sure we perform the _exact same_ transformations on the data. If "has_brownies_in_text" is column 19, we need to make sure it is __also__ column 19 during future evaluation.
 
-Similar to models and vectorizers in scikit-learn, pipelines are equipped with `fit` and `predict` or `predict_proba` methods as any model would be, but they ensure that proper data transformations are performed.
+Pipelines combines both pre-processing and model building steps into a _single object_. Rather than manually evaluating the transformers and then feeding them into the models, pipelines ties both of these steps together.
+
+Similar to models and vectorizers in scikit-learn, pipelines are equipped with `fit` and `predict` or `predict_proba` methods (as any model would be), but they ensure that proper data transformations are performed.
 
 ```python
 # Split the data into a training set
@@ -285,7 +298,7 @@ pipeline = Pipeline([
 # Fit the full pipeline
 # This means we perform the steps laid out above
 # First we fit the vectorizer,
-# and then feed the output of that into the fit function of the model
+# And then feed the output of that into the fit function of the model
 
 pipeline.fit(X_train, y_train)
 
@@ -296,6 +309,8 @@ pipeline.predict_proba(X_new)
 
 **Check** Add a `MaxAbsScaler` scaling step to the pipeline, which should occur after the vectorization.
 
+#### Merging Feature Sets in Pipelines
+
 Additionally, we want to merge many different feature sets automatically. Here we can use scikit-learn's `FeatureUnion`.
 
 While scikit-learn pipelines help with managing the transformation from raw data, there may be many steps before this takes place in your pipeline. These pipelines are often referred to as _ETL pipelines_ for "Extract, Transform, Load.""
@@ -304,21 +319,20 @@ In an _ETL pipeline_, the data is pulled or extracted from some source (like a d
 
 Many data science teams rely on software tools to manage these ETL pipelines. If a transformation step fails, these tools alert you, or ensure that step can be re-run. If these transformation steps need to happen daily or weekly, these tools can manage that timeline.
 
-One of the most popular Python tools for this is [Luigi](https://github.com/spotify/luigi) developed by Spotify.
-
-An alternative is [Airflow](https://github.com/airbnb/airflow) by AirBnB.
+- One of the most popular Python tools for this is [Luigi](https://github.com/spotify/luigi) developed by Spotify.
+- An alternative is [Airflow](https://github.com/airbnb/airflow) by AirBnB.
 
 <a name=""></a>
 ## Alternative Tools (45 mins)
 
-While most of this class has focused on data science and analytics in Python, there are many tools that can be used! Such tools appear often in data science roles and may offer slightly different advantages and disadvantages.
+While most of our class has focused on data science and analytics using Python, there are many other tools out there! Some tools only appear in specific data science roles and may offer different advantages and disadvantages.
 
 ### Languages
 Aside from Python, other common languages for data scientists include:
 - R
 - Java & Scala
 
-R is often used in data science and many features of data analysis with Python have been borrowed from R. The Pandas dataframe replicates functionality of the original R dataframe.
+"R" is often used in data science. Many features of data analysis with Python have actually been borrowed from R! For example, the Pandas dataframe replicates the functionality of the original R dataframe.
 
 However, R still contains many specialized algorithms. While `statsmodels` and `scikit-learn` combine many of the most popular statistical algorithms, some problems require a more specialized tool. Typically, R has a wider variety of niche algorithms for these cases.
 
