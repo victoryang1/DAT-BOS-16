@@ -17,7 +17,7 @@ DS | Lesson 18
 
 ### STUDENT PRE-WORK
 *Before this lesson, you should already be able to:*
-- Describe the data science workflow
+- Define the data science workflow
 - Apply course information to your own professional interests
 
 ### INSTRUCTOR PREP
