@@ -1,39 +1,29 @@
 # ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png) Data Science Refresh
 
-
 ### Repo Guide
-This guide is intended to help create a repository for your DS instance. 
-**The DS instructor repo will include:**
+Use this guide to create a repository for your Data Science instance. 
+**Your repo will include:**
 
 - Lesson Plans & Slide Decks
 - Workshop datasets + starter & solution code
 - Project Prompts, Rubrics, & Solution Code (where applicable)
 - Resources for students and instructors
 
-Once you create your instance, you should also create a student-facing repo.
-**The DS student-facing repo should include:**
-
-- Lesson Startercode & Datasets
-- Project Prompts & Rubrics
-- Student Resources
- - _Note: It should NOT include solution codes._
-
-For instructions on how to set up a GitHub repository for your DS class, please see below.
 > __IMPORTANT: Once you are done setting up your repo, please delete or overwrite the contents of this Readme!__
 
 ---
 
 ## Requirements
 
-* [ ] **Github Usernames**: Before you get started, you should have a list of usernames for all relevant instructors, TA's, and/or students. If they don't already have one, ask them to signup (it's free). 
+* [ ] **Github Usernames**: Before you get started, you should have a list of usernames for all instructors, TA's, and/or students. If they don't already have one, ask them to signup (it's free). 
 
-* [ ] **Basic Github Familiarity**: Here is a [useful tutorial](https://generalassembly.wistia.com/medias/jkrycndgrs) that will teach you how to create an account, install the Github desktop app, and start a repository.
+* [ ] **Basic Github Familiarity**: If you haven't used Github before, there are a ton of [useful tutorials](https://generalassembly.wistia.com/medias/jkrycndgrs) out there.
 
 ***
 
 ## Setting Up Your Repo
 
-In Data Science, we recommend using forking the master curriculum repo for your own course instances. We further recommend creating a student-facing repo to distribute project prompts/rubrics, starter/sample code, and course resources.
+Fork from the master curriculum repo for your own course instances. We further recommend creating a student-facing repo to distribute project prompts/rubrics, starter/sample code, and course resources.
 
 ***
 
