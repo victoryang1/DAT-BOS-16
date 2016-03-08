@@ -345,7 +345,7 @@ In this exercise, we will compare some of the classical NLP tools from the last 
 
 > Instructor Note: If you want students to capture their own collection of tweets using the Twitter API,[ use the following instructions](./code/twitter-instructions.md). It requires some setup and a Twitter account.
 
-> If not - you can use a [pre-existing file of captured tweets](./assets/data/captured-tweets.txt) relating tech companies and Middle Eastern companies.
+> If not - you can use a [pre-existing file of captured tweets](./assets/dataset/captured-tweets.txt) relating tech companies and Middle Eastern companiest
 
 **Bonus**: Want to collect your own tweets? Here are some instructions. We'll use the Twitter API to build a collection of tweets to learn from. After that, we'll filter future tweets based on some established conditions.
 
@@ -372,12 +372,12 @@ for tweet in tweets:
        break
 ```
 
-You can collect your own tweets, or use [the existing collection found here](./assets/data/captured-tweets.txt).
+You can collect your own tweets, or use [the existing collection found here](./assets/dataset/captured-tweets.txt).
 
 #### Loading the data
 
 ```python
-tweets = [tweet for tweet in open('../../assets/data/captured-tweets.txt', 'r')]
+tweets = [tweet for tweet in open('../../assets/dataset/captured-tweets.txt', 'r')]
 ```
 
 #### Setting up spacy
