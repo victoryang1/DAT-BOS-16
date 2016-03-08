@@ -2,10 +2,6 @@
 
 > Globally, we have 3 Units in Data Science, each building on top of skills learned previously to scaffold students' learning over the entire course.
 
-## _CURRENTLY UNDER CONSTRUCTION_
-
-> Timeline: _Lessons 1-15 are complete. Lessons 16 - 18 will be complete by Mar 4th._
-
 Our lessons contain objectives, prerequisites, suggested datasets, starter and solution code, and other instructional resources, tying into the overall competencies for each unit. See below for a complete description of all the lesson planning material we provide.
 
 > Instructors should review our [preparatory instructions](../resources/instructor-resources/instructor-prep.md) or read up on our [feedback guidelines](../projects/project-feedback.md) for debriefing student assignments.
