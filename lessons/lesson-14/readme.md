@@ -31,9 +31,12 @@ DS | Lesson 14
 
 - Review [Final Project, pt. 3](../../projects/final-projects/03-exploratory-analysis/readme.md)
 - Copy and modify the [lesson slide deck](./assets/slides/slides-14.md)
-- Read through datasets and starter/solution code
+- Read through the starter/solution code.
+- Pull the "stumbleupon" dataset from Lesson 13.
 - Add to the "Additional Resources" section for this lesson
 - Setup Twitter API credentials for accessing and receiving tweets. Instructions [can be found here](./code/twitter-instructions.md)
+
+> Note: The demo and starter code for this lesson is written in Python 3.4, not 2.7. This bug fix has been flagged and will be patched shortly. In the meantime, please reload Anacondas for Python 3.4 to correctly run the code for this lesson.
 
 ### LESSON GUIDE
 | TIMING  | TYPE  | TOPIC  |
