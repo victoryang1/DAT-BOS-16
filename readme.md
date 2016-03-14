@@ -2,7 +2,7 @@
 
 Welcome to Data Science 2.0! We are building a global community of lifelong learners who are excited about using data to solve real world problems. 
 
-In this 10 week part-time course, students will use Python (version 2.7) to explore datasets, build predictive models, and communicate data driven insights. Specifically, students will:
+In this 10 week part-time course, students will use Python (v2.7) to explore datasets, build predictive models, and communicate data driven insights. Specifically, students will:
 - Learn the language of data scientists to contribute as a part of a greater team.
 - Perform exploratory data analysis with powerful programmatic tools, python, and the command line.
 - Build and refine basic machine learning models to predict patterns from data sets.
@@ -22,7 +22,7 @@ Included in this Repository:
 ## To Get Started
 1. **Producers**: Review the [github instructions with your instructional team](./resources/instructor-resources/github-repo-instance-guide.md).
 2. **Instructors**: Review these [resources](./resources/readme.md) and ["getting started" guide](./resources/instructor-resources/instructor-prep.md).
-3. **Students**: Read through our [projects](./projects/readme.md), [lessons](./lessons/readme.md), and [resources](./resources/student-resources/) to start learning data science!
+3. **Students**: Read through our [installation guide](/resources/instructor-resources/tech-guide.md) and [prework](https://gist.github.com/jessicaGA/0c7215de7f75e16f7899) to start learning data science!
 
 ---
 
