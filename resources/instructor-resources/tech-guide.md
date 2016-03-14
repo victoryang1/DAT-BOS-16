@@ -10,7 +10,7 @@ Before the course starts, you should install and familiarize yourself with the f
 
 
 ## COMMON TOOLS
-- *[Anacondas](https://docs.continuum.io/anaconda/pkg-docs)* is our primary tool for this course. It bundles many of the common packages we'll be using, including:
+- **[Anacondas](https://docs.continuum.io/anaconda/pkg-docs)** is our primary tool for this course. It bundles many of the common packages we'll be using, including:
   - Python 2.7: One language to rule them all...
   - Ipython / Jupyter / Pandas: Core tools for creating notebooks 
   - Matplotlib: The Grandaddy of all python plotting packages
