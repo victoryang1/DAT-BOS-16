@@ -3,6 +3,7 @@
 Here you'll find our "getting started" guide, some github instructions, the course syllabus, project timeline, and other useful materials.
 
 - ["Getting Started" Instructor Guide](./instructor-prep.md)
+- [Technical Installation Guide](./tech-guide.md)
 - [Github Instructions](./github-repo-instance-guide.md)
 - [Course Syllabus](./ds-syllabus.pdf)
 - [Project Timeline](./DS-project-due-dates.pdf)
