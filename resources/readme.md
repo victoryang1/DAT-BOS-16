@@ -6,6 +6,7 @@ In this folder, you'll find a range of useful support materials. Here you'll fin
 ### For Instructors
 
 - ["Getting Started" - Instructor Guide](./instructor-resources/instructor-prep.md)
+- [Technical Installation Guide](./instructor-resources/tech-guide.md)
 - [Github Instructions](./instructor-resources/github-repo-instance-guide.md)
 - [Course Syllabus](./instructor-resources/ds-syllabus.pdf)
 - [Project Timeline](./instructor-resources/DS-project-due-dates.pdf)
