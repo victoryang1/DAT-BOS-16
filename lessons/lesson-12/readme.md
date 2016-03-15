@@ -250,7 +250,7 @@ Predictions from a Random Forest come from each decision tree.  Each tree makes 
 
 <a name="guided-practice4"></a>
 ## Guided Practice: Regression with Decision Trees & Random Forests (20 mins)
-> See ipython notebook for starter and solution code
+> See iPython notebook for starter and solution code
 
 #### Random Forest in scikit-learn
 Your new goal is to build a random forest model to predict the evergreen-ness of a website, using our existing dataset.

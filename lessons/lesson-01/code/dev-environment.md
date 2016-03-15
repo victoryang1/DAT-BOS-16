@@ -15,7 +15,7 @@ Please follow the installation instructions below.
 
 2. [ ] Install [Anaconda](https://www.continuum.io/downloads)
         - Follow the installation instructions for your computer (e.g. “Mac Install”). 
-        - Test that Anaconda and Python were installed correctly. For example, on a Mac you can by open a Terminal window (or the Anaconda Launcher app on your desktop) and type `ipython notebook`. If successful, in a few moments, your browser should open to a window titled "Jupyter."
+        - Test that Anaconda and Python were installed correctly. For example, on a Mac you can by open a Terminal window (or the Anaconda Launcher app on your desktop) and type `jupyter notebook`. If successful, in a few moments, your browser should open to a window titled "Jupyter."
 
 ### Start Practicing
 Review the following resources as an introduction to some commonly used concepts and tools.
