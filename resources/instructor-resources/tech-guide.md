@@ -6,7 +6,7 @@ Before the course starts, you should install and familiarize yourself with the f
 - **[Github](www.github.com)** - We’ll be using Github on a daily basis to store and share our code
 - **[Python 2.7](https://www.python.org/download/releases/2.7/)** - We will be using Python & its packages as our primary language
 - **[Anaconda](https://www.continuum.io/downloads)** - We will be using Anaconda as our primary development environment
-- **[Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)** - In addition to creating a Github account, you'll also need to install the command line tools for Git
+- **[Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)** - In addition to creating a Github account, you'll also need to install the command line tools for Git. Windows users should [install Git Bash](https://git-for-windows.github.io)
 
 
 ## COMMON TOOLS
@@ -35,4 +35,3 @@ These tools aren't required, but they offer some additional functionality that s
 We here at GA care about both our Mac and PC users! If you are using a PC (or Linux machine), you may need to [follow some additional steps](https://docs.continuum.io/anaconda/install) to get your environment setup correctly. 
 
 - **Compatibility Issues** - Python and Anacondas have some known issues with Windows 7 x64 machines. If you are running this OS, we recommend [installing a virtual machine](https://docs.continuum.io/anaconda/images) in order to run Anacondas
-- **Terminal Editor** - Windows users [should already have Powershell installed](http://cli.learncodethehardway.org/book/ex1.html), but may need to install an alternate terminal emulator
