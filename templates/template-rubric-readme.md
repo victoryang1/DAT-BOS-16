@@ -5,7 +5,7 @@
 
 > #### *How to Use This Template*
 
-> Content: You are only responsible for areas marked: "SME Notes". Specifically, you should create 2-3 learning goals for the assignment and list any technical requirements within the rubric below.
+> Content: You are only responsible for areas marked: "SME Notes". Create 2-3 learning goals for the assignment and list any technical requirements within the rubric below.
 
 > Delete this section ^
 
@@ -18,16 +18,15 @@ Your project will be assessed using the following standards:
 - [ ] Standard 2
 - [ ] Professional Development [*Optional: use at mid/end of course*]
 
-> ID Note: Fill these in with specific course standards				
 
-Acceptable performance for this standard is based on how well you've applied specific learning goals within your deliverable. To review the full list of standards, see the course syllabus.
+Acceptable performance for these standards is based on how well you've applied specific learning goals within your deliverable. To review the full list of standards, see our course syllabus.
 
 ---
 
 ## STANDARD #1
-**Meets Expectations**: Did you: X? Y? Z?
+**Meets Expectations**: Did you _____ ?
 
-> - SME Note: Fill these in X/Y/Z with 2-3 learning goals. What should the student be able to demonstrate, identify, articulate, or do as part of this standard? I.e. Demonstrate comprehension of data science fundamentals? Define a valid sampling methodology?
+> *Note*: Fill these in with 2-3 learning goals. What should the student be able to demonstrate, identify, articulate, or do as part of this standard? Demonstrate comprehension of data science fundamentals? Define a valid sampling methodology?
 
 Application of these learning goals will be assessed using the requirements below:
 
@@ -40,7 +39,7 @@ Application of these learning goals will be assessed using the requirements belo
 | Specific Requirement #2 | | | | |
 | Specific Requirement #3 | | | | |
 
-> SME Note: Requirements should be specific/technical deliverable criteria. I.e. "Create a data dictionary with variable classification"
+> *Note*: Requirements should be specific/technical deliverable criteria. Example: "Create a data dictionary with variable classification"
 
 - Section Sub-score: # / # [optional]
 - Notes:
