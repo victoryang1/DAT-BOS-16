@@ -7,7 +7,7 @@
 - Confidence intervals
 - Correlation
 - Dataframe
-- Historgrams
+- Histograms
 - Line graph
 - Logistic Model
 - Mean

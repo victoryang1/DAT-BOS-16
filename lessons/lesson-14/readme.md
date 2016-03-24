@@ -325,7 +325,7 @@ model = Word2Vec(text, size=100, window=5, min_count=5, workers=4)
 ```
 Here:
 - `size` represents how many concepts or topics we should use
-- `window` represents how many words surronding a sentence we should use as our original features
+- `window` represents how many words surrounding a sentence we should use as our original features
 - `min_count` is the number of times that context or word must appear
 - `workers` is the number of CPU cores to use to speed up model training
 
@@ -345,7 +345,7 @@ In this exercise, we will compare some of the classical NLP tools from the last 
 
 > Instructor Note: If you want students to capture their own collection of tweets using the Twitter API,[ use the following instructions](./code/twitter-instructions.md). It requires some setup and a Twitter account.
 
-> If not - you can use a [pre-existing file of captured tweets](./assets/dataset/captured-tweets.txt) relating tech companies and Middle Eastern companiest
+> If not - you can use a [pre-existing file of captured tweets](./assets/dataset/captured-tweets.txt) relating tech companies and Middle Eastern companies.
 
 **Bonus**: Want to collect your own tweets? Here are some instructions. We'll use the Twitter API to build a collection of tweets to learn from. After that, we'll filter future tweets based on some established conditions.
 

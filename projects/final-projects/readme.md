@@ -25,7 +25,7 @@ Project outlines are a valuable resource when working through data projects. For
 
 ### **Final Project, pt. 3**
 
-Exploratory data analysis is a crucial and informative step in the data process. In this assignment, you will build off of your previous work, by first confirming a dataset, then exploring and visualizing your analysis in order to effectively tell your data's story. You'll create an iPython notebook that explores your data mathematically, using a python visualiation package.
+Exploratory data analysis is a crucial and informative step in the data process. In this assignment, you will build off of your previous work, by first confirming a dataset, then exploring and visualizing your analysis in order to effectively tell your data's story. You'll create an iPython notebook that explores your data mathematically, using a python visualization package.
 
 - **Goal**: Confirm your data and create an exploratory analysis notebook with stat analysis and visualization.
 - **[Detailed Spec File](./03-exploratory-analysis/readme.md)**
@@ -33,9 +33,9 @@ Exploratory data analysis is a crucial and informative step in the data process.
 
 ### **Project Project, pt. 4**
 
-By now, you're ready to apply your modeling skills to make machine learning predictions. Our goal for this project is to develop a working technical document that can be shared amongst your peers. 
+By now, you're ready to apply your modeling skills to make machine learning predictions. Our goal for this project is to develop a working technical document that can be shared amongst your peers.
 
-Use your model to display correlations, feature importance, and unexplained variance. Document your research with a summary, explaining your modeling approach as well as the strengths and weaknesses of any variables in the process. You should provide insight into your analysis, using best practices like cross validation or applicable prediction metrics. Look at how your model performs compared to a dummy model, and articulate the benefit gained by using your specific model to solve this problem. Finally, build visualizations that explain outliers and the relationships of your predicted parameter and independent variables. 
+Use your model to display correlations, feature importance, and unexplained variance. Document your research with a summary, explaining your modeling approach as well as the strengths and weaknesses of any variables in the process. You should provide insight into your analysis, using best practices like cross validation or applicable prediction metrics. Look at how your model performs compared to a dummy model, and articulate the benefit gained by using your specific model to solve this problem. Finally, build visualizations that explain outliers and the relationships of your predicted parameter and independent variables.
 
 - **Goal**: Detailed iPython technical notebook with a summary of your statistical analysis, model, and evaluation metrics.
 - **[Detailed Spec File](./04-notebook-rough-draft/readme.md)**

@@ -31,7 +31,7 @@ Following these steps will help you better understand your dataset.
     - Advanced Option: Replace missing values using multiple imputation methods
 
 - **Submission:**
-    - Instructor TBD 
+    - Instructor TBD
 
 ---
 
@@ -49,7 +49,7 @@ Your project will be assessed using the following standards:
 
 1. Parse the Data
 
-#### Rubric: [Click here for the complete rubric](./project2-rubric.md). 
+#### Rubric: [Click here for the complete rubric](./project2-rubric.md).
 
 Requirements for these standards will be assessed using the scale below:
 
@@ -67,7 +67,7 @@ While your total score is a helpful gauge of whether you've met overall project 
 ### RESOURCES
 
 #### Dataset  
-We'll be using the same dataset as UCLA's Logistic Regression in R tutorial to explore logistic regression in Python, as explained in [yhat's blog](http://blog.yhat.com/posts/logistic-regression-and-python.html). This is an excellent resource for using logistic regression and summary statistics to explore a relevant dataset. Our goal will be to identify the various factors that may influence admission into graduate school. It containes four variables- admit, gre, gpa, rank.
+We'll be using the same dataset as UCLA's Logistic Regression in R tutorial to explore logistic regression in Python, as explained in [yhat's blog](http://blog.yhat.com/posts/logistic-regression-and-python.html). This is an excellent resource for using logistic regression and summary statistics to explore a relevant dataset. Our goal will be to identify the various factors that may influence admission into graduate school. It contains four variables- admit, gre, gpa, rank.
 
 - 'admit' is a binary variable. It indicates whether or not a candidate was admitted admit =1) our not (admit= 0)
 - 'gre' is GRE score
@@ -102,4 +102,3 @@ Look at some sample notebooks for an example of the types of visualizations you 
 - [Useful Pandas Snippets](https://gist.github.com/bsweger/e5817488d161f37dcbd2)
 
 ---
-

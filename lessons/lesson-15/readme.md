@@ -85,7 +85,7 @@ Similarly, searches for 'Gingerbread Houses' spike every year around the holiday
 
 Both of these spikes re-occur on a fixed time-scale, making them seasonal patterns. While we may see other types of regularly occurring swings (for example, growth vs recession year economic trends), seasonal patterns should repeat on a fixed timescale or _period_.
 
-Repeated patterns that are _aperiodic_ are known as _cycles_. While identifying aperiodic cycles are important, they are often treated differently that seasonal effects. Seasonal effects are useful for their consistency, because prior data from previos years/terms/etc is useful as a predictor.
+Repeated patterns that are _aperiodic_ are known as _cycles_. While identifying aperiodic cycles are important, they are often treated differently that seasonal effects. Seasonal effects are useful for their consistency, because prior data from previous years/terms/etc is useful as a predictor.
 
 Lastly, 'iphone' searches have both a general trend upwards (indicating more popularity for the phone) as well as a spike in September, which is typically when Apple announces new versions.
 

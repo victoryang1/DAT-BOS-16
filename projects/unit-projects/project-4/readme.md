@@ -15,19 +15,19 @@ In this project, you will summarize and present your analysis from Projects 1-3.
 
 - **Requirements:**
     -  “Specific aim”
-    -  Outlined methods and models 
-    -  Articulation of datasets 
-    -  Risks and assumptions 
+    -  Outlined methods and models
+    -  Articulation of datasets
+    -  Risks and assumptions
     -  Goals and criteria for success
-    -  A exploratory data analysis overview with visualizations and statistical analysis 
-    -  A writeup on the interpretation of findings including an executive summary with conclusions and next steps 
+    -  A exploratory data analysis overview with visualizations and statistical analysis
+    -  A writeup on the interpretation of findings including an executive summary with conclusions and next steps
 
-- **Bonus:** 
+- **Bonus:**
     - Always consider your audience - what do they already know vs. what should you define or explain?
     - Visualize your findings! Use charts, graphs, or other images as appropriate.
 
-- **Submission:**	
-    - TBD by instructor. 
+- **Submission:**
+    - TBD by instructor.
 
 ---
 
@@ -46,7 +46,7 @@ Your project will be assessed using the following standards:
 1. Present Results
 2. Professional Development
 
-#### Rubric: [Click here for the complete rubric](./project4-rubric.md). 
+#### Rubric: [Click here for the complete rubric](./project4-rubric.md).
 
 Requirements for these standards will be assessed using the scale below:
 
@@ -64,7 +64,7 @@ While your total score may serve as a helpful gauge of whether you've met projec
 ### RESOURCES
 
 #### Dataset  
-We'll be using the same dataset as UCLA's Logistic Regression in R tutorial to explore logistic regression in Python, as explained in [yhat's blog](http://blog.yhat.com/posts/logistic-regression-and-python.html). This is an excellent resource for using logistic regression and summary statistics to explore a relevant dataset. Our goal will be to identify the various factors that may influence admission into graduate school. It containes four variables- admit, gre, gpa, rank.
+We'll be using the same dataset as UCLA's Logistic Regression in R tutorial to explore logistic regression in Python, as explained in [yhat's blog](http://blog.yhat.com/posts/logistic-regression-and-python.html). This is an excellent resource for using logistic regression and summary statistics to explore a relevant dataset. Our goal will be to identify the various factors that may influence admission into graduate school. It contains four variables- admit, gre, gpa, rank.
 
 - 'admit' is a binary variable. It indicates whether or not a candidate was admitted admit =1) our not (admit= 0)
 - 'gre' is GRE score
@@ -78,7 +78,7 @@ Open the [iPython Notebook](./starter-code/project4-starter.ipynb) and follow th
 
 #### Suggestions for Getting Started
 
-- Review your previous work and any prior intructor feedback.
+- Review your previous work and any prior instructor feedback.
 - Look up sample executive summaries online.
 
 ---

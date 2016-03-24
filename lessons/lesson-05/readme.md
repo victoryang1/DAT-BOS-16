@@ -125,7 +125,7 @@ pip install beautifulsoup4
 #### Outside World
 As we saw with pip, the CL can connect us to the outside world. In data this is particularly important.
 
-Let's say we have HIPAA protected data (note: HIPAA is a policy that protects health data for people. It requires extra securtiy so you can't leave data around on your local computer.) Often times it will be the data we'll leave on an external computer that we need to communicate with. We can do this through the CL.
+Let's say we have HIPAA protected data (note: HIPAA is a policy that protects health data for people. It requires extra security so you can't leave data around on your local computer.) Often times it will be the data we'll leave on an external computer that we need to communicate with. We can do this through the CL.
 
 > Instructor Note: Demo SSH and/or Tunnel to a AWS or similar instance
 
