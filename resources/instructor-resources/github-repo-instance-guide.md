@@ -1,7 +1,5 @@
 # ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png) Student Facing Repo Instructions
 
-![GeneralAssemb.ly](https://github.com/generalassembly/ga-ruby-on-rails-for-devs/raw/master/images/ga.png "GeneralAssemb.ly")
-
 ##Student-Facing Repo Instructions
 
 In many technical courses, we use a student-facing repo to distribute things like homework and project prompts, sample and solution code, slides and notes. The instructor or producer should create a student-facing repo for each course by following these steps:
