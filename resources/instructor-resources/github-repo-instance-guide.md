@@ -1,103 +1,23 @@
-# ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png) Data Science Refresh
+# ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png) Student Facing Repo Instructions
 
-### Repo Guide
-Use this guide to create a repository for your Data Science instance.
-**Your repo will include:**
+![GeneralAssemb.ly](https://github.com/generalassembly/ga-ruby-on-rails-for-devs/raw/master/images/ga.png "GeneralAssemb.ly")
 
-- Lesson Plans & Slide Decks
-- Workshop datasets + starter & solution code
-- Project Prompts, Rubrics, & Solution Code (where applicable)
-- Resources for students and instructors
+##Student-Facing Repo Instructions
 
-> __IMPORTANT: Once you are done setting up your repo, please delete or overwrite the contents of this Readme!__
+In many technical courses, we use a student-facing repo to distribute things like homework and project prompts, sample and solution code, slides and notes. The instructor or producer should create a student-facing repo for each course by following these steps:
 
----
+* Before you get started, you'll need to know what your instructors' and TAs' GitHub usernames are. They should already have GitHub accounts but if they don't, they'll need to sign up for one. Instructor/TA onboarding is a great time to ask for their GitHub handles. 
 
-## Requirements
+* Create a new repo under the [ga-students org](https://github.com/ga-students) (if you don't have access to ga-students, please email [Zoe](mailto:zoes@generalassemb.ly), who can add you). Name your repo using the following convention: [Course Code]-City-Instance Number (i.e. "FEWD-NYC-1"). Make sure that you select "Private" in order to prevent the course materials from being publicly accessible.
 
-* [ ] **Github Usernames**: Before you get started, you should have a list of usernames for all instructors, TA's, and/or students. If they don't already have one, ask them to signup (it's free).
+* You'll now need to give your instructors access to the repository by [creating a new team](https://github.com/orgs/ga-students/teams) and adding both the instructor and the TA to the team. Give your team the same name that you gave the repo above, plus the word "Instructors" (i.e. "DS-NYC-1 Instructors"). Then, under "Repositories," add the repo that you just created by searching for its name in the "Add repositories" field. Finally, press the "Settings" button on the left and select "Admin Access". This will allow your instructors to make changes to the repo.
 
-* [ ] **Basic Github Familiarity**: If you haven't used Github before, there are a ton of [useful tutorials](https://generalassembly.wistia.com/medias/jkrycndgrs) out there.
+* Your instructors should receive an email notification from GitHub letting them know that they've been given access to this repo but just in case they don't, you can always send them the link. Navigate to [https://github.com/ga-students](https://github.com/ga-students) in your web browser, search for your repo by name in the "Find a repository..." search box and click on the title for your repo. This is the permalink for your repository that you can send to instructors and students. 
 
-***
+* When adding students to the repo, do the same as above, creating a team for students (i.e. "DS-NYC-1 Students"). Instead of giving students admin access to the repo, give them read access. This way, students can't accidentally write over any files in the repo. __Producers will need to add students to this group because instructors do not have the necessary permissions to add students.__ You will need to ask students to send you their GitHub account names either before the start of class or during the first week so that you can add them. 
 
-## Setting Up Your Repo
+* Your student-facing repo should now be ready to use! Once your instructors have access, they should be able to add any content that they need to distribute to students to the repo (homework, project prompts, resources, etc.). Depending on the course, students will either use the GitHub for Mac/Windows client or the command line to pull down files from the class repo.
 
-Fork from the master curriculum repo for your own course instances. We further recommend creating a student-facing repo to distribute project prompts/rubrics, starter/sample code, and course resources.
+##Questions?
 
-***
-
-## Instructions
-
-1. **Create a new repo.** Create a new repo under the [ga-students org](https://github.com/ga-students).
- > If you don't have access to "ga-students", please email [Zoe](mailto:zoes@generalassemb.ly).
-
-2. Name your repo using the following convention: "DS-City-Instance Number" (i.e. "DS-NYC-3").
-3. Press the "Download ZIP" button on the right. Download and unzip the .zip file to your computer.
-4. This folder is the local copy of your "DS-City-Instance" repo.
-
- **Checkpoint**: You should now have a blank "DS-City-Instance Number" folder, ready to be filled with class content!
-
-5. Next, go back to github and navigate over to the "DS-Student-Facing-Repo."
-6. Once again, press the "Download ZIP" button on the right. Download and unzip.
-7. Copy all of the contents from your downloaded "DS-Student-Facing-Repo" folder into your "DS-City-Instance Number" folder.
-
- **Checkpoint**: Your local "DS-City-Instance Number" folder should now contain all the class materials from the student-facing repo. Next you'll need to publish it!
-
-8. Complete the steps outlined in the Github familiarity video from step 1 to push your changes online. You should:
- * [ ] Initialize Git within your "DS-City-Instance" local repo using the Github desktop app or Terminal.
-   * In Terminal, you would navigate to your "DS-City-Instance" folder, type `git init` and then `git add .`
- * [ ] Leave a commit message using the Github desktop app or Terminal.
-   * In Terminal, you would type `git commit -m "commit message"` with your commit message in quotes.
- * [ ] Finally, commit to master using the Github desktop app or Terminal.
-   * In Terminal, you would type `git push origin master`  
-
- **Checkpoint**: Your "DS-City-Instance" repo should now be live on GitHub, filled with all of the student facing content!
-
-9. Now that you're ready to go, make sure all instructors and TA's have access to the repository. To do this:
- * [ ] [Create a new team](https://github.com/orgs/ga-students/teams).
- * [ ] Give your team the same name as your repo + the word "Instructors" (i.e. "DS-NYC-3 Instructors").
- * [ ] Under "Repositories," add your DS-City-Instance repo by searching for its name in the "Add repositories" field.
- * [ ] Press the "Settings" button on the left and select "Admin Access" so that your instructors can make changes as needed.
- * [ ] Add instructors and TAs to the team.
-
-10. Your team members will automatically receive an email notification from Github letting them know they've been given access to your repo. You can also send them the link if needed:
- * [ ] Navigate to [https://github.com/ga-students](https://github.com/ga-students) in your web browser
- * [ ] Search for your repo by name in the "Find a repository..." search box
- * [ ] Click on the title for your repo. This is the permalink you can send to instructors and students.
-
- **Checkpoint**: Your "DS-City-Instance" repo should now be accessible to your team of instructors and TA's.
-
-11. Finally, you'll need to repeat most of the process from step 10 for your students:
- * [ ] First, make sure students have created a Github account and submitted their user names. You can do this before or during the first week of class.
- * [ ] Next, create a team for students and title it with your instance (i.e. "DS-NYC-3 Students")
- * [ ] Under "Repositories," add your DS-City-Instance repo by searching for its name in the "Add repositories" field.
- * [ ] Press the "Settings" button on the left and select "Read Access".
- > _This will keep students from accidentally deleting any of the files in the repo._
-
-12. Before you can add students to your new group, they must first be added to the "ga-students" org.
- * [ ] _Producers will need to add students to this group because instructors may not have the necessary permissions.__
- * [ ] Once your students are recognized by the "ga-students" org, add them to your "DS-City-Instance Student" team.
-
- **Checkpoint**: Ok! Your "DS-City-Instance" repo should now be accessible by students, organized by team. They should be able to read all the files but not edit them. You're all set!
-
-13. One last step! __Instructors should be sure to either delete or overwrite this readme file before giving students access to the repo :)__
-
-***
-
-## Benefits
-
-- Students can also use the GitHub desktop app (or Terminal commands) to access all of the materials in the repo, including notes/links, starter code, projects, etc.
-- Instructors can optionally choose to give students access to submit their project assignments by pull request, which makes it easy for instructors and TA's to leave comments and feedback.
-
-***
-
-## Additional Resources
-
-- Github has a ton of online resources, and the Desktop app comes with a sample tutorial.
-- Both Codecademy and Codeschool offer free Git/Github related walkthroughs.
-
-***
-
-## Questions?
-If you have any questions please send them to [the part-time courses email list](mailto:askpart-time@generalassemb.ly).
+If you have any questions, please visit [the GA help desk](http://ga.co/helpdesk).
