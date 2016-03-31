@@ -5,7 +5,7 @@ In many technical courses, we use a student-facing repo to distribute things lik
 
 * Before you get started, you'll need to know what your instructors' and TAs' GitHub usernames are. They should already have GitHub accounts but if they don't, they'll need to sign up for one. Instructor/TA onboarding is a great time to ask for their GitHub handles. 
 
-* Create a new repo under the [ga-students org](https://github.com/ga-students) (if you don't have access to ga-students, please email [Zoe](mailto:zoes@generalassemb.ly), who can add you). Name your repo using the following convention: [Course Code]-City-Instance Number (i.e. "FEWD-NYC-1"). Make sure that you select "Private" in order to prevent the course materials from being publicly accessible.
+* Create a new repo under the [ga-students org](https://github.com/ga-students) (if you don't have access to ga-students, please email [Zoe](mailto:zoes@generalassemb.ly), who can add you). Name your repo using the following convention: [Course Code]-City-Instance Number (i.e. "DS-NYC-1"). Make sure that you select "Private" in order to prevent the course materials from being publicly accessible.
 
 * You'll now need to give your instructors access to the repository by [creating a new team](https://github.com/orgs/ga-students/teams) and adding both the instructor and the TA to the team. Give your team the same name that you gave the repo above, plus the word "Instructors" (i.e. "DS-NYC-1 Instructors"). Then, under "Repositories," add the repo that you just created by searching for its name in the "Add repositories" field. Finally, press the "Settings" button on the left and select "Admin Access". This will allow your instructors to make changes to the repo.
 
