@@ -10,7 +10,10 @@ During these preparation weeks you should:
 - Review the objectives as well as sample, starter, and solution code for each lesson, lab, and project.
 - Read through our [student feedback guide](../../projects/project-feedback.md) and review the rubrics for each project.
 - Decide how you want to incorporate your experiences into lesson materials and deliverables.
-- Update the slide decks for each lesson to correspond with the materials you plan to teach.
+- Create / update slide decks to correspond with the materials you plan to teach.
+  - We recommend using [Reveal.js](https://github.com/hakimel/reveal.js#full-setup) to automatically generate slides from external markdown files.
+- Review these [required student onboarding tasks](https://docs.google.com/document/d/1xoC18JHk880C9n_cAPCsGn-sNqexPgTIIkmUd7cTJQw/edit?usp=sharing), and ask your producer for access to the [pre-course onboarding assessment](https://mobilega.typeform.com/to/DqgDfO), which will help you gauge your students' comfort level with introductory concepts.
+- Review our [course technical requirements](https://docs.google.com/document/d/1hQZSmYfQwsOrc7Po4s7p1oDSKX8BAgKdgAKE4IRzh7g/edit?usp=sharing).
 
 > Note: We recommend that you follow the lesson structure provided as a baseline, but feel free to add or supplement the curriculum with materials based on your experience and students' comfort level. If you'd like to suggest future curriculum revisions, please see [our contributing guidelines](../../contributing.md).
 
