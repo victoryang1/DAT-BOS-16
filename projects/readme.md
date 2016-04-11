@@ -54,7 +54,13 @@ In order to pass this course, General Assembly students **must**:
 - Complete and submit the final project, including all 5 milestones.
 
 ### Grading & Using GitHub in the Classroom
+> The following recommendations assume instructors and students are all familiar with Github. If issues arise with assignment submission or grade release, alternative methods include using Dropbox or sending via email.
 
-You should be using GitHub for student-facing materials, project submission, feedback, and grading.
+Instructors should create their own fork from the baseline curriculum to host their tailored course materials. Students should in turn create their own individual course repositories to store notes and host graded assignments.
 
-> In addition to your own instructional instance repo, we recommend setting up a separate student-facing repo for the course. For information on [how to set up a student-facing repo, see these instructions](../resources/instructor-resources/github-repo-instance-guide.md).
+Students should pull in weekly materials released by instructors to their individual repositories. Students can create pull requests to the instructor's course repo for short assignments or homework submission. Instructors can use the public comment feature to confirm receipt and leave high level feedback.
+
+For project submission, students should link to their personal project commits so instructors can view their work. Instructors should in turn link students to a private gist for detailed project feedback and private graded rubrics.
+
+
+
