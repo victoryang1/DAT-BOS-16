@@ -31,7 +31,7 @@ Exploratory data analysis is a crucial and informative step in the data process.
 - **[Detailed Spec File](./03-exploratory-analysis/readme.md)**
 
 
-### **Project Project, pt. 4**
+### **Final Project, pt. 4**
 
 By now, you're ready to apply your modeling skills to make machine learning predictions. Our goal for this project is to develop a working technical document that can be shared amongst your peers.
 
@@ -41,7 +41,7 @@ Use your model to display correlations, feature importance, and unexplained vari
 - **[Detailed Spec File](./04-notebook-rough-draft/readme.md)**
 
 
-### **Project Project, pt. 5**
+### **Final Project, pt. 5**
 
 Whether during an interview or as part of a job, you will frequently have to present your findings to business partners and other interested parties - many of whom won't know anything about data science! That's why for pt. 5, you'll create a presentation of your previous findings with a non-technical audience in mind.
 
