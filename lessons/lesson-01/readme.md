@@ -117,7 +117,8 @@ DS | Lesson 1
 
 <a name="quiz"></a>
 ## Quiz: Data Science Baseline (10 Min)
-> Instructor Note: Consider presenting as a game or group activity.
+
+> Instructor Note: This quiz is intended as a helpful gauge of your students' background knowledge in data science related topics. It asks them questions on topics they haven't learned yet to estimate their prior knowledge and give you a chance to tailor materials accordingly (and correct misconceptions, etc). You are welcome to substitute or modify this quiz further as you see fit.
 
 #### Quiz
 1. True or False: Gender (coded: male= 0 female= 1) is a continuous variable
