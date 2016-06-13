@@ -82,7 +82,7 @@ DS | Lesson 1
 
 - Netflix - movie recommendations
 - Amazon's algorithm - "you might also like x"
-- Five Thirty Eight- election and sports coverage
+- Five Thirty Eight - election and sports coverage
 - Draft Kings - using data science to predict daily bets
 - Google - auto-translate and search results
 	- Ask students if they know of any other examples
