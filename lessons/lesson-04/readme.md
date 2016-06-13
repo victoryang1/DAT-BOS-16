@@ -127,9 +127,15 @@ In fact, people who carry cigarette lighters are 2.4 times as likely to contract
 A *DAG- Directed Acyclic Graph* is a handy tool to help you determine which
 variables are most important for your model.
 
+> Instructor: Explain the relationship between the acyclic property and
+causality.
+
 A DAG always includes at least one exposure/predictor and one outcome. For example:
 
 ![TV Sales DAG](./assets/images/sales-tv-model-output.png)
+
+> Instructors: Discuss "Acyclic" and "Undirected" for this diagram to solidify
+the concepts.
 
 Here the exposure/predictor is TV ads and it is associated with an outcome, sales. We can measure the strength to demonstrate a strong association between tv ads and sales.
 
