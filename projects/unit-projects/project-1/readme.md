@@ -9,6 +9,8 @@ Welcome to Data Science! In this first project you will create a framework to sc
 
 **Goal:** Create a structured iPython notebook using markup
 
+Note: You'll be working with two scenarios in this project and one dataset.
+
 ---
 
 ### DELIVERABLES
