@@ -97,6 +97,8 @@ Let's break this down further:
 <a name="demo1"></a>
 ## Demo: Diagraming an aim (5 mins)
 
+> Instructors: You do not need the actual dataset for this exercise.
+
 Example aim:
 Determine the association of foods in the home with child dietary intake. Using one 24-hour recall from the cross-sectional NHANES 2007-2010, we will determine the factors associated with food available in the homes of American children and adolescents. We will test if reported availability of fruits, dark green vegetables, low fat milk or sugar-sweetened beverages available in the home increases the likelihood that children and adolescents will meet their USDA recommended dietary intake for that food.
 
