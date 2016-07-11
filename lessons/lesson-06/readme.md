@@ -35,6 +35,10 @@ DS | Lesson 6
 - Read through datasets and starter/solution code
 - Add to the "Additional Resources" section for this lesson
 
+> A notebook of [linear regression examples](./code/Linear Regression with Statsmodels and Scikit-Learn.ipynb
+) is available, using both statsmodels and scikit-learn, including quadratic and
+exponential regressions.
+
 ### LESSON GUIDE
 | TIMING  | TYPE  | TOPIC  |
 |:-:|---|---|
