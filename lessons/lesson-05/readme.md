@@ -34,6 +34,9 @@ DS | Lesson 5
 	- Fill it in as you talk through the different features.
 	- Write commands (e.g., git push and git pull) on the lines connecting the correct tool to CL/Terminal as you discuss each one.
 
+> A notebook of [data visualization exercises](./code/Data Visualization Lab.ipynb
+) is available.
+
 ### LESSON GUIDE
 
 | TIMING  | TYPE  | TOPIC  |
