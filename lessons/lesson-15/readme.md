@@ -266,7 +266,7 @@ To measure how much the sales are correlated with each other, we want to compute
 `autocorr` takes one argument, the `lag` - which is how many prior data points should be used to compute the correlation. If we set the `lag` to 1, we compute the correlation between every point and the point directly preceding it, while setting `lag` to 10. This computes the correlation between every point and the point 10 days earlier:
 
 ```python
-data['Sales'].resample('D', how='mean').autocorr(lag=1)
+data['Sales'].resample('D').mean().autocorr(lag=1)
 ```
 
 Just like with correlation between different variables, the data becomes more correlated as this number moves closer to 1.
@@ -287,9 +287,9 @@ We can use `data.resample` and provide as arguments:
     - The aggregation to perform: 'mean', 'median', 'sum', etc.
 
 ```python
-data[['Sales']].resample('A', how=['median', 'mean'])
+data[['Sales']].resample('A').apply(['median', 'mean']).head()
 
-data[['Sales']].resample('M', how=['median', 'mean'])
+data[['Sales']].resample('M').apply(['median', 'mean']).head()
 ```
 
 Here we can see again that December 2013 and 2014 were the highest average sale months.
@@ -299,13 +299,13 @@ While identifying monthly averages is useful, we often want to compare the sales
 In pandas, we can compute rolling average using the `pd.rolling_mean` or `pd.rolling_median` functions.
 
 ```python
-pd.rolling_mean(data[['Sales']], window=3, center=True, freq='D')
+data[['Sales']].resample('D').mean().rolling(window=3, center=True).mean().head()
 ```
 
 This computes a rolling mean of sales using the sales on each day, the day preceding and the day following (window = 3, center=True).
 
 
-`rolling_mean` (as well as `rolling_median`) takes the series to aggregate as well as three important parameters:
+`rolling` takes three important parameters:
     - `window` is the number of days to include in the average
     - `center` is whether the window should be centered on the date or use data prior to that date
     - `freq` is on what level to roll-up the averages to (as used in `resample`). Either `D` for day, `M` for month or `A` for year, etc.
@@ -313,13 +313,13 @@ This computes a rolling mean of sales using the sales on each day, the day prece
 We can use our index filtering to just look at 2015.
 
 ```python
-pd.rolling_mean(data[['Sales']], window=3, center=True, freq='D')['2015']
+data[['Sales']].resample('D').mean().rolling(window=3, center=True).mean()['2015']
 ```
 
 Instead of plotting the full time series, we can plot the rolling mean instead, which smooths random changes in sales as well as removing outliers, helping us identify larger trends.
 
 ```python
-pd.rolling_mean(data[['Sales']], window=10, center=True, freq='D').plot()
+data[['Sales']].resample('D').mean().rolling(window=10, center=True).mean().plot()
 ```
 
 As we discussed earlier, this averages all values in the window evenly, but we might want to weight closer values more. For example, with a centered weighted average of 10 days, we want to put additional emphasis on +/- 1 day versus +/- days. One option to do that is the `ewma` function or `exponential weighted moving average` function.
@@ -333,11 +333,11 @@ pd.ewma(data['Sales'], span=10)
 
 #### Pandas Window functions
 
-Pandas `rolling_mean` and `rolling_median` are only two examples of Pandas window function capabilities. Window functions operate on a set of N consecutive rows (i.e.: a window) and produce an output.
+Pandas `rolling().mean` and `rolling().median` are only two examples of Pandas window function capabilities. Window functions operate on a set of N consecutive rows (i.e.: a window) and produce an output.
 
-In addition to `rolling_mean` and `rolling_median`, there are `rolling_sum`, `rolling_min`, `rolling_max`... and many more.
+In addition to `rolling().mean` and `rolling().median`, there are `rolling().sum`, `rolling().min`, `rolling().max`... and many more.
 
-Another common one is `diff`, which takes the difference over time. `pd.diff` takes one argument: `periods`, which measures how many rows prior to use for the difference.
+Another common one is `diff`, which takes the difference over time. `df.diff` takes one argument: `periods`, which measures how many rows prior to use for the difference.
 
 For example, if we want to compute the difference in sales, day by day, we could compute:
 
@@ -359,18 +359,18 @@ The following plot of the month to month change (`diff`) in jobs from FiveThirty
 
 #### Pandas Expanding Functions
 
-In addition to the set of `rolling_*` functions, Pandas also provides a similar collection of `expanding_*` functions, which, instead of using a window of N values, uses all values up until that time.
+In addition to the set of `rolling` functions, Pandas also provides a similar collection of `expanding` functions, which, instead of using a window of N values, uses all values up until that time.
 
 For example,
 
 ```python
-pd.expanding_mean(data['Sales'], freq='d')
+data[['Sales']].resample('D').mean().expanding().mean().head()
 ```
 
 computes the average sales, from the first date _until_ the date specified. Meanwhile:
 
 ```python
-pd.expanding_sum(data['Sales'], freq='d')
+data[['Sales']].resample('D').mean().expanding().sum().head()
 ```
 
 computes the sum of average sales per store up until that date.
@@ -406,7 +406,7 @@ sb.factorplot(
 
 ```python
 # Compare the following:
-average_daily_sales = data[['Sales', 'Open']].resample('D', how='mean')
+average_daily_sales = data[['Sales', 'Open']].resample('D').mean()
 
 average_daily_sales['Sales'].autocorr(lag=1)
 
@@ -418,22 +418,22 @@ average_daily_sales['Sales'].autocorr(lag=365)
 3. Plot the 15 day rolling mean of customers in the stores:
 
 ```python
-pd.rolling_mean(data[['Sales']], window=15, freq='D').plot()
+data[['Sales']].resample('D').mean().rolling(window=15).mean().plot()
 ```
 
 4. Identify the date with largest drop in sales from the same date in the previous month:
 
 ```python
-average_daily_sales = data[['Sales', 'Open']].resample('D', how='mean')
+average_daily_sales = data[['Sales', 'Open']].resample('D').mean()
 average_daily_sales['DiffVsLastWeek'] = average_daily_sales[['Sales']].diff(periods=7)
 
-average_daily_sales.sort(['DiffVsLastWeek']).head
+average_daily_sales.sort_values(by='DiffVsLastWeek').head()
 ```
 
 Unsurprisingly, this day is Dec. 25 and Dec. 26 in 2014 and 2015, when the store is closed and there are many sales in the preceding week. How about when the store is open?
 
 ```python
-average_daily_sales[average_daily_sales.Open == 1].sort(['DiffVsLastWeek'])
+average_daily_sales[average_daily_sales.Open == 1].sort_values(by='DiffVsLastWeek').head()
 ```
 
 The top values are Dec. 24th, but sales on 2013-12-09 and 2013-10-14 were on average 4k lower than the same day in the previous week.
@@ -442,23 +442,18 @@ The top values are Dec. 24th, but sales on 2013-12-09 and 2013-10-14 were on ave
 5. Compute the total sales up until Dec. 2014:
 
 ```python
-total_daily_sales = data[['Sales']].resample('D', how='sum')
-pd.expanding_sum(total_daily_sales)['2014-12']
+total_daily_sales = data[['Sales']].resample('D').sum()
+
+total_daily_sales.expanding().sum()['2014-12'].head()
+
 ```
-
-Note that this is **NOT**
-
-```python
-pd.expanding_sum(data['Sales'], freq='D')
-```
-
-because we do **not** want to average over our stores first.
 
 6. When were the largest differences between 15-day moving/rolling averages?
 HINT: Using `rolling_mean` and `diff`
 
 ```python
-pd.rolling_mean(data[['Sales']], window=15, freq='D').diff(1).sort('Sales')
+data[['Sales']].resample('d').mean().rolling(window=15).mean().diff(1).sort_values(by='Sales').head()
+
 ```
 
 Unsurprisingly, they occur at the beginning of every year after the holiday season.
