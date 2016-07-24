@@ -32,6 +32,7 @@ and the notebooks. Approximate timing:
 - One hour for DBSCAN and exercises
 - One hour on building models after clustering and silhouette metric
 
+> Be sure to copy the [slide deck](https://docs.google.com/presentation/d/12SEgnpHLwBXK_6CAsO2DUv_Gb7dJ-LD48QddtvulbWU/edit?usp=sharing).
 
 ### BEFORE NEXT CLASS
 |   |   |
