@@ -439,6 +439,20 @@ brew install postgres
 
 If this is done, you can demonstrate the `postgres` command line.
 
+On Linux (Ubuntu):
+```bash
+sudo apt-get install postgresql postgresql-client postgresql-contrib
+```
+
+Connect to the database with:
+```bash
+sudo -i -u postgres
+psql
+```
+
+See these [installation instructions](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-postgresql-on-ubuntu-14-04) and [these](https://help.ubuntu.com/community/PostgreSQL) if any issues arise.
+
+
 #### Demo of Postgres Shell
 - Starting postgres
 ```sh
