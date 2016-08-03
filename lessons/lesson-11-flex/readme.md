@@ -38,4 +38,3 @@ and the notebooks. Approximate timing:
 |   |   |
 |---|---|
 | **UPCOMING PROJECTS**  | [Final Project, Deliverable 2](../../projects/final-projects/02-experiment-writeup/readme.md)  |
-
