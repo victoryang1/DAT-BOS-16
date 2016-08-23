@@ -25,7 +25,7 @@ DS | Lesson 19
 
 ### Resources
 
-[Slides](https://docs.google.com/presentation/d/1wQjq3L80PR4x4quBeEzgEqmGejk_hE_AsKDtCkWOXUM/edit?usp=sharing)
+[Slides](https://docs.google.com/presentation/d/1KJrl-WM3nD2-T7NdrkQQVeRViyy_0lIViUH2VqO-Dqk/edit?usp=sharing)
 
 [Demo Notebook](19-Neural Networks.ipynb)
 [Solutions](19-Neural Networks-Solutions.ipynb)
