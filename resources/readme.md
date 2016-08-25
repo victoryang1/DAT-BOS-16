@@ -11,7 +11,6 @@ In this folder, you'll find a range of useful support materials. Here you'll fin
 - [Course Syllabus](./instructor-resources/ds-syllabus.pdf)
 - [Project Timeline](./instructor-resources/DS-project-due-dates.pdf)
 - [Data Science Workflow Guide](./instructor-resources/data-science-workflow-final.pdf)
-- [Contributing Guidelines](./instructor-resources/course-feedback-guidelines.md)
 
 ### For Students
 
