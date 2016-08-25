@@ -1,6 +1,6 @@
-# ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png) Data Science 2.0
+# ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png) Data Science
 
-Welcome to Data Science 2.1! We are building a global community of lifelong learners who are excited about using data to solve real world problems. 
+Welcome to GA's Part-Time Data Science Course (v 2.1)! We are building a global community of lifelong learners who are excited about using data to solve real world problems. 
 
 In this 10 week part-time course, students will use Python (v2.7) to explore datasets, build predictive models, and communicate data driven insights. Specifically, students will:
 
