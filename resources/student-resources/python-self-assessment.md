@@ -39,17 +39,9 @@ Below are links to some recommended resources that past Data Science students ha
 DON'T REVIEW UNTIL YOU'VE COMPLETED THE SELF-ASSESSMENT
 
 
-.
 
-.
-
-.
-
-***
-
-
-
-
+<spoiler>
+<details>
 > ### Python Self-Assessment: Answers
 
 > 1. `mylist = []` or `mylist = list()`
@@ -67,3 +59,5 @@ DON'T REVIEW UNTIL YOU'VE COMPLETED THE SELF-ASSESSMENT
 > 13. `d['c'] = 40`
 > 14. `people['Brandon'][1]`
 > 15. `def calc(a, b): return a + b` (usually written as two separate lines)
+</details>
+</spoiler>
