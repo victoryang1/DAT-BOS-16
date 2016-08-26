@@ -12,13 +12,13 @@ DS | Lesson 9
 
 ### LEARNING OBJECTIVES
 *After this lesson, you will be able to:*
-- Build a Logistic regression classification model using the sci-kit learn library
+- Build a Logistic regression classification model using the statsmodels library
 - Describe the sigmoid function, odds, and odds ratios as well as how they relate to logistic regression
 - Evaluate a model using metrics, such as: classification accuracy/error, confusion matrix, ROC / AOC curves, and loss functions
 
 ### STUDENT PRE-WORK
 *Before this lesson, you should already be able to:*
-- Implement a linear model (LinearRegression) with sklearn
+- Implement a linear model (LinearRegression) with sklearn or statsmodels
 - Define the concept of coefficients
 - Recall metrics for accuracy and misclassification
 - Recall the differences between L1 and L2 regularization
