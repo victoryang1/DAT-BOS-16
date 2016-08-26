@@ -28,10 +28,12 @@ DS | Lesson 7
 ### INSTRUCTOR PREP
 *Before this lesson, instructors will have to:*
 
+- Take a look at the [extra examples](./code/regularization.ipynb)
 - Review [Unit Project 3](../../projects/unit-projects/project-3/readme.md)
 - Copy and modify the [lesson slide deck](./assets/slides/slides-7.md)
 - Read through datasets and starter/solution code
 - Add to the "Additional Resources" section for this lesson
+
 
 ### LESSON GUIDE
 | TIMING  | TYPE  | TOPIC  |
@@ -228,6 +230,8 @@ Apply the following code through a loop of numbers 2 to 50 and find answers to t
 
 <a name="introduction-reg"></a>
 ## Regularization and Cross Validation (15 mins)
+
+> Note there are some nice [additional examples]([extra examples](./code/regularization.ipynb)) available
 
 #### What's Regularization? And why do we use it?
 
