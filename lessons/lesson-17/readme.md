@@ -39,6 +39,10 @@ DS | Lesson 17
           - If `brew` is installed, this is as simple as `brew install postgres`
     - *Using Wagon*
         - Everyone will need to [create an account and download the software](https://www.wagonhq.com/) to run the sample exercises they provide.
+- There is an extra [practice notebook](./code/starter-code/SQL-lab-starter.ipynb) available [solutions](./code/starter-code/SQL-lab-solution.ipynb).
+
+
+
 
 
 ### LESSON GUIDE
