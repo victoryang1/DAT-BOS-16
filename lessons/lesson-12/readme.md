@@ -12,10 +12,10 @@ DS | Lesson 12
 ### LEARNING OBJECTIVES
 *After this lesson, you will be able to:*
 
-- Understand and build decision tree models for classification and regression
-- Understand the differences between linear and non-linear models
-- Understand and build random forest models for classification and regression
-- Know how to extract the most important predictors in a random forest model
+- Build decision tree models for classification and regression
+- Discriminate the differences between linear and non-linear models
+- Build random forest models for classification and regression
+- Extract the most important predictors in a random forest model
 
 
 ### STUDENT PRE-WORK
