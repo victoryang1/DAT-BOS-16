@@ -13,9 +13,9 @@ DS | Lesson 14
 ### LEARNING OBJECTIVES
 *After this lesson, you will be able to:*
 
-- Understand what _latent_ variables are
-- Understand the uses of _latent variables_ in language processing
-- Use the _word2vec_ and _LDA_ algorithms of `gensim`
+- Define and identify _latent_ variables 
+- Explain the uses of _latent variables_ in language processing
+- Apply the _word2vec_ and _LDA_ algorithms of `gensim`
 
 ### STUDENT PRE-WORK
 *Before this lesson, you should already be able to:*
