@@ -204,7 +204,7 @@ As the standard error of an estimated value generally increases with the size of
 The regression line is the line that minimizes the sum of squared deviations of prediction (also called the sum of squares error). The standard error of the estimate is closely related to this quantity.
 
 > Instructors: You may want to demo the Central Limit Theorem at this point
-with 9this notebook](code/Central Limit Theorem.ipynb)
+with [this notebook](.code/Central Limit Theorem.ipynb)
 
 ### Codealong Part 3: Standard Deviation & Variance
 > Instructor Note: Review "Part 3. SD & Variance" of the [starter-code](./code/starter-code/starter-code-3.ipynb).
