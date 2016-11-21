@@ -359,4 +359,5 @@ brown | 0 | 0 | 0 | 0 | 1
 | **PROJECT 2** | [Unit Project 2](../../projects/unit-projects/project-2/readme.md)   |
 
 ### ADDITIONAL RESOURCES
-- If any
+- [Fundamental Statistics](https://sites.google.com/site/fundamentalstatistics/chapter1)
+- [Online Statistics Fundamentals](http://onlinestatbook.com/2/)
