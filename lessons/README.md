@@ -29,12 +29,12 @@ General Assembly's Data Science course is made up of 20 lessons that are 3 hours
 | Lesson 2 | [Research Design & Pandas](./lesson-02/README.MD) || Lesson 12 | [Decision Trees / Random Forest](./lesson-12/README.MD)|
 | Lesson 3| [Statistics Fundamentals pt. 1](./lesson-03/README.MD) || Lesson 13 | [NLP with Classification](./lesson-13/README.MD) |
 | Lesson 4 | [Statistics Fundamentals pt. 2](./lesson-04/README.MD) || Lesson 14 | [Dimensionality Reduction](./lesson-14/README.MD) |
-| Lesson 5 | *[Tool Review / Flex Session](./lesson-05/README.MD) || Lesson 15 | [Time Series Data](./lesson-15/README.MD) |
-| Lesson 6 | [Intro to Linear Regression](./lesson-06/README.MD) || Lesson 16 | [Modeling Time Series Data](./lesson-16/README.MD) |
-| Lesson 7 | [Evaluating Model Fit](./lesson-07/README.MD) || Lesson 17 | [Data Science Databases](./lesson-17/README.MD) |
-| Lesson 8 | [Intro to Classification](./lesson-08/README.MD)|| Lesson 18 | [Data Science Careers](./lesson-18/README.MD) |
+| Lesson 5 | *[Tool Review / Flex Session](./lesson-05/README.MD) || Lesson 15 | [Time Series Data](/lesson-15/README.MD) |
+| Lesson 6 | [Intro to Linear Regression](./lesson-06/README.MD) || Lesson 16 | [Modeling Time Series Data](/lesson-16/README.MD) |
+| Lesson 7 | [Evaluating Model Fit](./lesson-07/README.MD) || Lesson 17 | [Data Science Databases](/lesson-17/README.MD) |
+| Lesson 8 | [Intro to Classification](./lesson-08/README.MD)|| Lesson 18 | [Data Science Careers](/lesson-18/README.MD) |
 | Lesson 9 | [Intro to Logistic Regression](./lesson-09/README.MD) || Lesson 19 | *Flex Session (Suggestion: [Neural Networks](./lesson-19-flex/)) |
-| Lesson 10 | [Communicating Model Results](./lesson-10/README.MD) ||Lesson 20 | Final Project Demo Day |
+| Lesson 10 | [Communicating Model Results](./lesson-10/README.MD) ||Lesson 20 | Final Project Demo Day | 
 
 ---
 
