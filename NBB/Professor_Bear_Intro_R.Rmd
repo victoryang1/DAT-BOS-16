@@ -1,0 +1,1095 @@
+---
+title: "Professor Bear - Intro to R"
+author: "Nik Bear Brown"
+date: "September 5, 2016"
+output: html_document
+---
+
+
+**Table of Contents**  
+[Section 1.1: What is R?](#what-is-r?)  
+[Section 1.1.1: RStudio](#rstudio)  
+[Section 1.2: Downloading R and rStudio](#downloading-r-and-rstudio)  
+[Section 1.3: Learning tips](#learning-tips)  
+[Section 1.4: Simple calculator](#simple-calculator)  
+[Section 1.5: Variables and objects](#variables-and-objects)   
+[Section 1.6: Data types in R](#data-types-in-r)  
+[Section 1.6.1: Numeric](#numeric)  
+[Section 1.6.2: Logical](#logical)  
+[Section 1.6.3: Complex](#complex)  
+[Section 1.6.4: Character and strings](#character-and-strings)  
+[Section 1.6.5: Factors](#factors)  
+[Section 1.6.6: Dates](#dates)  
+[Section 1.6.7: Missing and special values](#missing-and-special-values)  
+[Section 1.7: Data structures in R](#data-structures-in-r)  
+[Section 1.7.1: Vectors](#vectors)  
+[Section 1.7.1: Lists](#lists)  
+[Section 1.7.1: Arrays](#arrays)  
+[Section 1.7.1: Matrices](#matrices)  
+[Section 1.7.1: Data frames](#data-frames)  
+[Section 1.8: Control structures](#control-structures)  
+[Section 1.8.1: Conditional statements](#conditional-statements)  
+[Section 1.8.2: Loops](#loops)  
+[Section 1.8.2.1: For](#for)   
+[Section 1.8.2.2: While](#while)   
+[Section 1.9: Data filtering (Subsetting)](#data-filtering-(subsetting))  
+[Section 1.10: Packages](#packages)  
+[Section 1.11: Reading documentation](#reading-documentation)  
+[Section 1.12: Loading data](#loading-data)  
+[Section 1.13: Saving your work](#saving-your-work)  
+[Section 1.14: Functional programming](#functional-programming)  
+[Section 1.15: Summarizing data](#summarizing-data)  
+[Section 1.16: Getting help](#getting-help)  
+[Section 1.17: Further resources](#further-resources)  
+
+##1.1: What is R?  
+
+R is a language and environment for statistical computing and graphics. It is a GNU project which is similar to the S language and environment which was developed at Bell Laboratories (formerly AT&T, now Lucent Technologies) by John Chambers and colleagues. R can be considered as a different implementation of S. There are some important differences, but much code written for S runs unaltered under R.
+
+It is a very popular language for statistics or as some argue the [lingua franca of statistics](http://vimeo.com/52999628). You can learn more about the [history of R](https://www.youtube.com/watch?v=kzxHxFHW6hs&list=PLjTlxb-wKvXNSDfcKPFH2gzHGyjpeCZmJ).
+
+The reason that popularity is important for a language is, as Linus Torvarld's said "given enough eyeballs, all bugs are shallow." Many people working on R means that many people use it, debug it, and write new functionality for it.
+
+##1.1.1: RStudio  
+
+RStudio is a free and open-source integrated development environment (IDE) for R. A good IDE like RStudio makes it easier to work with R.
+
+##1.2: Downloading R and RStudio  
+
+[R project](https://www.r-project.org/)   
+
+[RStudio](https://www.rstudio.com/products/rstudio/download3/)    
+
+
+##1.3: Learning tips.  
+
+
++ If you have never learnt a programming language, it is likely that this may feel a bit intimidating. But **practice will increase your confidence, understanding, and skills**. 
+
++ **Get used to making mistakes!** You will make loads of them and that's OK. 
+
++ **Don't memorize.** There are thousands **packages** in R (modules that expand the functionality of R). It will never be the case when you are programming in R when you don't have access to the R documentation and help. Rarely will most program in R without access to the Internet. It is **far more important** to learn to read the R documentation and undertsand error messages than it is to memorize.
+
+
+##1.4: Simple calculator  
+
+```{r simple-calculator}
+33+5
+55*11
+2**5
+2^5
+log(10)       					
+log(16, 2)    					
+log(1000, 10)   	
+33 + 11
+value = (3.55 / 0.11)^3
+print(value)
+
+# R will do these operations element-wise on vectors
+vector1 = c(1, 2, 3, 4)
+vector2 = c(2, 2, 2, 2) # 'c' is short for Concatenate
+
+vector1 + vector2
+vector1 * vector2
+vector1^2
+log(vector2) 
+vector1/vector2
+```
+
+
+##1.5: Variables and objects  
+
+R is what we call an *object-oriented language*. **Everything that exists in R is an object**. You can think of an object as a *smart variable* that has some knowledge of itself.
+
+If we want to save a variable we need to give it a name to save its data. For that we use the **assignment operator**. In R the `<-` symbol is the assignment operator 
+
+This assignment operator is what assigns value to a symbol. So, for example, if we type the following expression in the prompt:
+
+```{r}
+x <- 5
+x
+class(x)
+is.numeric(x)
+```
+
+Here R creates a *numeric object*, called `x`, with one element (5) or of lenght 1. R is smart enough to automatically make it numeric.
+
+One could also use the `=` sign as an assignment operator but it is not as powerful as `<-` The difference in assignment operators is clearer when you use them to set an argument value in a function call. For example: 
+
+```{r, eval=FALSE}
+median(x = 1:10)
+x   
+## Error: object 'x' not found
+```
+
+In the median(x = 1:10) case, x is declared within the scope of the function, so it does not exist in the user workspace.
+
+```{r, which-assignment}
+median(x  <- 1:10)
+x   
+```
+
+In the median(x  <- 1:10) case, x is declared in the user workspace, so you can use it after the function call has been completed.
+
+
+When writing expressions in R is very important you understand that **R is case sensitive**. If we assign a varible *x* and then later try to access *X* we will get an error/
+
+```{r, eval = FALSE}
+X
+print(X)
+
+```
+
+You will get the following message: `"Error in print(X) : object 'X' not found"`. R is telling us that `X` does not exist. There isn't an object "
+
+The assignment operator `<-` can also be used to assign more complicated data structures. We will discuss this more when we discuss data structures in R but for a quick preview look at the code below:
+
+```{r}
+y <- 1:33 # a numeric sequence using the : operator
+y 
+```
+
+Notice that a comment was created using the pound sign `#` followed by some text. 
+
+
+If you want to delete a particular object you can do so using the `rm()` function.
+
+```{r}
+rm(y) #remove y from your global environment
+```
+
+It is also possibly to remove all objects at once:
+
+```{r, eval=FALSE}
+rm(list = ls()) #remove all objects from your global environment
+```
+
+
+##1.6: Data types in R  
+
+R has a wide variety of data types including numerical, character, logical, complex, factors, dates and special objects to handle missing and special values. 
+
+It also has functions like is.numeric(), is.character(), etc. to check a data type as well as functions like as.numeric(), as.character() that will attempt to convert an object to a particular data type.
+
+##1.6.1: Numeric  
+
+A numeric data type is a floating point approximatation of a real number including positive and negative numbers. R has no single precision data type. All real numbers are stored in double precision format. Double precision has 53 bits, and represents to that precision a range of absolute values from about 2e-308 to 2e+308. 2e+308 is a VERY big number so one will use it for most numeric operations without worrying whether R can accurately store the number.
+
+```{r, numeric}
+x <- c(0.0,1,2,3.3,-5.5) # numeric vector
+x
+class(x)
+y <-5
+y
+class(y)
+z<--3.3
+z
+class(z)
+```
+
+Note: By default all numbers are real numbers. In order to create an integer variable in R, we can invoke the as.integer function or use the suffix L after the number.
+
+```{r, integer}
+y <-5
+y
+class(y)
+y <-5
+y<-as.integer(y) 
+class(y)
+y <-5
+z<-as.integer(3) 
+z
+class(z)
+a<-1
+a
+class(a)
+b<-1L
+b
+class(b)
+```
+
+##1.6.2: Logical 
+
+The logical (or Boolean) data type is a data type, having two values (usually denoted true and false), intended to represent the truth values of logic and Boolean algebra. 
+ 
+```{r, logical}
+x<-3.3; y<-5   # some values 
+z = x > y      # is x larger than y? 
+z              # print the logical value 
+class(z)       # print the class name of z 
+u = TRUE; v = FALSE
+u & v          # u AND v 
+u | v          # u OR v 
+!u             # negation of u 
+```
+
+
+Notice that u = TRUE; v = FALSE are capitalized. Further details and related logical operations can be found in the R documentation.
+
+```{r, eval=FALSE}
+ help("&")
+```
+
+##1.6.3: Complex  
+
+A [complex number](https://en.wikipedia.org/wiki/Complex_number) is a pair of numbers $a \quad and \quad b$ forming a vector representing a projection in the real and the [complex plane](https://en.wikipedia.org/wiki/Complex_plane). "Re" is the real axis, "Im" is the imaginary axis, and $i$ is the [[imaginary unit]] which satisfies $i^2 = −1$.  
+
+```{r}
+x <- 1 + 2i     # create a complex number 
+x
+class(x)
+```
+
+The following gives an error as −1 is not a complex value.
+
+```{r, eval=FALSE}
+sqrt(−1)       # square root of −1 
+```
+
+Instead, we have to use the complex value −1 + 0$i$.
+
+```{r, eval=FALSE}
+sqrt(−1+0i)       # square root of −1 
+```
+
+Alternatively we can coerce −1 into a complex value.
+
+```{r, eval=FALSE}
+sqrt(as.complex(−1))  # square root of −1 
+```
+
+
+##1.6.4: Character and strings
+
+Character string are sequences of ASCII characters. By default R uses a [UTF-8 encoding](https://en.wikipedia.org/wiki/UTF-8). UTF-8 is a character encoding capable of encoding all possible characters, or code points, defined by Unicode and originally designed by Ken Thompson and Rob Pike. Professor Bear will create another tutorial on using other character encodnings in R. 
+
+```{r}
+x<-'bear'
+x
+class(x)
+y<-as.character(3.14)
+y
+class(y)
+```
+
+##1.6.5: Factors  
+
+It is common to have categorical data in statistical data analysis. A categorical variable is a variable that can take on one of a limited, and usually fixed, number of possible values (e.g. {Male,Female} or {yes,no} or a human blood type {A, B, AB or O}. In R such variables are referred to as factors. Nominal variables such as yes/no has no intrinsic ordering. An ordinal variable has a clear ordering of the variables, such as ranks like *private*, *corporal*,*sergeant*, *lieutenant*, *captain*, etc.. In R, *all categorical data* is treated as a factor with a set of levels. The levels allow for the ordering (or reordering of categorical data) for display even if there is no intrinsic ordering.
+
+A factor is very similar to an integer vector with a set of labels. While factors look like character vectors, they are not. So be careful when converting factors to characters and vice-versa. For example, use `stringsAsFactors = FALSE` when reading dataframes (more on this later).
+
+
+```{r, factors-months}
+months = c("March","April","January","November","September","October","June","August","February","May","July","December")
+months
+class(months)
+months = factor(months,levels=c("January","February","March", "April","May","June","July","August","September","October","November","December"),ordered=TRUE)
+class(months)
+levels(months)
+is.factor(months)
+```
+
+
+
+##1.6.6: Dates  
+
+Dates are represented as the number of days since 1970-01-01, with negative values for earlier dates. We use as.Date( ) to convert strings to dates.
+
+```{r}
+life <- as.Date(c("1972-07-08", "2016-09-05")) # use as.Date( ) to convert strings to dates 
+lifespan <- life[2] - life[1]
+lifespan
+Sys.Date( ) # returns today's date. 
+date() # returns the current date and time.
+```
+
+##1.6.7: Missing and special values  
+
+One thing you may also want to do is to see if there are any **missing values**. For that we can use the `is.na()` function. Missing values in R are coded as NA (NA stands for “not available.”). The code below, for example, asks for NA values for the variable 
+
+
+```{r}
+x<-1:33 # create a numeric sequence
+x
+x[sample(1:length(x), 11)] <- NA # Add 11 NA's randomly
+x
+is.na(x) # Create a logical vector asking which elements are NA's 
+```
+
+
+### Inf and -Inf
+
+If a computation results in a number that is too big, R will return Inf for a positive number and -Inf for a negative number (meaning positive and negative infinity, respectively).
+
+```{r}
+2^3333
+-2^3333
+1/0
+```
+
+
+### NaN
+
+A computation will Sometimes produce a result that makes no sense.  In these cases, R will often return NaN (meaning “not a number”).
+
+```{r}
+Inf - Inf
+0 / 0
+```
+
+
+### NULL
+
+It is common for programming languages to have a NULL value. NULL is used to represent missing or undefined values. NULL represents the null object in R: it is a reserved word. NULL is often returned by expressions and functions whose values are undefined.
+
+While this is similar to NA, rhere is a sublte but important distinction between  NA and NULL. NA is a logical constant of length 1 which contains a missing value indicator. The important distinction is that NA is a ‘logical’ value that when evaluated in an expression, yields NA. Porofessor Bear will create a future tutorial on the difference but that requires an explanation of pointers, so for the moment just remember to use NA for missing data values.
+
+```{r}
+NA
+class(NA)
+NA > 1
+NULL
+class(NULL)
+NULL > 1
+```
+
+
+##1.7: Data structures in R  
+
+Data Structures are the programmatic way of storing data so that data can be used efficiently. One can think of a data structure as a container for data. 
+
+##1.7.1: Vectors  
+
+Usually when you create variables in R, you create **vectors**. A vector is simply a set of elements *of the same class* (e.g. character, numeric, integer, or logical -as in True/False). It is the basic data structure in R. Most commonly, you will use the `c()` function (c stands for concatenate) to create vectors.
+:
+
+```{r}
+v1 <- c(1,2,3,4,5) #creates a numeric vector
+v1
+v2 <- c(1L, 2L) #creates an integer vector
+v2
+v3 <- c(TRUE, FALSE) #creates a logical vector
+v3
+v4 <- c("a", "b", "c") #creates a character vector
+v4
+v5 <- c(1+0i, 3+5i) #creates a complex vector 
+v5
+
+```
+
+*Operations on vectors*
+
+Once you have a vector (or a list of numbers) in memory most basic operations are available. This makes R very powerful.
+
+```{r}
+v1 
+v1 + 5 # add 5 to each of the numbers
+v1*3 # Multiply each of the numbers by 3
+v1/3 # Divide each of the numbers by 3
+log(v1) # Take the log of each of the numbers
+```
+
+We can even add vectors to vectors.
+
+```{r}
+a <- c(1,2,3)
+a
+b <-  c(1,2,3,4,5)
+b
+a+b
+```
+
+If the lengths of the vectors differ then you may get an error message, a warning message and unpredictable results. It is best if they are the same length.
+
+```{r}
+a <- c(1,2,3)
+a
+length(a)
+b <-  c(3,4,5)
+b
+length(b)
+a+b
+```
+
+
+If you mix in a vector elements that are of a different class (for example numerical and logical), R will **coerce** to the minimum common denominator, so that every element in the vector is of the same class. 
+
+```{r}
+b <- c(33, "bear")
+class(b)
+```
+
+
+Note what happens when a vector is placed in another vector.
+
+```{r}
+x <- c(2, 3, 5)
+x
+class(x)
+y <- c(6, x, 2)
+y
+class(y)
+```
+
+
+
+##1.7.1: Lists  
+
+A list is a generic data structure containing other objects. Unlike a vector it allows us to create a mixed data sequence. 
+
+```{r}
+w <-  c(1, 2, 3) 
+w
+class(w)
+x <- c("a", "b", "c", "d", "e") 
+x
+class(x)
+y <- c(TRUE, FALSE, TRUE, FALSE) 
+y
+z <- list(w, y, x, 33, "bear", FALSE) # create a mixed data type list
+z
+class(z)
+
+```
+
+*List Slicing*
+
+We use the single square bracket "[]" operator to access elements at the first level of a list. The index 1 is the first element. We use the doubkle square bracket "[]" operator to access elements at the second level, etc.
+
+```{r}
+z
+z[1] # First element 
+z[[2]] # cond element 
+z[[2]][1] # First element of the second element 
+
+```
+
+
+
+##1.7.1: Arrays  
+
+Vectors are one-dimensional arrays in R and matrices are two-dimensional arrays in R. We can create n-dimensional arrays as a set of stacked matrices of identical dimensions. This will be discuss in the [matrices](#matrices) section below. The term arrays is discussed here becuase most programming languages use the term array. The reason R uses the term vector, is the basic operations can be applied to vectors whereas most programming languages use functions and loops to apply operations to arrays.  
+
+##1.7.1: Matrices  
+
+Matrices are n-dimensional vectors (usually two-dimensional). We build matrices from vectors (one-dimensional arrays). You can create a matrix in two ways. By using the command *matrix*.
+```{r}
+x<-matrix(c(1,2,3,4,5,6), nrow = 2, ncol = 3)
+x
+class(x)
+```
+
+Or using *cbind()* or *rbind()* to add columns or rows to a vectors.
+
+```{r}
+x <- c(1, 2, 3)         # Creates a vector `x' of 3 values.
+x
+class(x)
+y <- c(55, 33, 11)         # Creates another vector `y' of 3 values.
+y
+class(y)
+a<-rbind(x, y) # Creates a 2 x 3 matrix.  Note that the rows are appended
+a
+class(a)
+b<-cbind(x, y)   # Creates a 3 x 2 matrix.  Note that the columns are appended
+b
+class(b)
+```
+
+*Matrix element access*
+
+As with vectors, square brackets extract specific values from a matrix but more values are used within the brackets seperated by commas for each diminasion.
+
+ 
+```{r}
+b
+b[,2] # Extracts the second column
+b[1,]  # Extracts the first row
+b[1,2] # Extracts element in the first row and the second column
+b[1,2]<=55 # Recplaces the element in the first row and the second column with 55
+b
+b[1,] <- c(3,3) # Replaces the first row 
+b
+```
+
+
+*Matrix operations and functions*
+
+R supports a variety of matrix functions, including: det(), which returns the matrix's determinant; t(), which transposes the matrix; solve(), which inverts the the matrix; dim() command returns the dimensions of your matrix. 
+```{r}
+b
+dim(b)
+```
+
+##1.7.1: Data frames  
+
+A data frame is used for storing data tables of mixed data type. Typically, data from an excel sheet will be imported in to R as a data frame. We will use the built-in data set “InsectSprays” to discuss data frames.
+
+```{r}
+data(InsectSprays)
+names(InsectSprays)
+head(InsectSprays,3)
+dim(InsectSprays)
+nrow(InsectSprays) 
+ncol(InsectSprays) 
+levels(InsectSprays$spray)
+summary(InsectSprays)
+```
+
+##1.8: Control structures  
+
+A control structure is a block of programming that analyzes variables and chooses a direction in which to go based on given parameters. These are:
+
+1. IF-THEN 
+2. ELSE Statements 
+3. WHILE loops  
+4. FOR Loops  
+
+
+
+
+  
+```{r, conditional-statements}
+y <- 1:33 # a numeric sequence using the : operator
+y 
+```
+
+##1.8.1: Conditional statements  
+
+IF-THEN Statements  
+
+IF  <Condition 1 is True>
+THEN <Do something> 
+
+ELSE Statements  
+
+ELSE <No Condition s True> 
+  <Do something>
+  
+```{r, if-else-statement}
+## A simple if statement
+x <- 5
+if(x>0) {
+  print(x)
+} else {
+  print(-x)
+}
+
+if(x>0) {
+  print(x)
+} else if(x==0) {
+  print(0)
+} else {
+  print(-x)
+}
+```
+
+##1.8.2: Loops  
+
+Loops allow one to iterate through a data set.
+
+##1.8.2.1: For Loops   
+
+FOR Loop  
+
+The first is used to set a starting point (like x = 0). The second is the end condition (same as in a while loop) and is run every round. The third indicates how the test condition changes.
+
+```{r, for-loops}
+n <- 11
+for(i in 1:n) {
+  print(i)  
+  print(sqrt(i))
+}
+```
+
+
+##1.8.2.2: While   
+
+WHILE loop  
+
+WHILE <Condition is True>  
+  <Do something>  
+  
+
+```{r}
+n <- 11
+i <- 1
+while(i<=n) {
+  print(i)  
+  print(sqrt(i))
+  i <- i+1
+}
+```
+
+
+##1.9: Data filtering (Subsetting)  
+
+## Data frame Manipulation 
+`data.frames` extend the `matrix` class, in that they allow the binding of vectors of several classes (with same length).
+```{r}
+x<- 1:100; y<- sqrt(x) 
+class(x) 
+mode(x) 
+typeof(x)
+class(y) 
+mode(y) 
+typeof(y)
+```
+
+Combine same length data in todata frame
+```{r}
+df1 <- data.frame(x=x, sqrt=y)	
+head(df1)
+
+class(df1) # the object is of type data.frame
+dim(df1)  							
+dim(x)
+length(df1)
+length(x)
+
+str(df1) # the inner structure of an object
+attributes(df1) # get the object's meta data
+```
+
+# Exctraction 
+
+The extraction is the same as a 2D matrix.
+
+```{r}
+df1[1, 2]    						
+head(df1[2, ])  
+head(df1[, 2])  
+```
+
+However we can also extract a column by name:
+```{r}
+names(df1)   						
+head(df1['sqrt'])
+```
+
+`subset()` does the same
+```{r}
+head(subset(df1, select=sqrt),5) 
+head(subset(df1, select=2),7)
+subset(df1, select= c(2,0))
+```
+
+##1.10: Packages  
+
+A large part of the reason R has become so popular is the vast array of statsitical packages the users contribute. Installing packages is easy.
+
+```{r, eval=FALSE}
+install.packages("ggplot2") # install with root access
+install.packages("ggplot2", lib="/data/Rpackages/") # install without root access
+# note the directory  /data/Rpackages/ could be any directory that a user has read and write permissions
+```
+
+Using packages is simple as well.
+
+```{r, eval=FALSE}
+library(ggplot2) # load a library that was installed with root access
+install.packages("ggplot2", lib="/data/Rpackages/") # load a library that was installed without root access
+```
+
+Note you can also use *require()* rather than *library()*. require() trys to load the package using library() and return a logical value indicating the success or failure. It is probably best to avoid using require() unless you actually will be using the value it returns.  require() will just fail without an error if the package is not there. Geting an error message of which package is missing is useful.
+
+```{r, eval=FALSE}
+# It is common to see require() used as follows
+
+if (require('awesome')) {
+  awesome_foo_function()
+} else {
+  warning('You missed an awesome function')
+}
+
+# Or as follows
+
+if (!require('awesome')) {
+  stop('The package awesome was not installed')
+}
+```
+
+
+##1.11: Reading documentation.  
+
+*Let's read the R Documentation for the function lm together*  
+
+
+lm {stats}	R Documentation  
+
+Fitting Linear Models
+
+*Description*
+
+lm is used to fit linear models. It can be used to carry out regression, single stratum analysis of variance and analysis of covariance (although aov may provide a more convenient interface for these).
+
+*Usage*  
+
+lm(formula, data, subset, weights, na.action,
+   method = "qr", model = TRUE, x = FALSE, y = FALSE, qr = TRUE,
+   singular.ok = TRUE, contrasts = NULL, offset, ...)
+Arguments
+
+formula	
+an object of class "formula" (or one that can be coerced to that class): a symbolic description of the model to be fitted. The details of model specification are given under ‘Details’.
+
+data	
+an optional data frame, list or environment (or object coercible by as.data.frame to a data frame) containing the variables in the model. If not found in data, the variables are taken from environment(formula), typically the environment from which lm is called.
+
+subset	
+an optional vector specifying a subset of observations to be used in the fitting process.
+
+weights	
+an optional vector of weights to be used in the fitting process. Should be NULL or a numeric vector. If non-NULL, weighted least squares is used with weights weights (that is, minimizing sum(w*e^2)); otherwise ordinary least squares is used. See also ‘Details’,
+
+na.action	
+a function which indicates what should happen when the data contain NAs. The default is set by the na.action setting of options, and is na.fail if that is unset. The ‘factory-fresh’ default is na.omit. Another possible value is NULL, no action. Value na.exclude can be useful.
+
+method	
+the method to be used; for fitting, currently only method = "qr" is supported; method = "model.frame" returns the model frame (the same as with model = TRUE, see below).
+
+model, x, y, qr	
+logicals. If TRUE the corresponding components of the fit (the model frame, the model matrix, the response, the QR decomposition) are returned.
+
+singular.ok	
+logical. If FALSE (the default in S but not in R) a singular fit is an error.
+
+contrasts	
+an optional list. See the contrasts.arg of model.matrix.default.
+
+offset	
+this can be used to specify an a priori known component to be included in the linear predictor during fitting. This should be NULL or a numeric vector of length equal to the number of cases. One or more offset terms can be included in the formula instead or as well, and if more than one are specified their sum is used. See model.offset.
+
+...	
+additional arguments to be passed to the low level regression fitting functions (see below).
+
+*Details*  
+
+Models for lm are specified symbolically. A typical model has the form response ~ terms where response is the (numeric) response vector and terms is a series of terms which specifies a linear predictor for response. A terms specification of the form first + second indicates all the terms in first together with all the terms in second with duplicates removed. A specification of the form first:second indicates the set of terms obtained by taking the interactions of all terms in first with all terms in second. The specification first*second indicates the cross of first and second. This is the same as first + second + first:second.
+
+If the formula includes an offset, this is evaluated and subtracted from the response.
+
+If response is a matrix a linear model is fitted separately by least-squares to each column of the matrix.
+
+See model.matrix for some further details. The terms in the formula will be re-ordered so that main effects come first, followed by the interactions, all second-order, all third-order and so on: to avoid this pass a terms object as the formula (see aov and demo(glm.vr) for an example).
+
+A formula has an implied intercept term. To remove this use either y ~ x - 1 or y ~ 0 + x. See formula for more details of allowed formulae.
+
+Non-NULL weights can be used to indicate that different observations have different variances (with the values in weights being inversely proportional to the variances); or equivalently, when the elements of weights are positive integers w_i, that each response y_i is the mean of w_i unit-weight observations (including the case that there are w_i observations equal to y_i and the data have been summarized).
+
+lm calls the lower level functions lm.fit, etc, see below, for the actual numerical computations. For programming only, you may consider doing likewise.
+
+All of weights, subset and offset are evaluated in the same way as variables in formula, that is first in data and then in the environment of formula.
+
+*Value*  
+
+lm returns an object of class "lm" or for multiple responses of class c("mlm", "lm").
+
+The functions summary and anova are used to obtain and print a summary and analysis of variance table of the results. The generic accessor functions coefficients, effects, fitted.values and residuals extract various useful features of the value returned by lm.
+
+An object of class "lm" is a list containing at least the following components:
+
+coefficients	
+a named vector of coefficients
+
+residuals	
+the residuals, that is response minus fitted values.
+
+fitted.values	
+the fitted mean values.
+
+rank	
+the numeric rank of the fitted linear model.
+
+weights	
+(only for weighted fits) the specified weights.
+
+df.residual	
+the residual degrees of freedom.
+
+call	
+the matched call.
+
+terms	
+the terms object used.
+
+contrasts	
+(only where relevant) the contrasts used.
+
+xlevels	
+(only where relevant) a record of the levels of the factors used in fitting.
+
+offset	
+the offset used (missing if none were used).
+
+y	
+if requested, the response used.
+
+x	
+if requested, the model matrix used.
+
+model	
+if requested (the default), the model frame used.
+
+na.action	
+(where relevant) information returned by model.frame on the special handling of NAs.
+
+In addition, non-null fits will have components assign, effects and (unless not requested) qr relating to the linear fit, for use by extractor functions such as summary and effects.
+
+Using time series
+
+Considerable care is needed when using lm with time series.
+
+Unless na.action = NULL, the time series attributes are stripped from the variables before the regression is done. (This is necessary as omitting NAs would invalidate the time series attributes, and if NAs are omitted in the middle of the series the result would no longer be a regular time series.)
+
+Even if the time series attributes are retained, they are not used to line up series, so that the time shift of a lagged or differenced regressor would be ignored. It is good practice to prepare a data argument by ts.intersect(..., dframe = TRUE), then apply a suitable na.action to that data frame and call lm with na.action = NULL so that residuals and fitted values are time series.
+
+Note
+
+Offsets specified by offset will not be included in predictions by predict.lm, whereas those specified by an offset term in the formula will be.
+
+*Author(s)*  
+
+The design was inspired by the S function of the same name described in Chambers (1992). The implementation of model formula by Ross Ihaka was based on Wilkinson & Rogers (1973).
+
+*References*  
+
+Chambers, J. M. (1992) Linear models. Chapter 4 of Statistical Models in S eds J. M. Chambers and T. J. Hastie, Wadsworth & Brooks/Cole.
+
+Wilkinson, G. N. and Rogers, C. E. (1973) Symbolic descriptions of factorial models for analysis of variance. Applied Statistics, 22, 392–9.
+
+See Also
+
+summary.lm for summaries and anova.lm for the ANOVA table; aov for a different interface.
+
+The generic functions coef, effects, residuals, fitted, vcov.
+
+predict.lm (via predict) for prediction, including confidence and prediction intervals; confint for confidence intervals of parameters.
+
+lm.influence for regression diagnostics, and glm for generalized linear models.
+
+The underlying low level functions, lm.fit for plain, and lm.wfit for weighted regression fitting.
+
+More lm() examples are available e.g., in anscombe, attitude, freeny, LifeCycleSavings, longley, stackloss, swiss.
+
+biglm in package biglm for an alternative way to fit linear models to large datasets (especially those with many cases).
+
+*Examples*  
+
+require(graphics)
+
+Annette Dobson (1990) "An Introduction to Generalized Linear Models".
+Page 9: Plant Weight Data.
+
+```{r, eval=FALSE}
+ctl <- c(4.17,5.58,5.18,6.11,4.50,4.61,5.17,4.53,5.33,5.14)
+trt <- c(4.81,4.17,4.41,3.59,5.87,3.83,6.03,4.89,4.32,4.69)
+group <- gl(2, 10, 20, labels = c("Ctl","Trt"))
+weight <- c(ctl, trt)
+lm.D9 <- lm(weight ~ group)
+lm.D90 <- lm(weight ~ group - 1) # omitting intercept
+```
+
+##1.12: Loading data  
+
+There're lots of ways to read data into R, but in this class 
+you can get away with just this:
+```{r, eval = FALSE}
+# set your working directory - normally where you data are
+setwd('path/to/your/data')
+data = read.delim('data.file',
+                  header = TRUE, 
+                  sep = '\t')
+```
+
+Type `?read.delim` to learn what the `header` and `sep` arguments do.
+
+
+##1.13: Saving your work  
+
+To save your work you need to know where you are going to save it and in what format.
+
+```{r}
+getwd() # print the current working directory - cwd 
+ls()    # list the objects in the current workspace
+```
+
+Let's say you want to save your work in a directory /usr/bear/R
+
+```{r, eval=FALSE}
+setwd("c:/docs/bear/R")  # note / instead of \ in windows 
+setwd("/usr/bear/R") # on linux or Mac
+```
+
+You can save the entire session as a .RData file
+```{r, eval=FALSE}
+# save the workspace to the file .RData in the cwd (current working directory) 
+save.image()
+```
+
+If you just want to save a particular data frame then use the *save* function.
+
+```{r,eval=FALSE}
+ save(df1, file="data.frame1")
+```
+
+You can use *load* to read .Rdata or just some data. Note *read* is usually used to read data from text files.
+
+```{r,eval=FALSE}
+df2<-load("data.frame1")
+```
+
+##1.14: Functional programming  
+
+Functions are "self contained" modules of code that accomplish a specific task. As such, they promote code reuse and quality. If a function is improved or debugged its corrected everywhere it's used.  
+
+*Basic syntax of a function*
+```{r, eval=FALSE}
+name.of.function <- function(argument1, argument2) {
+    statements
+    return(something)
+}
+```
+Example function 1  
+```{r}
+f1 <- function(x, y) {
+  x+y
+}
+f1( 33, 11)
+```
+
+Example function 2  
+```{r}
+sum.of.squares <- function(x,y) {
+  x^2 + y^2
+}
+sum.of.squares( 33, 11)
+```
+
+We will go much deeper in to writing functions in R in a seperate module.  
+
+##1.15: Summarizing data  
+
+We will be using the mtcars dataset to demo summarizing data.
+
+```{r data}
+# Load our data
+data(mtcars)
+```
+
+### R Functions for Understanding Data
+* We can use `class()`, `dim()`, `nrow()`, `ncol()`, `names()` to understand datasets
+    * `object.size(data.frame)` = returns how much space the dataset is using in memory
+* `head(data.frame, n)`, `tail(data.frame, n)` = returns first/last  $n$ rows of data; default = 6
+* `summary()` = provides summary statistics for each variable, depending on type of variable (numeric,factor).
+    * for numerical variables, displays min max, mean median, etx.
+    * for categorical (factor) variables, displays number of times each value occurs
+* `table(data.frame$variable)` = table of all values of the variable, and how many observations there are for each
+* `str(data.frame)` = structure of data, provides data class, num of observations vs variables, and name of class of each variable and preview of its contents
++ `view(data.frame)` = opens and view the content of the data frame
+
+### ggplot2 diamonds data? 
+
+What is in the diamonds data? ?diamonds typed in the R prompt opens up a full description.
+
+```{r mtcars}
+str(mtcars)
+names(mtcars)  
+```
+
+
+*Descriptive Statistics*  
+
+Descriptive statistics is the discipline of quantitatively describing the main features of a collection of data. Common descriptive measures used are measures of central tendency and measures of variability or dispersion or spread. 
+
+_Measures of central tendency_
+
+Measures of central tendency are used to describe the most typical measure.
+
+Mode: the value in a string of numbers that occurs most often
+Median: the value whose occurrence lies in the middle of a set of ordered values
+
+Mean: sometimes referred to as the arithmetic mean. It is the average value characterizing a set of numbers
+
+*Mode*  
+- the value that occurs most frequently 
+- used w/ nominal data 
+- there can be "ties"
+
+*Median*  
+- score at the center of the distribution
+- sort and take the middle value (or average or two middle values)
+- determine w/ : $\frac{N + 1}{2}$
+- equal to 50th percentile
+
+*Mean (or arithmetic mean)*  
+- $\bar{X} = \frac{\sum X}{N}$
+- can be misleading when there are large outliers
+
+*Properties of the Measures of Center*  
+
+  1. adding or subtracting a constant does the same to the measure of center
+  2. multiplying or dividing by a constant does the same to the measure of center
+
+_Measures of Spread_
+
+Measures of variability aare used to reveal the typical difference between the values in a set of values
+
+Measures of Spread  
+* Range, Quartile  2nd Quartile is the median
+* Quartiles: sort and divide in 4 parts.
+* Frequency distribution reveals the number (percent) of occurrences of each number or set of numbers
+* Range identifies the maximum and minimum values in a set of numbers
+* Standard deviation (or variance) indicates the degree of variation  
+
+
+*Summary statistics*  
+
+In descriptive statistics, summary statistics are used to summarize a set of observations, in order to communicate the largest amount of information as simply as possible. Statisticians commonly try to describe the observations in:  
+
+* a measure of location, or central tendency, such as the arithmetic mean
+* a measure of statistical dispersion like the standard deviation
+* a measure of the shape of the distribution like skewness or kurtosis
+* if more than one variable is measured, a measure of statistical dependence such as a correlation coefficient
+
+from [Summary statistics - Wikipedia](https://en.wikipedia.org/wiki/Summary_statistics)  
+
+```{r}
+mean(mtcars$qsec)
+range(mtcars$qsec)
+diff(range(mtcars$qsec))
+head(mtcars[,"qsec"])
+median(mtcars$qsec)
+mean(mtcars$qsec)-median(mtcars$qsec)
+var(mtcars$qsec)
+sd(mtcars$qsec)
+sqrt(var(mtcars$qsec))
+summary(mtcars$qsec)
+summary(mtcars)
+```
+
+##1.16: Getting help  
+
+#### R docs
+
+You can access documentation for any function in R by typing `help(function_name)` or 
+`?(function_name)`. The help files conform to a standard format so that they're easy 
+to navigate. You'll probably end up reading the *usage*, *arguments*, *value* 
+and *examples* sections most often. The *usage* section describes how to call 
+the function, *arguments* lists all the values that can be set in the call, 
+*value* describes what information the function call will return to you, and 
+*examples* are typically self-contained chunks of code that you can copy and 
+paste into the console.
+
+##1.17: Further resources  
+
+[LearnR](https://youtu.be/p3i7Kz6C_-4?list=PLFAYD0dt5xCwDNFdrqeNoU9t-nhAWkbKe)  
+
+
+[Try R @codeschool](http://tryr.codeschool.com)  
+
+[Datacamp R Tutorials](https://www.datacamp.com/)   
+
+
+[rstudio online learning](https://www.rstudio.com/online-learning/)  
+

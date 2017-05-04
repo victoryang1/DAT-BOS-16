@@ -1,0 +1,57 @@
+---
+title: "Professor Bear - Intro to R"
+author: "Nik Bear Brown"
+output: html_document
+---
+
+
+## Materials
+
+_Learning by doing_
+
+You can find the materials here [Professor Bear - Intro to R Markdown] (http://nikbearbrown.com/YouTube/R/Professor_Bear_Intro_RMarkdown.zip) 
+
+* Engage (Interest and attention)   
+* Explain (Theory and concepts)   
+* Examples (How-to)   
+* Experience (Learning by doing)   
+* Evaluate (Test your knowledge)  
+
+## Lesson 1: R Markdown
+
+In the first lesson, we start the lesson discussing R Markdown to create written reports with embedded working code. R Markdown is an authoring format that enables easy creation of dynamic documents, presentations, and reports from R. It 
+
+
+## Evaluate (Test your knowledge) 
+
+
+
+## Further resources  
+
+[LearnR](https://youtu.be/p3i7Kz6C_-4?list=PLFAYD0dt5xCwDNFdrqeNoU9t-nhAWkbKe)  
+
+[Try R @codeschool](http://tryr.codeschool.com)  
+
+[Datacamp R Tutorials](https://www.datacamp.com/)   
+
+[rstudio online learning](https://www.rstudio.com/online-learning/)  
+
+
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+```
