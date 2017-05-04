@@ -1,6 +1,8 @@
 ---
 title: "Self-Organizing Maps (SOM)"
-output: html_document
+output:
+  html_document: default
+  word_document: default
 ---
 
 In this lesson we'll learn the theory behind using Linear Self-Organizing Maps (SOM) as a clustering and mapping technique. We'll then use Self-Organizing Maps to cluster the UCI wine dataset in R.
@@ -8,7 +10,7 @@ In this lesson we'll learn the theory behind using Linear Self-Organizing Maps (
 
 # Additional packages needed
  
-To run the code in M07_Lesson_03.Rmd you may need additional packages.
+To run the code you may need additional packages.
 
 * If necessary install the followings packages.
 
@@ -271,17 +273,6 @@ plot(fit.som,"dist.neighbours")
 plot(fit.som,"quality")
 ```
 
-
-# Assingment
-
-* Go to the [Self-Organising Maps for Customer Segmentation using R](http://www.r-bloggers.com/self-organising-maps-for-customer-segmentation-using-r/) via @rbloggers and complete the tutorial. Once you complete the tutorial you will answer questions about how the parameterization of the Self-Organixing Map affects the clustering.  
-
-  Answer the following questions:   
-    * How does the $x$ dimension and $y$ dimension effect the clustering?  
-    * How does the choice of neighborhood effect the clustering?  
-    * How does the learning rate $\alpha (s)$ effect the clustering?    
-    * Does scaling, normalization or leaving the data unscaled effect the clustering?   
-    
 
 # Resources   
 

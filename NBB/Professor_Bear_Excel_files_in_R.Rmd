@@ -1,8 +1,9 @@
 ---
 title: 'Professor Bear :: Excel files in R'
 author: "Bear"
-date: "9/25/2016"
-output: html_document
+output:
+  word_document: default
+  html_document: default
 ---
 
 It is easier and more common to work with comma-delimited text files (`.csv`), and tab-delimited text files than with native Excel files (`.xlsx`)nut  there are options for bringing data in from `.xlsx` files, too.

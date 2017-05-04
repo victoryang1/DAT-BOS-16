@@ -1,7 +1,9 @@
 ---
 title: "Simulated Annealing"
 author: "Nik Bear Brown"
-output: html_document
+output:
+  html_document: default
+  word_document: default
 ---
 
 In this lesson we'll learn the theory behind using simulated annealing as an optimization and search technique. We'll then use simulated annealing to search for a solution to the famous Travelling Salesman Problem in R.
@@ -9,7 +11,7 @@ In this lesson we'll learn the theory behind using simulated annealing as an opt
 
 # Additional packages needed
  
-To run the code in M07_Lesson_01.Rmd you may need additional packages.
+To run the code you may need additional packages.
 
 * If necessary install the followings packages.
 
@@ -165,14 +167,6 @@ text(x, y, labels(cities), cex=0.8)
 text(x, y, labels(eurodist), cex=0.8)
 ```
 
-
-# Assingment
-
-Use simulated annealing to search for a solution to the famous Travelling Salesman Problem in R.  
-* . Answer the following questions:  
-    * Write a different distance function. How does the effect the final solution?  
-    * Does scaling, normalization or leaving the data unscaled make a difference for simulated annealing?  
-    * Try a few differnt initial tours. How does the effect the final solution?    
 
  
 # Resources   

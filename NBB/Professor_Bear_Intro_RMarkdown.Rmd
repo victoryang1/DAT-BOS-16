@@ -2,19 +2,10 @@
 title: "Professor Bear - Intro to R Markdown"
 author: "Nik Bear Brown"
 output:
-  word_document: default
   html_document: default
+  word_document: default
 ---
-## Materials
-
-You can find the materials here [Professor Bear - Intro to R Markdown] (http://nikbearbrown.com/YouTube/R/Professor_Bear_Intro_RMarkdown.zip) 
-
-* Engage (Interest and attention)   
-* Explain (Theory and concepts)   
-* Examples (How-to)   
-* Experience (Learning by doing)   
-* Evaluate (Test your knowledge)  
-
+ 
 ## Lesson 1: R Markdown
 
 In the first lesson, we start the lesson discussing R Markdown to create written reports with embedded working code. R Markdown is an authoring format that enables easy creation of dynamic documents, presentations, and reports from R. It combines the core syntax of markdown (an easy-to-write plain text format) with embedded R code chunks that are run so their output can be included in the final document. R Markdown documents can be regenerated whenever underlying R code or data changes.

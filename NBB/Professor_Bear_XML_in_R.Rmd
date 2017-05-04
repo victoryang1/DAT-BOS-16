@@ -1,8 +1,9 @@
 ---
 title: 'Professor Bear :: XML in R'
 author: "Bear"
-date: "9/25/2016"
-output: html_document
+output:
+  html_document: default
+  word_document: default
 ---
 
 ## What is XML?

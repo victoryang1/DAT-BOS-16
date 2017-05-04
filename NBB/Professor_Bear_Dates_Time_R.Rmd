@@ -1,8 +1,9 @@
 ---
 title: "Date and Time Processing in R"
 author: "Professor Bear"
-date: "September 19, 2016"
-output: html_document
+output:
+  html_document: default
+  word_document: default
 ---
 In this lesson we'll learn date and time processing in R. R has a range of functions that allow you to work with dates and times.  Packages such as [`lubridate`](https://cran.r-project.org/web/packages/lubridate/index.html) make it easier to work with dates and times. 
 

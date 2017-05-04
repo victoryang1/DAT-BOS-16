@@ -1,7 +1,9 @@
 ---
 title: "Graphs and Networks"
 author: "Nik Bear Brown"
-output: html_document
+output:
+  html_document: default
+  word_document: default
 ---
 
 In this lesson we'll learn the how to implement and analyze graphs and networks in R.
@@ -9,7 +11,7 @@ In this lesson we'll learn the how to implement and analyze graphs and networks 
 
 # Additional packages needed
  
-To run the code in M12_Lesson_02.Rmd you may need additional packages.
+To run the code you may need additional packages.
 
 * If necessary install the followings packages.
 

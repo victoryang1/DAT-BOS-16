@@ -9,7 +9,7 @@ In this lesson we cover association rule learning theory, apply and evaluate ass
 
 ## Additional packages needed
  
-To run the code in M04_Lesson_04.Rmd you may need additional packages.
+To run the code you may need additional packages.
 
 * If necessary install these packages.
 
@@ -476,19 +476,7 @@ plot(Rules.sorted, method="graph", control=list(type="items"))
 plot(Rules.sorted, method="paracoord", control=list(reorder=TRUE))
 ```
 
-# Assingment
 
-*NOTE: It's your choice to submit EITHER Lesson 03 (Expectation-maximization) OR Lesson 04 (Association Rules) for the module Unsupervised Learning 2.*
-
-* Choose a transaction dataset from the [Frequent Itemset Mining Dataset Repository](http://fimi.ua.ac.be/data/) or another transaction dataset of your choice from the Web.
-* Generate a a set of 50 or so (non-redundant) rules:
-    * Which rules make sense to you? Highlight the five best and five worst of your rule set.
-    * How did you choose the level of support, confidence?
-    * What is the lift and conviction of your best and worst rules?
-    * Visualize your 50 association rules. Where to the best and worst end up in your plot.
-    * Does the model make sense?
-Write up your report as an .Rmd file.
- 
 # Resources
 
 * Agrawal, R.; Imieliński, T.; Swami, A. (1993). ["Mining association rules between sets of items in large databases"](http://dl.acm.org/citation.cfm?doid=170035.170072). Proceedings of the 1993 ACM SIGMOD international conference on Management of data - SIGMOD '93. p. 207.  

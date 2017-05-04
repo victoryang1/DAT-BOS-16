@@ -1,8 +1,9 @@
 ---
 title: "Professor Bear - Exploratory Data Analysis (EDA)"
 author: "Bear"
-date: "September 13, 2016"
-output: word_document
+output:
+  html_document: default
+  word_document: default
 ---
 
 In the this lesson, we look graphical techniques summarize their main characteristics of one, two variable, and multi-variable data sets. To find relationships amongst variables and to find the variables which are most interesting for a particular analysis task.
@@ -11,7 +12,7 @@ Rationale: Exploratory data analysis helps one understand the data, to form and 
 
 ## Additional packages needed
  
-To run the code in M01_Lesson_03.Rmd you may need additional packages.
+To run the code you may need additional packages.
 
 * If necessary install `ggplot2` package.
 
@@ -865,24 +866,6 @@ qqline(twitter$followers_count)
 In statistics, a sequence or a vector of random variables is homoscedastic  if all random variables in the sequence or vector 
 
 have the same finite variance.
-
-## Homework Question 2
-
-_Exploratory Data Analysis assignment_
-
-* Load the file M01_quasi_twitter.csv
-* Answer the following questions for the data in each column:
-    * How is the data distributed?
-    * Test distribution assumptions (e.g. normal distributions or skewed?)
-    * What are the summary statistics?
-    * Are there anomalies/outliers?
-* identify useful raw data & transforms (e.g. log(x))
-* identify data quality problems
-* identify outliers
-* identify subsets of interest
-* suggest functional relationships
-
-_Write your analysis up as an RMA file._
 
 ```
 

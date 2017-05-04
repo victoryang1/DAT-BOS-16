@@ -1,14 +1,16 @@
 ---
 title: "Principal Components Analysis & Singular Value Decomposition"
 author: "Nik Bear Brown"
-output: word_document
+output:
+  html_document: default
+  word_document: default
 ---
 
 In this lesson we apply principal component analysis (PCA) that uses eigenvalues and eigenvectors in an orthogonal transformation to convert a set of observations of possibly correlated variables into a set of values of linearly uncorrelated variables called principal components. We also  perform Eigen decomposition of various data matrices into a canonical form, whereby the matrices is represented in terms of their eigenvalues and eigenvectors which allow us to rank and use the most important features in a data set which may make many calculations much quicker and easier.
 
 # Additional packages needed
  
-To run the code in M03_Lesson_02.Rmd you may need additional packages.
+To run the code you may need additional packages.
 
 * If necessary install the following packages.
 
@@ -335,21 +337,6 @@ diamonds.svd$d
 ```
   
 
-# Assignment
-
-* Download the compressed data from the U.S. [Bureau of Labor Statistics](https://en.wikipedia.org/wiki/Bureau_of_Labor_Statistics
-) [http://www.bls.gov/](http://www.bls.gov/) @ http://www.bls.gov/cew/data/files/2014/csv/2014_annual_singlefile.zip, and extract the .csv file.  
-* Run Principal Components Analysis on the BLS data and answer the following questions. (You can use any PCA function you wish, i.e. princomp(), prcomp(),  principal() or by hand.)    
-* Questions:  
-(a) What proportion of the total variation in the data is explained by each of the principal  components?  
-(b) What happens when you plot a screeplot? 
-(c) Based on the variation explained for each of these components, which, if any, components would you use?  
-(d) Is there evidence of clustering in the data by creating biplots of the each of the components plotted against one another?  
-(e) Do any of the biplots reveal any interesting structure?Only plot biplots if your computer has the memory. Otherwise show the code you would use for biplots without evaluating it.     
-(f) How many pcs are required to explain 75% of the variance in the data?   
-
-Write up your report as an .Rmd file.
- 
 # Resources
 
 [Computing and visualizing PCA in R] (http://www.r-bloggers.com/computing-and-visualizing-pca-in-r/)  

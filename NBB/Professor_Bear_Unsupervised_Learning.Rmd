@@ -1,7 +1,9 @@
 ---
 title: "Unsupervised Learning"
 author: "Nik Bear Brown"
-output: html_document
+output:
+  html_document: default
+  word_document: default
 ---
 
 In this module, we study unsupervised learning.  Unsupervised learning is about finding patterns and structure in unlabeled data. This is especially true in the analysis of “big-data.” A central issue with big-data is that the data is not typically labeled or only a very small subset is, as labeling often requires human annotation. As such some consider unsupervised learning the ‘future’ of big-data. 
@@ -21,8 +23,8 @@ In the fifth lesson we cover association rule learning theory, apply and evaluat
 Rationale: The power of unsupervised machine learning is that it might spot salient correlations, connections and structure in data absent of human bias (i,e. patterns that no human would have thought to look for), and when the amount of data makes it difficult or impossible to label a significant subset.   
 
 # Additional packages needed
- 
-To run the code in M04_Lesson_01.Rmd you need no additional packages.
+
+To run the code you need no additional packages.
 
 # Questions
 

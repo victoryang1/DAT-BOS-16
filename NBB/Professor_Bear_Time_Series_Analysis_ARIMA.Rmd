@@ -1,7 +1,9 @@
 ---
 title: "Time Series Analysis (ARIMA)"
 author: "Nik Bear Brown"
-output: html_document
+output:
+  html_document: default
+  word_document: default
 ---
 
 In this lesson we'll learn the how to implement Time series analysis using ARIMA in R.
@@ -9,7 +11,7 @@ In this lesson we'll learn the how to implement Time series analysis using ARIMA
 
 # Additional packages needed
  
-To run the code in M11_Lesson_02.Rmd you may need additional packages.
+To run the code you may need additional packages.
 
 * If necessary install the followings packages.
 
@@ -101,15 +103,6 @@ summary(seismic_model)
 plot(forecast(seismic_model, 10))
 ```
 
-# Assingment
-
-_NOTE: It's your choice to submit EITHER Lesson 02 (ARIMA models) OR Lesson 03 (Trend Analysis) for the module Time Series Analysis._   
-
-  Answer the following questions:   
-    * Can some form of Time series analysis help in your research project to forcast a prediction?
-    * If it can apply Time series analysis to your research project? Does it help?   
-    * If (and only if) you can't use some form of Time series analysis help in your research project then apply a form of Time series analysis to a data set you find at the [UC Irvine Machine Learning Repository](http://archive.ics.uci.edu/ml/)   
-  
 
 # Resources   
 

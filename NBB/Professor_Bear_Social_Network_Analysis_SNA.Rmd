@@ -1,7 +1,9 @@
 ---
 title: "Social Network Analysis (SNA)"
 author: "Nik Bear Brown"
-output: html_document
+output:
+  html_document: default
+  word_document: default
 ---
 
 In this lesson we will disucss Social network analysis and graph theory. There are no data sets, or libraires to be installed.
@@ -245,9 +247,6 @@ Assume that we have various types of nodes. What is the probability that two nod
 
 Individuals in homophilic relationships share common characteristics (beliefs, values, education, etc.) that make communication and relationship formation easier. The opposite of homophily is heterophily.  
 
-# Assingment
-
-There is no assigment for this lesson.   
   
 # Resources   
 

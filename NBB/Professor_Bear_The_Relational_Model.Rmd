@@ -1,8 +1,9 @@
 ---
 title: 'Professor Bear :: The Relational Model'
 author: "Bear"
-date: "10/3/2016"
-output: html_document
+output:
+  html_document: default
+  word_document: default
 ---
 
 ```{r echo = FALSE}

@@ -1,14 +1,16 @@
 ---
 title: "Naive Bayes"
 author: "Nik Bear Brown"
-output: html_document
+output:
+  html_document: default
+  word_document: default
 ---
 
 In this lesson we'll learn the how to implement Naive Bayes in R.
 
 # Additional packages needed
  
-To run the code in M10_Lesson_02.Rmd you may need additional packages.
+To run the code you may need additional packages.
 
 * If necessary install the followings packages.
 
@@ -115,13 +117,6 @@ CrossTable(sms_test_pred2, sms_data_test$type,
            prop.chisq = FALSE, prop.t = FALSE, prop.r = FALSE,
            dnn = c('predicted', 'actual'))
 ```
-
-# Assingment
-
-  Answer the following questions:   
-    * Can some form of Naive Bayes help in your research project?     
-    * If it can apply Naive Bayes to your research project? Does it help?     
-    * If (and only if) you can't use some form of Naive Bayes help in your research project then apply a form of Naive Bayes to the data set you chose for the supervised learning module. Does it help?       
 
 
 # Resources   

@@ -1,7 +1,9 @@
 ---
 title: "Boosting"
 author: "Nik Bear Brown"
-output: html_document
+output:
+  html_document: default
+  word_document: default
 ---
 
 In this lesson we'll learn the how to implement Boosting in R.
@@ -9,7 +11,7 @@ In this lesson we'll learn the how to implement Boosting in R.
 
 # Additional packages needed
  
-To run the code in M09_Lesson_03.Rmd you may need additional packages.
+To run the code you may need additional packages.
 
 * If necessary install the followings packages.
 
@@ -64,13 +66,6 @@ adult_predict_confusion$table
 accuracy <- adult_predict_confusion$overall[1]
 accuracy
 ```
-
-# Assingment
-
-  Answer the following questions:    
-    * Can some form of Boosting help in your research project?    
-    * If it can apply Boosting to your research project? Does it help?       
-    * If (and only if) you can't use some form of Boosting help in your research project then apply a form of Boosting to the data set you chose for the supervised learning module. Does it help?       
 
 
 # Resources   

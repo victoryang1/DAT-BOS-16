@@ -1,7 +1,9 @@
 ---
 title: "Bayesian Probability"
 author: "Nik Bear Brown"
-output: html_document
+output:
+  html_document: default
+  word_document: default
 ---
 
 In this lesson we will disucss Bayesian probability theory. There are no data sets, or libraires to be installed.
@@ -259,12 +261,6 @@ A Frequentist is someone that believes probabilities represent long run frequenc
 It is important to note that most Frequentist methods have a Bayesian equivalent (that is, they give the same results) when there are enough repeated trails. That is, they converge the the same result given enough data.  
 
 
-# Assingment
-
-* A certain disease has an incidence rate of 2%.  If the false negative rate is 10% and the false positive rate is 1%, compute the probability that a person who tests positive actually has the disease.   
-
-* About 0.01% of data scientists with no known risk behavior are infected with cooties.  The false negative rate for the standard cooties test 0.01% and the false positive rate is also 0.01%.  If a randomly selected data scientist with no known risk behavior tests positive for cooties, what is the probability that she is actually infected with cooties?   
-  
 # Resources   
   
 * [An idiot learns Bayesian analysis: Part 1](http://www.r-bloggers.com/an-idiot-learns-bayesian-analysis-part-1/) via @rbloggers   

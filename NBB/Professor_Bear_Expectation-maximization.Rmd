@@ -1,7 +1,9 @@
 ---
 title: "Expectation-maximization"
 author: "Nik Bear Brown"
-output: html_document
+output:
+  html_document: default
+  word_document: default
 ---
 
 In this lesson, we cover expectation-maximization theory, apply and evaluate expectation-maximization based clustering.
@@ -9,7 +11,7 @@ In this lesson, we cover expectation-maximization theory, apply and evaluate exp
 
 ## Additional packages needed
  
-To run the code in M04_Lesson_03.Rmd you may need additional packages.
+To run the code you may need additional packages.
 
 * If necessary install these packages.
 
@@ -489,25 +491,6 @@ data.frame("Truth" = true, "EM Estimate" = unlist(output), "Lower CI" = unlist(o
 
 ```
 
-
-# Assingment
-
-*NOTE: It's your choice to submit EITHER Lesson 03 (Expectation-maximization) OR Lesson 04 (Association Rules) for the module Unsupervised Learning 2.*
-
-* Use the same dataset you use for M04 Lesson 02 for the partition (k-means,PAM) and hierarchical clustering from the he the [UC Irvine Machine Learning Repository](https://archive.ics.uci.edu/ml/)  
-* Cluster some of your data using EM based clustering.
-
-Answer the following questions:  
-    * How did you choose a model for EM?  
-    * Evaluate the  model performance.  
- 
-* Cluster some of your data using EM based clustering that you also used for k-means,PAM. and hierarchical clustering.   
-
- Answer the following questions:     
-    How do the clustering appaoches compare on the same data?  
-
-Write up your report as an .Rmd file.  
- 
 # Resources
 
 Data Mining Algorithms In R/Clustering/Expectation Maximization (EM) [https://en.wikibooks.org/wiki/Data_Mining_Algorithms_In_R/Clustering/Expectation_Maximization_(EM)]

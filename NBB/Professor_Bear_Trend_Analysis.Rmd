@@ -1,14 +1,16 @@
 ---
 title: "Trend Analysis"
 author: "Nik Bear Brown"
-output: html_document
+output:
+  html_document: default
+  word_document: default
 ---
 
 In this lesson we'll learn the how to implement Trend Analysis in R.
 
 # Additional packages needed
  
-To run the code in M11_Lesson_03.Rmd you may need additional packages.
+To run the code you may need additional packages.
 
 * If necessary install the followings packages.
 
@@ -91,15 +93,7 @@ nottem.stl = stl(nottem, s.window="periodic")
 plot(nottem.stl)
 ```
 
-# Assingment
-
-_NOTE: It's your choice to submit EITHER Lesson 02 (ARIMA models) OR Lesson 03 (Trend Analysis) for the module Time Series Analysis._   
-
-  Answer the following questions:   
-    * Can some form of Time series analysis help in your research project to forcast a prediction?    
-    * If it can apply Time series analysis to your research project? Does it help?     
-    * If (and only if) you can't use some form of Time series analysis help in your research project then apply a form of Time series analysis to a data set you find at the [UC Irvine Machine Learning Repository](http://archive.ics.uci.edu/ml/)          
-
+      
 # Resources   
 
 * The heat is on.. or is it? Trend Analysis of Toronto Climate Data via @rbloggers](http://www.r-bloggers.com/the-heat-is-on-or-is-it-trend-analysis-of-toronto-climate-data/)    

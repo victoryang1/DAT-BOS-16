@@ -1,7 +1,9 @@
 ---
 title: "Bagging"
 author: "Nik Bear Brown"
-output: html_document
+output:
+  html_document: default
+  word_document: default
 ---
 
 In this lesson we'll learn the how to implement Bagging in R.
@@ -9,7 +11,7 @@ In this lesson we'll learn the how to implement Bagging in R.
 
 # Additional packages needed
  
-To run the code in M09_Lesson_02.Rmd you may need additional packages.
+To run the code you may need additional packages.
 
 * If necessary install the followings packages.
 
@@ -79,12 +81,6 @@ accuracy <- adult_predict_confusion$overall[1]
 accuracy
 ```
 
-# Assingment
-
-  Answer the following questions:   
-    * Can some form of bagging help in your research project?    
-    * If it can apply bagging to your research project? Does it help?     
-    * If (and only if) you can't use some form of bagging help in your research project then apply a form of bagging to the data set you chose for the supervised learning module. Does it help?       
 
 
 # Resources   

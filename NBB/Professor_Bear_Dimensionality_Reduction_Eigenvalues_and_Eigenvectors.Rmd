@@ -1,7 +1,9 @@
 ---
 title: "Dimensionality Reduction, Eigenvalues and Eigenvectors"
 author: "Nik Bear Brown"
-output: word_document
+output:
+  html_document: default
+  word_document: default
 ---
 
 Dimensionality reduction is about converting data of high dimensionality into data of lower dimensionality while keeping most of the information in the data. This allows us to work on larger datasets and identify the data’s most relevant features. Anomaly detection (or outlier detection) is the identification of items, events or observations which do not conform to an expected pattern or other items in a dataset.  In this first lesson, we study the theory of dimensionality reduction and introduce essential concepts and jargon, such as eigenvalues, eigenvectors, linear independence, span, vector, scalar, basis of a subspace and linear combination.   

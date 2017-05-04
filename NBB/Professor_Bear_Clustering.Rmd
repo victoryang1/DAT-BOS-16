@@ -1,14 +1,16 @@
 ---
 title: "Clustering"
 author: "Nik Bear Brown"
-output: html_document
+output:
+  html_document: default
+  word_document: default
 ---
 
 In this lesson, we cover clustering theory, and distance & similarity measures. We use R apply and evaluate various clustering techniques such as hierarchical clustering, k-means clustering and pam.  We look are techniques to help choose the number of clusters as well as how to evaluating cluster performance. 
 
 # Additional packages needed
  
-To run the code in M02_Lesson_02.Rmd you may need additional packages.
+To run the code you may need additional packages.
 
 * If necessary install `ggplot2, cluster and amap` packages.  
 
@@ -906,20 +908,6 @@ Free online via SpringerLink (http://link.Springer.com/) http://link.springer.co
 [UC Irvine Machine Learning Repository](https://archive.ics.uci.edu/ml/)
 
 [K-means clustering is not a free lunch](http://varianceexplained.org/r/kmeans-free-lunch/)
-
-# Assingment
-
-* Go to the [UC Irvine Machine Learning Repository](https://archive.ics.uci.edu/ml/) and find a dataset for clustering. Every student MUST use a different dataset so you MUST get approved for which you can going to use. You will use this dataset for this modeule on unsupervised learning and the next on supervised learning.
-* Cluster some of your data using k-means, PAM and hierarchical clustering. Answer the following questions:
-    * How did you choose a k for k-means?
-    * Evaluate the model performance. How do the clustering approaches compare on the same data?  
-    * Generate and plot confusion matrices for the k-means and PAM. What do they tell you?
-    * Generate centroid plots against 1st two discriminant functions for k-means and PAM. What do they tell you?
-    * Generate siloutte plots for  PAM. What do they tell you?    
-    * For the hierarchical clustering use all linkage methods (Single Link, Complete Link, Average Link,  Centroid and Minimum energy clustering) and generate dendograms. How they compare on the same data?
-    *  For the hierarchical clustering use both agglomerative and divisive clustering with a linkage method of your choice and generate dendograms. How they compare on the same data?
-    * For the hierarchical clustering use both agglomerative and divisive clustering with a linkage method of your choice and generate dendograms. How do they compare on the same data?   
-
 
 
 

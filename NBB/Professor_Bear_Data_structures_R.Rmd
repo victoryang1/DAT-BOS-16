@@ -1,7 +1,8 @@
 ---
 title: "Professor Bear - R Data structures"
-output: html_document
-date: "September 19, 2016"
+output:
+  html_document: default
+  word_document: default
 ---
 
 

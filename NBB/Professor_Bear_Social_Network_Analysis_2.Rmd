@@ -1,7 +1,9 @@
 ---
 title: "Social Network Analysis (SNA) Part2"
 author: "Nik Bear Brown"
-output: html_document
+output:
+  html_document: default
+  word_document: default
 ---
 
 In this lesson we'll learn the how to implement and analyze Social network analysis (SNA) in R.
@@ -9,7 +11,7 @@ In this lesson we'll learn the how to implement and analyze Social network analy
 
 # Additional packages needed
  
-To run the code in M12_Lesson_03.Rmd you may need additional packages.
+To run the code you may need additional packages.
 
 * If necessary install the followings packages.
 
@@ -136,13 +138,6 @@ which.max(ranks_of_families) # 9 is the index of the vertex
 
 ```
 
-# Assingment
-
-  Answer the following questions:   
-    * Can some form of Social Network analysis help in your research project?   
-    * If it can apply Social Network analysis to your research project? Does it help?     
-    * If (and only if) you can't use some form of Social Network analysis help in your research project then apply a form of Social Network analysis to the data the Twiiter time series data set M11_Tweets_Miley_Nikki_Taylor.csv (it is online at  'http://nikbearbrown.com/YouTube/MachineLearning/M11/M11_Tweets_Miley_Nikki_Taylor.csv') . Does it help?    
-    * Note you only need to use ONE Social Network analysis approach from Module 12, so there will be only ONE assingment for all the modules and the same assingment for all the modules.   
 
 # Resources   
 

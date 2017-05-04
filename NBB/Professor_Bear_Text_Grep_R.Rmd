@@ -1,8 +1,9 @@
 ---
 title: "Text Processing in R"
 author: "Professor Bear"
-date: "September 19, 2016"
-output: html_document
+output:
+  html_document: default
+  word_document: default
 ---
 
 In this lesson we'll learn text processing and regular expressions in R.

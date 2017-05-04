@@ -1,8 +1,9 @@
 ---
 title: 'Professor Bear :: Web Scraping'
 author: "Professor Bear"
-date: "October 3, 2016"
-output: html_document
+output:
+  html_document: default
+  word_document: default
 ---
 
 ```{r setup, include=FALSE}

@@ -1,8 +1,9 @@
 ---
 title: "Professor Bear - Importing Data in R"
 author: "Bear"
-date: "September 13, 2016"
-output: html_document
+output:
+  html_document: default
+  word_document: default
 ---
 
 The first step in data analysis is getting the data in to R. Small datasets often come in the form of Excel  (`.xls`), a comma delimited (Comma-Separated

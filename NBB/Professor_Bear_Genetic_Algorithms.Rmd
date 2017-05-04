@@ -1,14 +1,16 @@
 ---
 title: "Genetic Algorithms"
 author: "Nik Bear Brown"
-output: html_document
+output:
+  html_document: default
+  word_document: default
 ---
 In this lesson we'll learn the theory behind using genetic algorithms as an optimization and search technique.
 
 
 # Additional packages needed
  
-To run the code in M07_Lesson_02.Rmd you may need additional packages.
+To run the code you may need additional packages.
 
 * If necessary install the followings packages.
 
@@ -177,15 +179,6 @@ cat(paste(solution %*% knap$value, "/", sum(knap$value)))
 plot(my_GA_Model)
 ```
 
-
-# Assingment
-
-* Use a genetic algorithm to search for a solution to the famous Travelling Salesman Problem in R. The same problem that we used in the simulated annealing lesson. 
-
-* Answer the following questions:
-    * How does the genetic algorithm solution compare to the simulated annealing solution?  
-    * How does the crossover probability effect the genetic algorithm solution?  
-    * How does the mutation probability effect the genetic algorithm solution?     
  
 # Resources   
 

@@ -1,14 +1,16 @@
 ---
 title: "Seasonal Models"
 author: "Nik Bear Brown"
-output: html_document
+output:
+  html_document: default
+  word_document: default
 ---
 
 In this lesson we'll learn the how to implement Seasonal Models in R.
 
 # Additional packages needed
  
-To run the code in M11_Lesson_04.Rmd you may need additional packages.
+To run the code you may need additional packages.
 
 * If necessary install the followings packages.
 
@@ -80,15 +82,7 @@ sarima.for(mydata, 24, 1,0,0,2,1,0,12)
 predict(mod, n.ahead=24)
 ```
 
-# Assingment
 
-_NOTE: It's your choice to submit EITHER Lesson 04 (Seasonal Models) OR Lesson 05 (Spectral Analysis) for the module Time Series Analysis 2._   
-
-  Answer the following questions:   
-    * Can some form of Seasonal Models help in your research project to forcast a prediction?      
-    * If it can apply Time series analysis to your research project? Does it help?     
-    * If (and only if) you can't use some form of Time series analysis help in your research project then apply a form of Time series Seasonal Models to a data set you find at the [UC Irvine Machine Learning Repository](http://archive.ics.uci.edu/ml/)  
-    
 # Resources   
 
 * [Seasonal ARIMA models | STAT 510](https://onlinecourses.science.psu.edu/stat510/node/67)    

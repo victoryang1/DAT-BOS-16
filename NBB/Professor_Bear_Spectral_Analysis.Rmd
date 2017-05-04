@@ -1,7 +1,9 @@
 ---
 title: "Spectral Analysis"
 author: "Nik Bear Brown"
-output: html_document
+output:
+  html_document: default
+  word_document: default
 ---
 
 In this lesson we'll learn the how to implement Spectral Analysis in R.
@@ -9,7 +11,7 @@ In this lesson we'll learn the how to implement Spectral Analysis in R.
 
 # Additional packages needed
  
-To run the code in M11_Lesson_05.Rmd you may need additional packages.
+To run the code you may need additional packages.
 
 * If necessary install the followings packages.
 
@@ -165,15 +167,7 @@ ts.plot(lh, lh.fore$pred, lh.fore$pred + 2*lh.fore$se,
         lh.fore$pred - 2*lh.fore$se)
 ```
 
-# Assingment
 
- _NOTE: It's your choice to submit EITHER Lesson 04 (Seasonal Models) OR Lesson 05 (Spectral Analysis) for the module Time Series Analysis 2._   
-
-  Answer the following questions:     
-    * Can some form of Spectral Analysis help in your research project?    
-    * If it can apply Spectral Analysis to your research project? Does it help?    
-    * If (and only if) you can't use some form of Time series analysis help in your research project then apply a form of Time series Spectral Analysis to a data set you find at the [UC Irvine Machine Learning Repository](http://archive.ics.uci.edu/ml/)
-    
 
 # Resources   
 

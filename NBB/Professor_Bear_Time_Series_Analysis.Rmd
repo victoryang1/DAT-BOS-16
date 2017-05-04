@@ -1,7 +1,9 @@
 ---
 title: "Time Series Analysis"
 author: "Nik Bear Brown"
-output: html_document
+output:
+  html_document: default
+  word_document: default
 ---
 
 In this lesson we will disucss time series analysis theory. There are no data sets, or libraires to be installed.
@@ -220,10 +222,6 @@ The error term $\varepsilon_i$ still has the following assumptions:
 * homoscedasticity (constant variance) of the errors.
 * normality of the error distribution.  
 
-# Assingment
-
-There is no assigment for this lesson.   
-  
 # Resources   
 
 * [Using R for Time Series Analysis](http://a-little-book-of-r-for-time-series.readthedocs.org/en/latest/src/timeseries.html)   

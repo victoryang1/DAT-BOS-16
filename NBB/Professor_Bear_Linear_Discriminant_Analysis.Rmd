@@ -1,7 +1,9 @@
 ---
 title: "Linear Discriminant Analysis"
 author: "Nik Bear Brown"
-output: html_document
+output:
+  html_document: default
+  word_document: default
 ---
 
 In this lesson we'll learn the theory behind using Linear Discriminant Analysis (LDA) as a supervised classification technique. We'll then use LDA to classify the UCI wine dataset in R.
@@ -9,7 +11,7 @@ In this lesson we'll learn the theory behind using Linear Discriminant Analysis 
 
 # Additional packages needed
  
-To run the code in M08_Lesson_04.Rmd you may need additional packages.
+To run the code you may need additional packages.
 
 * If necessary install the followings packages.
 
@@ -203,19 +205,6 @@ cm.m2
 cm.m3<-table(lsa.m3.p$class,wine[,c(1)])
 cm.m3
 ```
-
-
-# Assingment  
-
-_NOTE: It's your choice to submit EITHER Lesson 03 (Support Vector Machines) OR Lesson 04 (Linear Discriminant Analysis) for the module Supervised Learning 2._   
-
-* Go to the [UC Irvine Machine Learning Repository](https://archive.ics.uci.edu/ml/) and find a dataset for supervised classification. Every student MUST use a different dataset so you MUST get approved for which you can going to use. This can be the same dataset you used for the unsupervised clustering as long as the data has some labeled data.  
-
-* Classify your data using Linear Discriminant Analysis (LDA). Answer the following questions:
-    * Does the number of predictor variables for LDA make a difference? Try for a range of models using differing numbers of predictor variables.
-    * What determines the number of linear discriminants in LDA.    
-    * Does scaling, normalization or leaving the data unscaled make a difference for LDA?
-    
 
  
 # Resources   
