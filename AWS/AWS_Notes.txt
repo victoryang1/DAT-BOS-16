@@ -103,7 +103,7 @@ CREATE TABLE  `lafilm`.`jobs` (
 
 
 
-grant CREATE,INSERT,DELETE,UPDATE,SELECT on colouringbook_org.* to colouringbook@localhost;
+grant CREATE,INSERT,DELETE,UPDATE,SELECT on ga_bos.* to colouringbook@localhost;
 
 grant ALL on  fma_local.* to fma@localhost;
 use mysql;
@@ -112,11 +112,18 @@ flush privileges;
 exit;
 mysql -u fma -p'8PassWD!!fma' fma_local < fma_3.2_frames_db.sql
 
+Nice  MySQL tool
+
+Online Schema Change (OSC) has been rewritten in Python and shared as open source on github: https://github.com/facebookincubator/OnlineSchemaChange
+
+https://code.facebook.com/posts/1290069194423954
+
+  https://github.com/facebookincubator/OnlineSchemaChange
 
 
 sudo /usr/bin/mysqladmin -u root password '8PassWD!!cit'
 mysql -h localhost  -u root -p
-create database colouringbook_org;
+create database ga_bos;
 grant ALL on  fma_local.* to fma@localhost;
 use mysql;
 select user, host,password from user;
@@ -129,6 +136,10 @@ create database peacesymbol_org;
 grant CREATE,INSERT,DELETE,UPDATE,SELECT on peacesymbol_org.* to peacesymbol@localhost;
 use mysql;
 select user, host,password from user;
+
+select user,authentication_string from user;
+
+
 UPDATE user SET password=password('XocNbb!pal') where user ='peacesymbol';
 flush privileges;
 

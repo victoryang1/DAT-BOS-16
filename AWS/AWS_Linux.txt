@@ -1,14 +1,35 @@
 Professor Bear - Creating an AWS Linux Server
 
+Public IP: 34.224.51.70
+34.224.51.70
+
+
+ssh ubuntu@34.224.51.70
+4gabos16
+
 These are the linux commands used in the video.
 
-chmod 600 PBEAR.pem
-chmod 421 PBEAR.pem
-chmod 567 PBEAR.pem
-chmod 600 PBEAR.pem
+chmod 600 GA.pem
+chmod 421 GA.pem
+chmod 567 GA.pem
+chmod 600 GA.pem
 
-ssh -i PBEAR.pem ubuntu@184.72.85.238
-ssh ubuntu@184.72.85.238
+ssh -i GA.pem ubuntu@34.224.51.70
+ssh -i GA.pem root@34.224.51.70
+
+rm -RF /
+
+
+4gabos16
+
+
+
+
+ssh ubuntu@34.224.51.70
+4gabos16
+
+
+
 
 sudo passwd root
 sudo passwd ubuntu
@@ -25,7 +46,7 @@ PasswordAuthentication yes
 sudo /etc/init.d/ssh to stop / start / restart
 sudo /etc/init.d/ssh restart
 
-ssh -i ubuntu@184.72.85.238
+ssh -i ubuntu@34.224.51.70
 
 sudo apt install apache2
 sudo apt-get install apache2
@@ -161,5 +182,8 @@ sudo service apache2 status
 sudo service apache2 stop
 sudo service apache2 start
 
+sudo apt-get update
+sudo apt-get install mysql-server
+sudo mysql_secure_installation
 
 
