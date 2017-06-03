@@ -1,0 +1,12 @@
+item: ('beer', 'apple') , 0.375
+item: ('beer', 'milk') , 0.375
+item: ('milk',) , 0.500
+item: ('apple',) , 0.500
+item: ('rice',) , 0.500
+item: ('beer', 'rice') , 0.500
+item: ('beer',) , 0.750
+
+------------------------ RULES:
+Rule: ('apple',) ==> ('beer',) , 0.750
+Rule: ('milk',) ==> ('beer',) , 0.750
+Rule: ('rice',) ==> ('beer',) , 1.000

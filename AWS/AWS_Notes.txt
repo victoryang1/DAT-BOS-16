@@ -116,6 +116,31 @@ Nice  MySQL tool
 
 Online Schema Change (OSC) has been rewritten in Python and shared as open source on github: https://github.com/facebookincubator/OnlineSchemaChange
 
+I also put a lesson on Association Rules up
+
+The lecture slides that accompany the textbook Algorithm Design by Jon Kleinberg and Éva Tardos http://www.cs.princeton.edu/~wayne/kleinberg-tardos/
+
+Next Tuesday will be our lecture in our lecture on Deep Learning - Natural Language Processing with Deep Learning
+
+We'll use the public materials from Stanford's CS224N/Ling284 as a basis
+
+Chris Manning and Richard Socher are giving lectures on “Natural Language Processing with Deep Learning CS224N/Ling284” at Stanford University.
+
+http://web.stanford.edu/class/cs224n/
+
+
+
+
+By request (and because it's important) we'll also be discussing Algorithm Analysis (big O notation), Dijkstra's and a related algorithm, Bellman-Ford, on Tuesday.
+
+We'll be using the lecture slides that accompany the textbook Algorithm Design by Jon Kleinberg and Éva Tardos to do this.
+
+We'll also be using to visualize algorithm analysis (big O notation)
+
+http://www.wolframalpha.com/input/?i=intersect+of+x*ln(x)+and+x%5E(1%2F2)
+
+
+
 https://code.facebook.com/posts/1290069194423954
 
   https://github.com/facebookincubator/OnlineSchemaChange

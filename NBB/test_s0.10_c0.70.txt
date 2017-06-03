@@ -1,0 +1,48 @@
+item: ('chicken', 'apple') , 0.125
+item: ('mango', 'milk') , 0.125
+item: ('mango', 'apple') , 0.125
+item: ('chicken', 'milk') , 0.125
+item: ('beer', 'apple', 'chicken') , 0.125
+item: ('chicken', 'rice', 'apple') , 0.125
+item: ('chicken', 'rice', 'milk') , 0.125
+item: ('beer', 'milk', 'chicken') , 0.125
+item: ('beer', 'apple', 'chicken', 'rice') , 0.125
+item: ('beer', 'chicken', 'rice', 'milk') , 0.125
+item: ('chicken',) , 0.250
+item: ('mango',) , 0.250
+item: ('rice', 'apple') , 0.250
+item: ('rice', 'milk') , 0.250
+item: ('chicken', 'rice') , 0.250
+item: ('beer', 'chicken') , 0.250
+item: ('beer', 'rice', 'chicken') , 0.250
+item: ('beer', 'rice', 'apple') , 0.250
+item: ('beer', 'rice', 'milk') , 0.250
+item: ('beer', 'apple') , 0.375
+item: ('beer', 'milk') , 0.375
+item: ('apple',) , 0.500
+item: ('milk',) , 0.500
+item: ('rice',) , 0.500
+item: ('beer', 'rice') , 0.500
+item: ('beer',) , 0.750
+
+------------------------ RULES:
+Rule: ('apple',) ==> ('beer',) , 0.750
+Rule: ('milk',) ==> ('beer',) , 0.750
+Rule: ('rice',) ==> ('beer',) , 1.000
+Rule: ('chicken',) ==> ('rice',) , 1.000
+Rule: ('chicken',) ==> ('beer',) , 1.000
+Rule: ('chicken', 'apple') ==> ('beer',) , 1.000
+Rule: ('chicken',) ==> ('beer', 'rice') , 1.000
+Rule: ('beer', 'chicken') ==> ('rice',) , 1.000
+Rule: ('chicken', 'rice') ==> ('beer',) , 1.000
+Rule: ('chicken', 'apple') ==> ('rice',) , 1.000
+Rule: ('chicken', 'milk') ==> ('rice',) , 1.000
+Rule: ('rice', 'apple') ==> ('beer',) , 1.000
+Rule: ('rice', 'milk') ==> ('beer',) , 1.000
+Rule: ('chicken', 'milk') ==> ('beer',) , 1.000
+Rule: ('chicken', 'apple') ==> ('beer', 'rice') , 1.000
+Rule: ('beer', 'apple', 'chicken') ==> ('rice',) , 1.000
+Rule: ('chicken', 'rice', 'apple') ==> ('beer',) , 1.000
+Rule: ('chicken', 'milk') ==> ('beer', 'rice') , 1.000
+Rule: ('beer', 'chicken', 'milk') ==> ('rice',) , 1.000
+Rule: ('chicken', 'rice', 'milk') ==> ('beer',) , 1.000
